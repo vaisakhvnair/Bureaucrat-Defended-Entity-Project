@@ -1,0 +1,8 @@
+<form>
+    Username: <input type="text" name="username" [(ngModel)]="username"#tx1><br>
+    Password: <input type="password" name="upasswd" [(ngModel)]="upasswd"><br>
+    <input type="submit" value="login" (click)="getValidation(tx1)">
+    
+    </form>
+    <hr>
+    {{msg}}

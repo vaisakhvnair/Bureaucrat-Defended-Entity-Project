@@ -11,6 +11,8 @@ import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.com
 import { AdminDataManagersCreateComponent } from './admin-data-managers-create/admin-data-managers-create.component';
 import { AdminDataManagersEditComponent } from './admin-data-managers-edit/admin-data-managers-edit.component';
 import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-data-managers-all.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminMainLayoutComponent } from './admin-main-layout/admin-main-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-d
     AdminPoliceAllComponent,
     AdminDataManagersCreateComponent,
     AdminDataManagersEditComponent,
-    AdminDataManagersAllComponent
+    AdminDataManagersAllComponent,
+    AdminLoginComponent,
+    AdminMainLayoutComponent
   ],
   imports: [
     BrowserModule,
