@@ -1,16 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AdminPoliceCreateComponent } from './admin-police-create/admin-police-create.component';
+import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.component';
+import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.component';
+import { AdminDataManagersCreateComponent } from './admin-data-managers-create/admin-data-managers-create.component';
+import { AdminDataManagersEditComponent } from './admin-data-managers-edit/admin-data-managers-edit.component';
+import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-data-managers-all.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AdminPoliceCreateComponent,
+    AdminPoliceEditComponent,
+    AdminPoliceAllComponent,
+    AdminDataManagersCreateComponent,
+    AdminDataManagersEditComponent,
+    AdminDataManagersAllComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+<h3>Police Register</h3> 
+<form (ngSubmit)="createPolice()"> 
+
+Police User Name : <input type="text" [(ngModel)]="police.userName" name="userName"/>  
+password : <input type="text" [(ngModel)]="police.password" name="password"/>  
+Name : <input type="text" [(ngModel)]="police.name" name="name"/>  
+Email : <input type="text"  [(ngModel)]="police.email" name="email"/>  
+Address : <input type="text"  [(ngModel)]="police.address" name="address"/>  
+
+<input type="submit" value="Register" class="btn btn-success"/> 
+</form> 
+{{message.message}} 

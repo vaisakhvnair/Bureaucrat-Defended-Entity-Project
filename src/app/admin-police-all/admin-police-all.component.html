@@ -1,0 +1,26 @@
+<h3>ALL Police</h3>
+
+<table border="2">
+  <tr>
+    <td>UserName</td>
+    <td>Password</td>
+    <td>Name</td>
+    <td>Email</td>
+    <td>Address</td>
+  </tr>
+  <tr *ngFor="let p of police">
+    <td>{{ p.userName }}</td>
+    <td>{{ p.password}}</td>
+    <td>{{ p.name}}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.address }}</td>
+    <td>
+      <button class="btn btn-danger" style="color: black;"   (click)="deletePolice(p.userName)">
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="editPolice(p.userName)">EDIT</button>
+    </td>
+  </tr>
+</table>
+{{ message.message }}
