@@ -28,7 +28,7 @@ export class AdminDataManagersAllComponent implements OnInit {
       error => { console.log(error) });
   }
   editDataManager(id: any) {
-    this.router.navigate(['p-edit', id]);
+    this.router.navigate(['d-edit', id]);
   }
 
 }
