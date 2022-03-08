@@ -1,0 +1,28 @@
+
+
+<h3>prisoner Update</h3> 
+<form (ngSubmit)="updatePrisoner()"> 
+
+    Prisoner ID : <input type="text" [(ngModel)]="pr.pid" lastName="pid"/>  <br>
+    First Name : <input type="text" [(ngModel)]="pr.firstName" lastName="firstName"/>  <br>
+    Last Name : <input type="text" [(ngModel)]="pr.lastName" lastName="lastName"/>  <br>
+    Middle Name : <input type="text"  [(ngModel)]="pr.middleName" lastName="middleName"/>  <br>
+    Date Of Birth : <input type="text"  [(ngModel)]="pr.dateOfBirth" lastName="dateOfBirth"/>  <br>
+    Gender : <input type="text"  [(ngModel)]="pr.gender" lastName="gender"/>  <br>
+    Age : <input type="text"  [(ngModel)]="pr.age" lastName="age"/>  <br>
+    Address : <input type="text"  [(ngModel)]="pr.address" lastName="address"/>  <br>
+    dateOfArrest : <input type="text"  [(ngModel)]="pr.dateOfArrest" lastName="dateOfArrest"/>  <br>
+    crimeType : <input type="text"  [(ngModel)]="pr.crimeType" lastName="crimeType"/>  <br>
+    eyeWitness : <input type="text"  [(ngModel)]="pr.eyeWitness" lastName="eyeWitness"/>  <br>
+    witnessAddress : <input type="text"  [(ngModel)]="pr.witnessAddress" lastName="witnessAddress"/>  <br>
+    complaintCount : <input type="text"  [(ngModel)]="pr.complaintCount" lastName="complaintCount"/>  <br>
+    eyeColor : <input type="text"  [(ngModel)]="pr.eyeColor" lastName="eyeColor"/>  <br>
+    hairColor : <input type="text"  [(ngModel)]="pr.hairColor" lastName="hairColor"/>  <br>
+    faceShape : <input type="text"  [(ngModel)]="pr.faceShape" lastName="faceShape"/>  <br>
+    remandDate : <input type="text"  [(ngModel)]="pr.remandDate" lastName="remandDate"/>  <br>
+    releaseDate : <input type="text"  [(ngModel)]="pr.releaseDate" lastName="releaseDate"/>  <br>
+    courtHearing : <input type="text"  [(ngModel)]="pr.courtHearing" lastName="courtHearing"/>  <br>
+
+<input type="submit" value="Register"/> <br>
+</form> 
+<button (click)="back()">Back</button>

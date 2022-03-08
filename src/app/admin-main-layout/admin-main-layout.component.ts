@@ -40,6 +40,15 @@ export class AdminMainLayoutComponent implements OnInit {
   editInOutReg(){
     this.router.navigate(['/inout-edit/:id'])
   }
+  viewPrisonerReg(){
+    this.router.navigate(['/prison-all'])
+  }
+  addPrisonerReg(){
+    this.router.navigate(['/prison-add'])
+  }
+  editPrisonerReg(){
+    this.router.navigate(['/prison-edit/:id'])
+  }
 
 
 

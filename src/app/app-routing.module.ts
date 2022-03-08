@@ -11,6 +11,9 @@ import { AdminMainLayoutComponent } from './admin-main-layout/admin-main-layout.
 import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.component';
 import { AdminPoliceCreateComponent } from './admin-police-create/admin-police-create.component';
 import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.component';
+import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
+import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
+import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
 import { FIRAllComponent } from './fir-all/fir-all.component';
 
 
@@ -27,6 +30,9 @@ const routes: Routes = [
   {path:'inout-all',component:AdminInOutAllComponent},
   {path:'inout-add',component:AdminInOutCreateComponent},
   {path:'inout-edit/:id',component:AdminInOutEditComponent},
+  {path:'prison-all',component:AdminPrisonerAllComponent},
+  {path:'prison-add',component:AdminPrisonerCreateComponent},
+  {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}, 
 ];
 

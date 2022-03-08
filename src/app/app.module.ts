@@ -17,6 +17,9 @@ import { FIRAllComponent } from './fir-all/fir-all.component';
 import { AdminInOutAllComponent } from './admin-in-out-all/admin-in-out-all.component';
 import { AdminInOutCreateComponent } from './admin-in-out-create/admin-in-out-create.component';
 import { AdminInOutEditComponent } from './admin-in-out-edit/admin-in-out-edit.component';
+import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
+import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
+import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { AdminInOutEditComponent } from './admin-in-out-edit/admin-in-out-edit.c
     FIRAllComponent,
     AdminInOutAllComponent,
     AdminInOutCreateComponent,
-    AdminInOutEditComponent
+    AdminInOutEditComponent,
+    AdminPrisonerAllComponent,
+    AdminPrisonerCreateComponent,
+    AdminPrisonerEditComponent
   ],
   imports: [
     BrowserModule,

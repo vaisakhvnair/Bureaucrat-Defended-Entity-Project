@@ -19,7 +19,7 @@ export class AdminPoliceCreateComponent implements OnInit {
   }
   createPolice() {
     this.service.createPolice(this.police).subscribe(data => { this.message = data; });
-    //this.police = new Police("","","","","");
+    this.police = new Police("","","","","");
   }
 
 
