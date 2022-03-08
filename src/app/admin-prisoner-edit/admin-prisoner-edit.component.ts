@@ -11,13 +11,13 @@ import { PrisonerService } from '../prisoner.service';
 })
 export class AdminPrisonerEditComponent implements OnInit {
 
-  pr: Prisoner = new Prisoner("","","","","","","","","","","","","","","","","","","");
+  pr: Prisoner = new Prisoner("","","","","","","","","","","","","","","","","","","","");
   un:string="";
 
   constructor(private service: PrisonerService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
-    this.pr = new Prisoner("","","","","","","","","","","","","","","","","","","");
+    this.pr = new Prisoner("","","","","","","","","","","","","","","","","","","","");
     this.un = this.activeRouter.snapshot.params['un'];
     this.service.getOnePrisoner(this.un).subscribe(data => { this.pr = data; });
   }

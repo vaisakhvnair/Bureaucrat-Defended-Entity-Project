@@ -49,7 +49,9 @@ export class AdminMainLayoutComponent implements OnInit {
   editPrisonerReg(){
     this.router.navigate(['/prison-edit/:id'])
   }
-
+  viewCell(){
+    this.router.navigate(['/cell-all'])
+  }
 
 
 }

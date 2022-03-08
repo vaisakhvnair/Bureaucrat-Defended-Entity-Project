@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
 import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-data-managers-all.component';
 import { AdminDataManagersCreateComponent } from './admin-data-managers-create/admin-data-managers-create.component';
 import { AdminDataManagersEditComponent } from './admin-data-managers-edit/admin-data-managers-edit.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
   {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
+  {path:'cell-all',component:AdminCellDetailsComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}, 
 ];
 

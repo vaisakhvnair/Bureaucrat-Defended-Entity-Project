@@ -20,6 +20,7 @@ import { AdminInOutEditComponent } from './admin-in-out-edit/admin-in-out-edit.c
 import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
+import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner
     AdminInOutEditComponent,
     AdminPrisonerAllComponent,
     AdminPrisonerCreateComponent,
-    AdminPrisonerEditComponent
+    AdminPrisonerEditComponent,
+    AdminCellDetailsComponent
   ],
   imports: [
     BrowserModule,
