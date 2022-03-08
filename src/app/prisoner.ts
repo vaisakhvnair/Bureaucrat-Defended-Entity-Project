@@ -6,13 +6,13 @@ export class Prisoner {
     middleName: String;
     dateOfBirth: String;
     gender: String;
-    age: number;
+    age: String;
     address: String;
     dateOfArrest: String;
     crimeType: String;
     eyeWitness: String;
     witnessAddress: String;
-    complaintCount: number;
+    complaintCount: String;
     eyeColor: String;
     hairColor: String;
     faceShape: String;
@@ -20,8 +20,8 @@ export class Prisoner {
     releaseDate: String;
     courtHearing: String;
     constructor(pid: String, firstName: String, lastName: String, middleName: String,dateOfBirth: String,gender: String,
-        age: number,address: String,dateOfArrest: String,crimeType: String, eyeWitness: String,witnessAddress: String,
-        complaintCount: number,eyeColor: String, hairColor: String, faceShape: String, remandDate: String,
+        age: String,address: String,dateOfArrest: String,crimeType: String, eyeWitness: String,witnessAddress: String,
+        complaintCount: String,eyeColor: String, hairColor: String, faceShape: String, remandDate: String,
         releaseDate: String, courtHearing: String) {
 
             this.pid=pid;
