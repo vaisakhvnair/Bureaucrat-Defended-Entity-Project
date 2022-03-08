@@ -1,0 +1,19 @@
+<p>admin-in-out-edit works!</p>
+
+<h3> Update In-Out Register</h3> 
+<form (ngSubmit)="updateInOut()"> 
+
+    SI NO : <input type="text" [(ngModel)]="inout.siNo" name="siNo"/>  <br>
+    Date : <input type="text" [(ngModel)]="inout.date" name="date"/>  <br>
+    Name : <input type="text" [(ngModel)]="inout.name" name="name"/>  <br>
+    Department : <input type="text"  [(ngModel)]="inout.dept" name="dept"/>  <br>
+    Purpose : <input type="text"  [(ngModel)]="inout.purpose" name="purpose"/>  <br>
+    Time In : <input type="text"  [(ngModel)]="inout.timeIn" name="timeIn"/>  <br>
+    Time Out : <input type="text"  [(ngModel)]="inout.timeOut" name="timeOut"/>  <br>
+    Digital Signature : <input type="text"  [(ngModel)]="inout.dsignature" name="dsignature"/>  <br>
+
+<input type="submit" value="Register"/> <br>
+</form> 
+
+<button (click)="back()">Back</button>
+

@@ -31,7 +31,15 @@ export class AdminMainLayoutComponent implements OnInit {
   editDataManager(){
     this.router.navigate(['d-edit/:id'])
   }
-
+  viewInOutReg(){
+    this.router.navigate(['/inout-all'])
+  }
+  addInOutReg(){
+    this.router.navigate(['/inout-add'])
+  }
+  editInOutReg(){
+    this.router.navigate(['/inout-edit/:id'])
+  }
 
 
 

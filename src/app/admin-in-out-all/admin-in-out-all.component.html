@@ -1,0 +1,34 @@
+
+<h3> In-Out Register</h3>
+
+<table border="2">
+  <tr>
+    <td>SI NO</td>
+    <td>Date</td>
+    <td>Name</td>
+    <td>Department</td>
+    <td>Purpose</td>
+    <td>Time In</td>
+    <td>Time Out</td>
+    <td>Digital Signature</td>
+  </tr>
+  <tr *ngFor="let i of inout">
+    <td>{{ i.siNo }}</td>
+    <td>{{ i.date }}</td>
+    <td>{{ i.name }}</td>
+    <td>{{ i.dept }}</td>
+    <td>{{ i.purpose }}</td>
+    <td>{{ i.timeIn }}</td>
+    <td>{{ i.timeOut }}</td>
+    <td>{{ i.dsignature }}</td>
+    <td>
+      <button class="btn btn-danger" style="color: black;"   (click)="deleteInOut(i.siNo)">
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="editInOut(i.siNo)">EDIT</button>
+    </td>
+  </tr>
+</table>
+{{ message.message }}
+<button (click)="back()">Back</button>

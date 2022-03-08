@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-data-managers-all.component';
 import { AdminDataManagersCreateComponent } from './admin-data-managers-create/admin-data-managers-create.component';
 import { AdminDataManagersEditComponent } from './admin-data-managers-edit/admin-data-managers-edit.component';
+import { AdminInOutAllComponent } from './admin-in-out-all/admin-in-out-all.component';
+import { AdminInOutCreateComponent } from './admin-in-out-create/admin-in-out-create.component';
+import { AdminInOutEditComponent } from './admin-in-out-edit/admin-in-out-edit.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminMainLayoutComponent } from './admin-main-layout/admin-main-layout.component';
 import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.component';
@@ -21,6 +24,9 @@ const routes: Routes = [
   {path:'login-admin',component:AdminLoginComponent},
   {path:'admin',component:AdminMainLayoutComponent},
   {path:'fir-all',component:FIRAllComponent},
+  {path:'inout-all',component:AdminInOutAllComponent},
+  {path:'inout-add',component:AdminInOutCreateComponent},
+  {path:'inout-edit/:id',component:AdminInOutEditComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}, 
 ];
 
