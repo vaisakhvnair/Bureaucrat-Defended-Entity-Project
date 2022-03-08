@@ -1,1 +1,70 @@
-<p>fir-all works!</p>
+
+<h3>ALL fir</h3>
+<div>
+<div style="float: left;">
+<h3>FIR Register</h3> 
+<form (ngSubmit)="createFIR()"> 
+
+Complaint Number : <input type="text" [(ngModel)]="firc.complaintNumber" name="userName"/>  <br>
+Victim Name/Name of the person making the complaint : <input type="text" [(ngModel)]="firc.victimName" name="password"/>  <br>
+Offence Description : <input type="text" [(ngModel)]="firc.offence" name="name"/>  <br>
+Time Of Crime : <input type="text"  [(ngModel)]="firc.timeOfCrime" name="email"/>  <br>
+Date Of Crime : <input type="text"  [(ngModel)]="firc.dateOfCrime" name="address"/>  <br>
+Place Of Crime : <input type="text" [(ngModel)]="firc.placeOfCrime" name="name"/>  <br>
+Witness Statement : <input type="text"  [(ngModel)]="firc.witnessStatement" name="email"/>  <br>
+Culprit Name : <input type="text"  [(ngModel)]="firc.culpritName" name="address"/>  <br>
+
+<input type="submit" value="Register" class="btn btn-success"/> <br>
+</form> 
+</div>
+
+<div style="float: right;">
+<h3>FIR edit</h3> 
+<form (ngSubmit)="updateFIR()"> 
+
+Complaint Number : <input type="text" [(ngModel)]="fire.complaintNumber" name="userName"/>  <br>
+Victim Name/Name of the person making the complaint : <input type="text" [(ngModel)]="fire.victimName" name="password"/>  <br>
+Offence Description : <input type="text" [(ngModel)]="fire.offence" name="name"/>  <br>
+Time Of Crime : <input type="text"  [(ngModel)]="fire.timeOfCrime" name="email"/>  <br>
+Date Of Crime : <input type="text"  [(ngModel)]="fire.dateOfCrime" name="address"/>  <br>
+Place Of Crime : <input type="text" [(ngModel)]="fire.placeOfCrime" name="name"/>  <br>
+Witness Statement : <input type="text"  [(ngModel)]="fire.witnessStatement" name="email"/>  <br>
+Culprit Name : <input type="text"  [(ngModel)]="fire.culpritName" name="address"/>  <br>
+
+<input type="submit" value="Update" class="btn btn-success"/> <br>
+</form> 
+</div>
+</div>
+
+<br>
+<br>
+<table border="2">
+  <tr>
+    <td>Complaint Number</td>
+    <td>Victim Name/NAme of the person making the complaint</td>
+    <td>Offence Description</td>
+    <td>Time Of Crime</td>
+    <td>Date Of Crime</td>
+    <td>Place Of Crime</td>
+    <td>Witness Statement</td>
+    <td>Culprit Name</td>
+  </tr>
+  <tr *ngFor="let f of fir">
+    <td>{{ f.complaintNumber }}</td>
+    <td>{{ f.victimName }}</td>
+    <td>{{ f.offence }}</td>
+    <td>{{ f.timeOfCrime }}</td>
+    <td>{{ f.dateOfCrime }}</td>
+    <td>{{ f.placeOfCrime }}</td>
+    <td>{{ f.witnessStatement }}</td>
+    <td>{{ f.culpritName }}</td>
+    <td>
+      <button class="btn btn-danger" style="color: black;"   (click)="deleteFIR(f.complaintNumber)">
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="editFIR(f.complaintNumber)">EDIT</button>
+    </td>
+  </tr>
+</table>
+{{ message.message }}

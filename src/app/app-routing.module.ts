@@ -9,8 +9,7 @@ import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.com
 import { AdminPoliceCreateComponent } from './admin-police-create/admin-police-create.component';
 import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.component';
 import { FIRAllComponent } from './fir-all/fir-all.component';
-import { FIRCreateComponent } from './fir-create/fir-create.component';
-import { FIREditComponent } from './fir-edit/fir-edit.component';
+
 
 const routes: Routes = [
   {path:'p-all',component:AdminPoliceAllComponent},
@@ -22,8 +21,6 @@ const routes: Routes = [
   {path:'login-admin',component:AdminLoginComponent},
   {path:'admin',component:AdminMainLayoutComponent},
   {path:'fir-all',component:FIRAllComponent},
-  {path:'fir-add',component:FIRCreateComponent},
-  {path:'fir-edit/:id',component:FIREditComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}, 
 ];
 

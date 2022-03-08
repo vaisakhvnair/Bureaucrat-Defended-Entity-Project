@@ -14,8 +14,6 @@ import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-d
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminMainLayoutComponent } from './admin-main-layout/admin-main-layout.component';
 import { FIRAllComponent } from './fir-all/fir-all.component';
-import { FIRCreateComponent } from './fir-create/fir-create.component';
-import { FIREditComponent } from './fir-edit/fir-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +26,7 @@ import { FIREditComponent } from './fir-edit/fir-edit.component';
     AdminDataManagersAllComponent,
     AdminLoginComponent,
     AdminMainLayoutComponent,
-    FIRAllComponent,
-    FIRCreateComponent,
-    FIREditComponent
+    FIRAllComponent
   ],
   imports: [
     BrowserModule,
