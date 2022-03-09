@@ -1,20 +1,8 @@
 <h3>ALL PolicePay</h3>
 
 
-<input  type="text" placeholder="Id" name="un" [(ngModel)]="un" (click)="grtOne()">
-<button (click)="grtOne()">click</button>
 
-<td>{{ rpp.police.userName }}</td><br>
-<td>{{ rpp.police.password}}</td><br>
-<td>{{ rpp.police.id}}</td><br>
-<td>{{ rpp.police.name}}</td><br>
-<td>{{ rpp.police.designation}}</td><br>
-<td>{{ rpp.police.hiredate}}</td><br>
-<td>{{ rpp.police.email }}</td><br>
-<td>{{ rpp.police.address }}</td><br>
-<td>{{ rpp.payroll.userName }}</td><br>
-<td>{{ rpp.payroll.pid}}</td><br>
-<td>{{ rpp.payroll.name}}</td><br>
-<td>{{ rpp.payroll.regularSalary }}</td><br>
-<td>{{ rpp.payroll.partTimeSalary }}</td><br>
-<td>{{ rpp.payroll.annualSalary }}</td><br>
+
+{{rpp1|json}}
+
+

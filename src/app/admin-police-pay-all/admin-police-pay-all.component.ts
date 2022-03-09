@@ -4,6 +4,7 @@ import { PayRoll } from '../pay-roll';
 import { Police } from '../police';
 import { PoliceService } from '../police.service';
 import { ReturnPolicePayV1 } from '../return-police-pay-v1';
+import { ReturnPolicePayv0 } from '../return-police-payv0';
 
 @Component({
   selector: 'app-admin-police-pay-all',
@@ -12,21 +13,17 @@ import { ReturnPolicePayV1 } from '../return-police-pay-v1';
 })
 export class AdminPolicePayAllComponent implements OnInit {
   pol: Police = new Police("", "", "", "", "", "", "", "");
-  pay: PayRoll = new PayRoll("", "", "", "", "", "")
-  rpp: ReturnPolicePayV1=new ReturnPolicePayV1(
-    new Police("", "", "", "", "", "", "", ""),new PayRoll("", "", "", "", "", "")
-  )
- //rpp: ReturnPolicePayV1[]=[];
+  pay: PayRoll = new PayRoll("", "", "", "", "", "");
+ rpp1: ReturnPolicePayv0[]=[];
 
-  un: string = "";
   constructor(private service: PoliceService, private activeRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-   // this.un = this.activeRouter.snapshot.params['un'];
+   this.grtTwo();
   }
-  grtOne() {
-    this.service.getOnePolicePay(this.un).subscribe(data => { this.rpp = data })
+  grtTwo(){
+    this.service.getAllPolicePay().subscribe(data => { this.rpp1 = data }, error => { this.rpp1 = [] })
+    
   }
-
 
 }

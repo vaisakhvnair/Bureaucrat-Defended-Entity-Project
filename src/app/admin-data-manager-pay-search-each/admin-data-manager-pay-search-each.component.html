@@ -1,0 +1,42 @@
+<h2>Admin Data Manager PayRoll search</h2>
+
+<input
+  type="text"
+  placeholder="Enter Username to get Payroll Details of DataMAnager"
+  name="un"
+  [(ngModel)]="un"
+  (click)="grtOne()"
+/><button (click)="grtOne()">click</button>
+<br>
+<br>
+
+<table border="2">
+  <tr>
+    <td>User Name</td>
+    <td>Password</td>
+    <td>DataMAnager Id</td>
+    <td>Name</td>
+    <td>Designation</td>
+    <td>Hire Date</td>
+    <td>Email</td>
+    <td>Address</td>
+    <td>PayRoll Id</td>
+    <td>Regular Salary</td>
+    <td>Part Time Salary</td>
+    <td>Annual Salary</td>
+  </tr>
+  <tr>
+    <td>{{ rpp.police.userName }}</td>
+    <td>{{ rpp.police.password }}</td>
+    <td>{{ rpp.police.id }}</td>
+    <td>{{ rpp.police.name }}</td>
+    <td>{{ rpp.police.designation }}</td>
+    <td>{{ rpp.police.hiredate }}</td>
+    <td>{{ rpp.police.email }}</td>
+    <td>{{ rpp.police.address }}</td>
+    <td>{{ rpp.payroll.pid }}</td>
+    <td>{{ rpp.payroll.regularSalary }}</td>
+    <td>{{ rpp.payroll.partTimeSalary }}</td>
+    <td>{{ rpp.payroll.annualSalary }}</td>
+  </tr>
+</table>

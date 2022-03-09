@@ -29,6 +29,14 @@ import { AdminPolicePayAllComponent } from './admin-police-pay-all/admin-police-
 import { AdminDutyRegisterAllComponent } from './admin-duty-register-all/admin-duty-register-all.component';
 import { AdminDutyRegisterCreateComponent } from './admin-duty-register-create/admin-duty-register-create.component';
 import { AdminDutyRegisterEditComponent } from './admin-duty-register-edit/admin-duty-register-edit.component';
+import { AdminPolicePaySearchEachComponent } from './admin-police-pay-search-each/admin-police-pay-search-each.component';
+import { AdminDataManagerPaySearchEachComponent } from './admin-data-manager-pay-search-each/admin-data-manager-pay-search-each.component';
+import { AdminDataManagerPayAllComponent } from './admin-data-manager-pay-all/admin-data-manager-pay-all.component';
+import { AdminDataManagerSearchComponent } from './admin-data-manager-search/admin-data-manager-search.component';
+import { AdminPoliceSearchComponent } from './admin-police-search/admin-police-search.component';
+import { AdminInOutSearchComponent } from './admin-in-out-search/admin-in-out-search.component';
+import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
+import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +64,15 @@ import { AdminDutyRegisterEditComponent } from './admin-duty-register-edit/admin
     AdminPolicePayAllComponent,
     AdminDutyRegisterAllComponent,
     AdminDutyRegisterCreateComponent,
-    AdminDutyRegisterEditComponent
+    AdminDutyRegisterEditComponent,
+    AdminPolicePaySearchEachComponent,
+    AdminDataManagerPaySearchEachComponent,
+    AdminDataManagerPayAllComponent,
+    AdminDataManagerSearchComponent,
+    AdminPoliceSearchComponent,
+    AdminInOutSearchComponent,
+    AdminPrisonerSearchComponent,
+    AdminPrisonerReportComponent
   ],
   imports: [
     BrowserModule,

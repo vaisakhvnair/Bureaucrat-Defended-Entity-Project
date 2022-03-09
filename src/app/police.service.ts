@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Message } from './message';
 import { Police } from './police';
 import { ReturnPolicePayV1 } from './return-police-pay-v1';
+import { ReturnPolicePayv0 } from './return-police-payv0';
 
 @Injectable({
   providedIn: 'root'
@@ -29,8 +30,8 @@ export class PoliceService {
   updatePolice(police:Police):Observable<Message>{ 
    return this.http.put<Message>(`${this.baseUrl}/update`,police); 
   } 
-  getAllPolicePay():Observable<ReturnPolicePayV1[]>{ 
-    return this.http.get<ReturnPolicePayV1[]>(`${this.baseUrl}/all`); 
+  getAllPolicePay():Observable<ReturnPolicePayv0[]>{ 
+    return this.http.get<ReturnPolicePayv0[]>(`${this.baseUrl}/all`); 
   }  
   getAllPolicePayObj():Observable<object>{ 
     return this.http.get<object>(`${this.baseUrl}/listall`); 

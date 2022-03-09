@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataManager } from './data-manager';
 import { Message } from './message';
+import { ReturnDataManagerPayV1 } from './return-data-manager-pay-v1';
+import { ReturnDataManagerPayv0 } from './return-data-manager-payv0';
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +29,14 @@ export class DataManagerService {
   updateDataManager(dm:DataManager):Observable<Message>{ 
    return this.http.put<Message>(`${this.baseUrl}/update`,dm); 
   } 
+  getAllPolicePay():Observable<ReturnDataManagerPayv0[]>{ 
+    return this.http.get<ReturnDataManagerPayv0[]>(`${this.baseUrl}/all`); 
+  }  
+  getAllPolicePayObj():Observable<object>{ 
+    return this.http.get<object>(`${this.baseUrl}/listall`); 
+  }
+  getOnePolicePay(id:string):Observable<ReturnDataManagerPayV1>{ 
+    return this.http.get<ReturnDataManagerPayV1>(`${this.baseUrl}/red/${id}`); 
+  }
 
 }

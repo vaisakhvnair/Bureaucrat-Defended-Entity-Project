@@ -43,6 +43,13 @@ export class AdminMainLayoutComponent implements OnInit {
   viewPrisonerReg(){
     this.router.navigate(['/prison-all'])
   }
+  SearchInOutReg(){
+    this.router.navigate(['/admin-inoutsearch'])
+  }
+  SearchPrisonerReg(){
+    this.router.navigate(['/admin-prisonsearch'])
+  }
+
   addPrisonerReg(){
     this.router.navigate(['/prison-add'])
   }
@@ -67,6 +74,15 @@ export class AdminMainLayoutComponent implements OnInit {
   policepay(){
     this.router.navigate(['/policepay-all'])
   }
+  policepaySearch(){
+    this.router.navigate(['/policepay-eachSearch'])
+  }
+  datpay(){
+    this.router.navigate(['/datpay-all'])
+  }
+  datpaySearch(){
+    this.router.navigate(['/datpay-eachSearch'])
+  }
   viewDutyReg(){
     this.router.navigate(['/duty-all'])
   }
@@ -76,5 +92,16 @@ export class AdminMainLayoutComponent implements OnInit {
   editDutyReg(){
     this.router.navigate(['/duty-edit/:id'])
   }
+
+  PoliceSearch(){
+    this.router.navigate(['/admin-p-search'])
+  }
+  DataManagerSearch(){
+    this.router.navigate(['/admin-d-search'])
+  }
+
+PrisonerReport(){
+  this.router.navigate(['/admin-prison-report'])
+}
 
 }
