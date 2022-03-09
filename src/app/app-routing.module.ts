@@ -14,6 +14,15 @@ import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.
 import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
+import { DataManagerInOutAddComponent } from './data-manager-in-out-add/data-manager-in-out-add.component';
+import { DataManagerInOutAllComponent } from './data-manager-in-out-all/data-manager-in-out-all.component';
+import { DataManagerInOutEditComponent } from './data-manager-in-out-edit/data-manager-in-out-edit.component';
+import { DataManagerLoginComponent } from './data-manager-login/data-manager-login.component';
+import { DataManagerMainLayoutComponent } from './data-manager-main-layout/data-manager-main-layout.component';
+import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/data-manager-prisoner-all.component';
+import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
+import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
+
 import { FIRAllComponent } from './fir-all/fir-all.component';
 
 
@@ -25,12 +34,20 @@ const routes: Routes = [
   {path:'d-add',component:AdminDataManagersCreateComponent},
   {path:'d-edit/:id',component:AdminDataManagersEditComponent},
   {path:'login-admin',component:AdminLoginComponent},
+  {path:'login-manager',component:DataManagerLoginComponent},
   {path:'admin',component:AdminMainLayoutComponent},
+  {path:'manager',component:DataManagerMainLayoutComponent},
   {path:'fir-all',component:FIRAllComponent},
   {path:'inout-all',component:AdminInOutAllComponent},
   {path:'inout-add',component:AdminInOutCreateComponent},
   {path:'inout-edit/:id',component:AdminInOutEditComponent},
-  {path:'prison-all',component:AdminPrisonerAllComponent},
+  {path:'dm-p-all',component:DataManagerPrisonerAllComponent},
+  {path:'dm-p-add',component:DataManagerPrisonerCreateComponent},
+  {path:'dm-p-edit/:id',component:DataManagerPrisonerEditComponent},
+  {path:'dm-io-all',component:DataManagerInOutAllComponent},
+  {path:'dm-io-add',component:DataManagerInOutEditComponent},
+  {path:'dm-io-edit/:id',component:DataManagerInOutAddComponent},
+ {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
   {path:'',redirectTo:'home',pathMatch:'full'}, 

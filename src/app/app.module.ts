@@ -20,6 +20,16 @@ import { AdminInOutEditComponent } from './admin-in-out-edit/admin-in-out-edit.c
 import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
+import { DatamanagerPrisonerCreateComponent } from './datamanager-prisoner-create/datamanager-prisoner-create.component';
+import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
+import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
+import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/data-manager-prisoner-all.component';
+import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
+import { DataManagerLoginComponent } from './data-manager-login/data-manager-login.component';
+import { DataManagerMainLayoutComponent } from './data-manager-main-layout/data-manager-main-layout.component';
+import { DataManagerInOutAllComponent } from './data-manager-in-out-all/data-manager-in-out-all.component';
+import { DataManagerInOutAddComponent } from './data-manager-in-out-add/data-manager-in-out-add.component';
+import { DataManagerInOutEditComponent } from './data-manager-in-out-edit/data-manager-in-out-edit.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +48,17 @@ import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner
     AdminInOutEditComponent,
     AdminPrisonerAllComponent,
     AdminPrisonerCreateComponent,
-    AdminPrisonerEditComponent
+    AdminPrisonerEditComponent,
+    DatamanagerPrisonerCreateComponent,
+    DataManagerPrisonerCreateComponent,
+    DataManagerPrisonerEditComponent,
+    DataManagerPrisonerAllComponent,
+    DataManagerPrisonerSearchComponent,
+    DataManagerLoginComponent,
+    DataManagerMainLayoutComponent,
+    DataManagerInOutAllComponent,
+    DataManagerInOutAddComponent,
+    DataManagerInOutEditComponent
   ],
   imports: [
     BrowserModule,

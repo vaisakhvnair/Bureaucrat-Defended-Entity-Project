@@ -1,0 +1,16 @@
+<h3>In-Out Register</h3> 
+<form (ngSubmit)="createInOut()"> 
+
+    SI NO : <input type="text" [(ngModel)]="inout.siNo" name="siNo"/>  <br><br>
+    Date : <input type="text" [(ngModel)]="inout.date" name="date"/>  <br><br>
+    Name : <input type="text" [(ngModel)]="inout.name" name="name"/>  <br><br>
+    Department : <input type="text"  [(ngModel)]="inout.dept" name="dept"/>  <br><br>
+    Purpose : <input type="text"  [(ngModel)]="inout.purpose" name="purpose"/>  <br><br>
+    Time In : <input type="text"  [(ngModel)]="inout.timeIn" name="timeIn"/>  <br><br>
+    Time Out : <input type="text"  [(ngModel)]="inout.timeOut" name="timeOut"/>  <br><br>
+    Digital Signature : <input type="text"  [(ngModel)]="inout.dsignature" name="dsignature"/> <br><br>
+
+<input type="submit" value="Register"/> <br><br>
+</form> 
+{{message.message}} 
+<!--<button (click)="back()">Back</button>-->

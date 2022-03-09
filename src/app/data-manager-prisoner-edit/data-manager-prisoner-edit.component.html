@@ -1,0 +1,81 @@
+<h3>Prisoner Update</h3> 
+<form (ngSubmit)="updateDetails()"> 
+  <h4>Personal Details</h4>
+
+ Prisoner Id : <input type="text"   [(ngModel)]="prisoner.pid" name="pid"/>  <br>
+ <br>
+FirstName : <input type="text"  [(ngModel)]="prisoner.firstName" name="firstName"/>  <br><br>
+
+LastName : <input type="text"  [(ngModel)]="prisoner.lastName" name="lastName"/>  <br><br>
+Middle Name : <input type="text"  [(ngModel)]="prisoner.middleName" name="middleName"/>  <br>
+ <br>
+DateOfBirth : <input type="date" [(ngModel)]="prisoner.dateOfBirth" name="dateOfBirth"/>  <br><br>
+
+Gender : <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="male"/>Male
+         <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="female"/>Female
+  <br><br>
+
+Age:<input type="text"  [(ngModel)]="prisoner.age" name="age"/>  <br><br>
+Adress:<input type="text"  [(ngModel)]="prisoner.address" name="address"/>  <br><br>
+<hr>
+<h4>Crime Details</h4>
+DateOfArrest:<input type="date"  [(ngModel)]="prisoner.dateOfArrest" name="dateOfArrest"/>  <br><br>
+CrimeType:<select [(ngModel)]="prisoner.crimeType" name="crimeType">
+  <option value="">---</option>
+  <option>Murder</option>
+  <option>ChainSnatching</option>
+  <option>Rape</option>
+  <option>Pocso</option>
+  <option>AttempttoMurder</option>
+</select>
+<br>
+<br>
+RemandDate:<input type="date"  [(ngModel)]="prisoner.remandDate" name="remandDate"/>  <br><br>
+CourtHearing:<input type="date"  [(ngModel)]="prisoner.courtHearing" name="courtHearing"/>  <br><br>
+ReleaseDate:<input type="date"  [(ngModel)]="prisoner.releaseDate" name="releaseDate"/>  <br><br>
+
+ComplaintCount:<input type="number"  [(ngModel)]="prisoner.complaintCount" name="complaintCount"/>  <br><br>
+<hr>
+<h4>Witness Details</h4>
+Name Of Eye Witness:<input type="text" [(ngModel)]="prisoner.eyeWitness" name="eyeWitness"><br><br>
+WitnessAddress:<input type="text"  [(ngModel)]="prisoner.witnessAddress" name="witnessAddress"/>  <br><br>
+<hr>
+<h4>Prioner physical Apperance Details</h4>
+EyeColor:<select  [(ngModel)]="prisoner.eyeColor" name="eyeColor"> 
+  <option value="">---</option>
+  <option>Black</option>
+  <option>Grey</option>
+  <option>Brown</option>
+  <option>Blue</option>
+  <option>Other</option>
+  </select>
+  <br><br>
+HairColor:<select [(ngModel)]="prisoner.hairColor" name="age">  
+  <option value="">---</option>
+  <option>Black</option>
+  <option>White</option>
+  <option>Brown</option>
+  <option>Salt&Pepper</option>
+  <option>Other</option>
+  </select>
+  
+  <br><br>
+  FaceShape:<select [(ngModel)]="prisoner.faceShape" name="faceShape">  
+    <option value="">---</option>
+    <option>Round</option>
+    <option>Oval</option>
+    <option>Square</option>
+    <option>Oblong</option>
+    <option>Diamond</option>
+    <option>Other</option>
+    </select>
+    <br><br>
+    <hr>
+    <h4></h4>
+
+
+<input type="submit" value="Update"/> <br><br>
+</form> 
+
+
+
