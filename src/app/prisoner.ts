@@ -9,6 +9,7 @@ export class Prisoner {
     age: String;
     address: String;
     dateOfArrest: String;
+    caseId:string;
     crimeType: String;
     eyeWitness: String;
     witnessAddress: String;
@@ -24,7 +25,7 @@ export class Prisoner {
     constructor(pid: String, firstName: String, lastName: String, middleName: String, dateOfBirth: String, gender: String,
         age: String, address: String, dateOfArrest: String, crimeType: String, eyeWitness: String, witnessAddress: String,
         complaintCount: String, eyeColor: String, hairColor: String, faceShape: String, remandDate: String,
-        releaseDate: String, courtHearing: String, cellNumber: string) {
+        releaseDate: String, courtHearing: String, cellNumber: string,caseId:string) {
 
         this.pid = pid;
         this.firstName = firstName;
@@ -35,6 +36,7 @@ export class Prisoner {
         this.age = age;
         this.address = address;
         this.dateOfArrest = dateOfArrest;
+        this.caseId=caseId;
         this.crimeType = crimeType;
         this.eyeWitness = eyeWitness;
         this.witnessAddress = witnessAddress;

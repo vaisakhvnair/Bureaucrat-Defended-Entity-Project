@@ -4,14 +4,20 @@
   <tr>
     <td>UserName</td>
     <td>Password</td>
+    <td>Id</td>
     <td>Name</td>
+    <td>Designation</td>
+    <td>Hiredate</td>
     <td>Email</td>
     <td>Address</td>
   </tr>
   <tr *ngFor="let p of datman">
     <td>{{ p.userName }}</td>
     <td>{{ p.password}}</td>
+    <td>{{ p.id}}</td>
     <td>{{ p.name}}</td>
+    <td>{{ p.designation}}</td>
+    <td>{{ p.hiredate}}</td>
     <td>{{ p.email }}</td>
     <td>{{ p.address }}</td>
     <td>

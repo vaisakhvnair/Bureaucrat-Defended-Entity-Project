@@ -21,6 +21,14 @@ import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-a
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
 import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
+import { AdminCaseRegisterComponent } from './admin-case-register/admin-case-register.component';
+import { AdminPayRollAllComponent } from './admin-pay-roll-all/admin-pay-roll-all.component';
+import { AdminPayRollCreateComponent } from './admin-pay-roll-create/admin-pay-roll-create.component';
+import { AdminPayRollEditComponent } from './admin-pay-roll-edit/admin-pay-roll-edit.component';
+import { AdminPolicePayAllComponent } from './admin-police-pay-all/admin-police-pay-all.component';
+import { AdminDutyRegisterAllComponent } from './admin-duty-register-all/admin-duty-register-all.component';
+import { AdminDutyRegisterCreateComponent } from './admin-duty-register-create/admin-duty-register-create.component';
+import { AdminDutyRegisterEditComponent } from './admin-duty-register-edit/admin-duty-register-edit.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +48,15 @@ import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-detai
     AdminPrisonerAllComponent,
     AdminPrisonerCreateComponent,
     AdminPrisonerEditComponent,
-    AdminCellDetailsComponent
+    AdminCellDetailsComponent,
+    AdminCaseRegisterComponent,
+    AdminPayRollAllComponent,
+    AdminPayRollCreateComponent,
+    AdminPayRollEditComponent,
+    AdminPolicePayAllComponent,
+    AdminDutyRegisterAllComponent,
+    AdminDutyRegisterCreateComponent,
+    AdminDutyRegisterEditComponent
   ],
   imports: [
     BrowserModule,

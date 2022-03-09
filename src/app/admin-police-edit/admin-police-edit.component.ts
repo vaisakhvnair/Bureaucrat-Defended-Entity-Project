@@ -10,13 +10,13 @@ import { PoliceService } from '../police.service';
 })
 export class AdminPoliceEditComponent implements OnInit {
 
-  police: Police = new Police("","","","","");
+  police: Police = new Police("","","","","","","","");
   un:string="";
 
   constructor(private service: PoliceService, private activeRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.police = new Police("","","","","");
+    this.police = new Police("","","","","","","","");
     this.un = this.activeRouter.snapshot.params['un'];
     this.service.getOnePolice(this.un).subscribe(data => { this.police = data; });
   }

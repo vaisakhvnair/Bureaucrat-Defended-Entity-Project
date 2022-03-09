@@ -52,6 +52,29 @@ export class AdminMainLayoutComponent implements OnInit {
   viewCell(){
     this.router.navigate(['/cell-all'])
   }
-
+  viewCaseReg(){
+    this.router.navigate(['/case-all'])
+  }
+  viewPayReg(){
+    this.router.navigate(['/pay-all'])
+  }
+  addPayReg(){
+    this.router.navigate(['/pay-add'])
+  }
+  editPayReg(){
+    this.router.navigate(['/pay-edit/:id'])
+  }
+  policepay(){
+    this.router.navigate(['/policepay-all'])
+  }
+  viewDutyReg(){
+    this.router.navigate(['/duty-all'])
+  }
+  addDutyReg(){
+    this.router.navigate(['/duty-add'])
+  }
+  editDutyReg(){
+    this.router.navigate(['/duty-edit/:id'])
+  }
 
 }

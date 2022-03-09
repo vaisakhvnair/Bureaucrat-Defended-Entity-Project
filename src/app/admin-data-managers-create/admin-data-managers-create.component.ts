@@ -11,7 +11,7 @@ import { Message } from '../message';
 })
 export class AdminDataManagersCreateComponent implements OnInit {
 
-  datman: DataManager = new DataManager("","","","","");
+  datman: DataManager = new DataManager("","","","","","","","");
   message: Message = new Message("","");
 
   constructor(private service: DataManagerService, private router: Router) { }
@@ -19,7 +19,7 @@ export class AdminDataManagersCreateComponent implements OnInit {
   }
   createDataManager() {
     this.service.createDataManager(this.datman).subscribe(data => { this.message = data; });
-    //this.police = new Police("","","","","");
+    this.datman = new DataManager("","","","","","","","");
   }
 
 }

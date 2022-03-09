@@ -1,0 +1,33 @@
+<h1>Case Register</h1>
+<table border="1">
+  <tr>
+    <td>Case Id</td>
+    <td>CrimeType</td>
+    <td>PrisonerId</td>
+    <td>EyeWitness</td>
+    <td>WitnessAddress</td>
+    <td>ComplaintCount</td>
+    <td>EyeColor</td>
+    <td>HairColor</td>
+    <td>FaceShape</td>
+    <td>RemandDate</td>
+    <td>ReleaseDate</td>
+    <td>CourtHearing</td>
+    <td>Cell Number</td>
+  </tr>
+  <tr *ngFor="let p of pris">
+    <td>{{ p.caseId }}</td>
+    <td>{{ p.crimeType }}</td>
+    <td>{{ p.pid }}</td>
+    <td>{{ p.eyeWitness }}</td>
+    <td>{{ p.witnessAddress }}</td>
+    <td>{{ p.complaintCount }}</td>
+    <td>{{ p.eyeColor }}</td>
+    <td>{{ p.hairColor }}</td>
+    <td>{{ p.faceShape }}</td>
+    <td>{{ p.remandDate }}</td>
+    <td>{{ p.releaseDate }}</td>
+    <td>{{ p.courtHearing }}</td>
+    <td>{{ p.cellNumber }}</td>
+  </tr>
+</table>

@@ -11,7 +11,7 @@ import { PoliceService } from '../police.service';
 })
 export class AdminPoliceCreateComponent implements OnInit {
 
-  police: Police = new Police("","","","","");
+  police: Police = new Police("","","","","","","","");
   message: Message = new Message("","");
 
   constructor(private service: PoliceService, private router: Router) { }
@@ -19,7 +19,7 @@ export class AdminPoliceCreateComponent implements OnInit {
   }
   createPolice() {
     this.service.createPolice(this.police).subscribe(data => { this.message = data; });
-    this.police = new Police("","","","","");
+    this.police = new Police("","","","","","","","");
   }
 
 

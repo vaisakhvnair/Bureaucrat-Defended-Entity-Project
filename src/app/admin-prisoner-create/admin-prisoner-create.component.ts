@@ -13,7 +13,7 @@ import { PrisonerService } from '../prisoner.service';
 export class AdminPrisonerCreateComponent implements OnInit {
 
 
-  pr:Prisoner = new Prisoner("","","","","","","","","","","","","","","","","","","","");
+  pr:Prisoner = new Prisoner("","","","","","","","","","","","","","","","","","","","","");
   message: Message = new Message("","");
 
   constructor(private service:PrisonerService , private router: Router,private location: Location) { }
@@ -21,7 +21,7 @@ export class AdminPrisonerCreateComponent implements OnInit {
   }
   createPrisoner() {
     this.service.createPrisoner(this.pr).subscribe(data => { this.message = data; });
-    this.pr=new Prisoner("","","","","","","","","","","","","","","","","","","","");
+    this.pr=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
   }
   back(): void {
     this.location.back();
