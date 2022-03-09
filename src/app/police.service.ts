@@ -34,9 +34,9 @@ export class PoliceService {
   }  
   getAllPolicePayObj():Observable<object>{ 
     return this.http.get<object>(`${this.baseUrl}/listall`); 
-  }  
-  getOnePolicePay(id:string):Observable<ReturnPolicePayV1[]>{ 
-    return this.http.get<ReturnPolicePayV1[]>(`${this.baseUrl}/red/${id}`); 
-  }  
+  }
+  getOnePolicePay(id:string):Observable<ReturnPolicePayV1>{ 
+    return this.http.get<ReturnPolicePayV1>(`${this.baseUrl}/red/${id}`); 
+  }
 
 }
