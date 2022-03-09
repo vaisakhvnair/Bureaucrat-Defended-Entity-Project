@@ -1,11 +1,13 @@
 <h3>data-managers Register</h3> 
 <form (ngSubmit)="updateDataManager()"> 
-
-Police User Name : <input type="text" [(ngModel)]="datman.userName" name="userName"/>  
-password : <input type="text" [(ngModel)]="datman.password" name="password"/>  
-Name : <input type="text" [(ngModel)]="datman.name" name="name"/>  
-Email : <input type="text"  [(ngModel)]="datman.email" name="email"/>  
-Address : <input type="text"  [(ngModel)]="datman.address" name="address"/>  
-
+    
+    DataManager User Name : <input type="text" [(ngModel)]="datman.userName" name="userName"/>  
+    password : <input type="text" [(ngModel)]="datman.password" name="password"/>  
+    ID : <input type="text"  [(ngModel)]="datman.id" name="id"/> 
+    Name : <input type="text" [(ngModel)]="datman.name" name="name"/>  
+    Designation : <input type="text"  [(ngModel)]="datman.designation" name="designation"/> 
+    Hire Date : <input type="text"  [(ngModel)]="datman.hiredate" name="hiredate"/> 
+    Email : <input type="text"  [(ngModel)]="datman.email" name="email"/>  
+    Address : <input type="text"  [(ngModel)]="datman.address" name="address"/>  
 <input type="submit" value="Update">
 </form> 

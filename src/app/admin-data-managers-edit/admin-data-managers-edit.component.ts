@@ -10,13 +10,13 @@ import { DataManagerService } from '../data-manager.service';
 })
 export class AdminDataManagersEditComponent implements OnInit {
 
-  datman: DataManager = new DataManager("","","","","");
+  datman: DataManager = new DataManager("","","","","","","","");
   un:string="";
 
   constructor(private service: DataManagerService, private activeRouter: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.datman = new DataManager("","","","","");
+    this.datman = new DataManager("","","","","","","","");
     this.un = this.activeRouter.snapshot.params['un'];
     this.service.getOneDataManager(this.un).subscribe(data => { this.datman = data; });
   }

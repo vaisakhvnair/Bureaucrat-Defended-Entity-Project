@@ -1,58 +1,63 @@
-
 <h1>All Prisoners Details</h1>
 <table border="1">
-    <tr>
-        <td>PrisonerId </td>
-        <td>FirstName </td>
-        <td>LastName </td>
-        <td>MiddleName </td>
-        <td>DateOfBirth </td>
-        <td>Gender</td>
-        <td>Age</td>
-        <td>Address</td>
-        <td>DateOfArrest</td>
-        <td>CrimeType</td>
-        <td>EyeWitness</td>
-        <td>WitnessAddress</td>
-        <td>ComplaintCount</td>
-        <td>EyeColor</td>
-        <td>HairColor</td>
-        <td>FaceShape</td>
-        <td>RemandDate</td>
-        <td>ReleaseDate</td>
-        <td>CourtHearing</td>
-        
-    </tr>
-    
-    <tr *ngFor="let p of pris">
-        <td>{{p.pid}}</td>
-        <td>{{p.firstName}}</td>
-        <td>{{p.lastName}}</td>
-        <td>{{p.middleName}}</td>
-        <td>{{p.dateOfBirth}}</td>
-        <td>{{p.gender}}</td>
-        <td>{{p.age}}</td>
-        <td>{{p.address}}</td>
-        <td>{{p.dateOfArrest}}</td>
-        <td>{{p.crimeType}}</td>
-        <td>{{p.eyeWitness}}</td>
-        <td>{{p.witnessAddress}}</td> 
-        <td>{{p.complaintCount}}</td>
-        <td>{{p.eyeColor}}</td>
-        <td>{{p.hairColor}}</td>
-        <td>{{p.faceShape}}</td>
-        <td>{{p.remandDate}}</td>
-        <td>{{p.releaseDate}}</td>
-        <td>{{p.courtHearing}}</td>
-        <td>
-            <button class="btn btn-danger" style="color: black;"   (click)="deletePrisoner(p.pid)">
-              DELETE
-            </button>
-            &nbsp;&nbsp;
-            <button class="btn btn-info" (click)="editPrisoner(p.pid)">EDIT</button>
-          </td>
+  <tr>
+    <td>PrisonerId</td>
+    <td>FirstName</td>
+    <td>LastName</td>
+    <td>MiddleName</td>
+    <td>DateOfBirth</td>
+    <td>Gender</td>
+    <td>Age</td>
+    <td>Address</td>
+    <td>DateOfArrest</td>
+    <td>Case Id</td>
+    <td>CrimeType</td>
+    <td>EyeWitness</td>
+    <td>WitnessAddress</td>
+    <td>ComplaintCount</td>
+    <td>EyeColor</td>
+    <td>HairColor</td>
+    <td>FaceShape</td>
+    <td>RemandDate</td>
+    <td>ReleaseDate</td>
+    <td>CourtHearing</td>
+    <td>Cell Number</td>
+  </tr>
 
-    </tr>
+  <tr *ngFor="let p of pris">
+    <td>{{ p.pid }}</td>
+    <td>{{ p.firstName }}</td>
+    <td>{{ p.lastName }}</td>
+    <td>{{ p.middleName }}</td>
+    <td>{{ p.dateOfBirth }}</td>
+    <td>{{ p.gender }}</td>
+    <td>{{ p.age }}</td>
+    <td>{{ p.address }}</td>
+    <td>{{ p.dateOfArrest }}</td>
+    <td>{{ p.caseId }}</td>
+    <td>{{ p.crimeType }}</td>
+    <td>{{ p.eyeWitness }}</td>
+    <td>{{ p.witnessAddress }}</td>
+    <td>{{ p.complaintCount }}</td>
+    <td>{{ p.eyeColor }}</td>
+    <td>{{ p.hairColor }}</td>
+    <td>{{ p.faceShape }}</td>
+    <td>{{ p.remandDate }}</td>
+    <td>{{ p.releaseDate }}</td>
+    <td>{{ p.courtHearing }}</td>
+    <td>{{ p.cellNumber }}</td>
+    <td>
+      <button
+        class="btn btn-danger"
+        style="color: black"
+        (click)="deletePrisoner(p.pid)"
+      >
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="editPrisoner(p.pid)">EDIT</button>
+    </td>
+  </tr>
 </table>
 {{ message.message }}
 <button (click)="back()">Back</button>

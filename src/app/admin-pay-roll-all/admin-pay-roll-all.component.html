@@ -1,0 +1,28 @@
+<h3>ALL Pay Roll</h3>
+
+<table border="2">
+  <tr>
+    <td>UserName</td>
+    <td>Pay Roll Id</td>
+    <td>Name</td>
+    <td>Regular Salary</td>
+    <td>Part Time Salary</td>
+    <td>Annual Salary</td>
+  </tr>
+  <tr *ngFor="let p of datman">
+    <td>{{ p.userName }}</td>
+    <td>{{ p.pid}}</td>
+    <td>{{ p.name}}</td>
+    <td>{{ p.regularSalary }}</td>
+    <td>{{ p.partTimeSalary }}</td>
+    <td>{{ p.annualSalary }}</td>
+    <td>
+      <button class="btn btn-danger" style="color: black;"   (click)="deletePayRoll(p.userName)">
+        DELETE
+      </button>
+      &nbsp;&nbsp;
+      <button class="btn btn-info" (click)="editPayRoll(p.userName)">EDIT</button>
+    </td>
+  </tr>
+</table>
+{{ message.message }}

@@ -1,11 +1,15 @@
 <h3>Police Register</h3> 
 <form (ngSubmit)="updatePolice()"> 
 
-Police User Name : <input type="text" [(ngModel)]="police.userName" name="userName"/>  
-password : <input type="text" [(ngModel)]="police.password" name="password"/>  
-Name : <input type="text" [(ngModel)]="police.name" name="name"/>  
-Email : <input type="text"  [(ngModel)]="police.email" name="email"/>  
-Address : <input type="text"  [(ngModel)]="police.address" name="address"/>  
+
+    Police User Name : <input type="text" [(ngModel)]="police.userName" name="userName"/>  
+    password : <input type="text" [(ngModel)]="police.password" name="password"/>  
+    ID : <input type="text"  [(ngModel)]="police.id" name="id"/> 
+    Name : <input type="text" [(ngModel)]="police.name" name="name"/>  
+    Designation : <input type="text"  [(ngModel)]="police.designation" name="designation"/> 
+    Hire Date : <input type="text"  [(ngModel)]="police.hiredate" name="hiredate"/> 
+    Email : <input type="text"  [(ngModel)]="police.email" name="email"/>  
+    Address : <input type="text"  [(ngModel)]="police.address" name="address"/>    
 
 <input type="submit" value="Update"> 
 </form> 

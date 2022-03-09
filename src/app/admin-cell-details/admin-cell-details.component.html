@@ -1,0 +1,17 @@
+<h1>Cell Details</h1>
+<table border="1">
+  <tr>
+    <td>Cell Number</td>
+    <td>PrisonerId</td>
+    <td>FirstName</td>
+    <td>LastName</td>
+    <td>MiddleName</td>
+  </tr>
+  <tr *ngFor="let p of pris">
+    <td>{{ p.cellNumber }}</td>
+    <td>{{ p.pid }}</td>
+    <td>{{ p.firstName }}</td>
+    <td>{{ p.lastName }}</td>
+    <td>{{ p.middleName }}</td>
+  </tr>
+</table>
