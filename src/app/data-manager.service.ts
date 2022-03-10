@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataManager } from './data-manager';
 import { Message } from './message';
+import { ReturnDataManagerDutyv1 } from './return-data-manager-dutyv1';
 import { ReturnDataManagerPayV1 } from './return-data-manager-pay-v1';
 import { ReturnDataManagerPayv0 } from './return-data-manager-payv0';
 
@@ -37,6 +38,9 @@ export class DataManagerService {
   }
   getOnePolicePay(id:string):Observable<ReturnDataManagerPayV1>{ 
     return this.http.get<ReturnDataManagerPayV1>(`${this.baseUrl}/red/${id}`); 
+  }
+  getOnePoliceDuty(id:string):Observable<ReturnDataManagerDutyv1>{ 
+    return this.http.get<ReturnDataManagerDutyv1>(`${this.baseUrl}/blue/${id}`); 
   }
 
 }

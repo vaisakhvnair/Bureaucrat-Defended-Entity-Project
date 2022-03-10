@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminAutomatedReleaseRegisterComponent } from './admin-automated-release-register/admin-automated-release-register.component';
 import { AdminCaseRegisterComponent } from './admin-case-register/admin-case-register.component';
 import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
+import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 import { AdminDataManagerPayAllComponent } from './admin-data-manager-pay-all/admin-data-manager-pay-all.component';
 import { AdminDataManagerPaySearchEachComponent } from './admin-data-manager-pay-search-each/admin-data-manager-pay-search-each.component';
 import { AdminDataManagerSearchComponent } from './admin-data-manager-search/admin-data-manager-search.component';
@@ -23,6 +24,7 @@ import { AdminPayRollCreateComponent } from './admin-pay-roll-create/admin-pay-r
 import { AdminPayRollEditComponent } from './admin-pay-roll-edit/admin-pay-roll-edit.component';
 import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.component';
 import { AdminPoliceCreateComponent } from './admin-police-create/admin-police-create.component';
+import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-police-duty-each.component';
 import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.component';
 import { AdminPolicePayAllComponent } from './admin-police-pay-all/admin-police-pay-all.component';
 import { AdminPolicePaySearchEachComponent } from './admin-police-pay-search-each/admin-police-pay-search-each.component';
@@ -72,6 +74,8 @@ const routes: Routes = [
   {path:'duty-edit/:id',component:AdminDutyRegisterEditComponent},
   {path:'admin-p-search',component:AdminPoliceSearchComponent},
   {path:'admin-d-search',component:AdminDataManagerSearchComponent},
+  {path:'admin-polDuty-eachSearch',component:AdminPoliceDutyEachComponent},
+  {path:'admin-datDuty-eachSearch',component:AdminDataManagerDutyEachComponent},
 ];
 
 @NgModule({

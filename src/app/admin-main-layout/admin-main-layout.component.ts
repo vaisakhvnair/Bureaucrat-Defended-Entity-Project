@@ -107,6 +107,11 @@ AutomatedReleaseRegister(){
   this.router.navigate(['/admin-automated-release-register'])
 }
 
-
+PoliceDutyEachSearch(){
+  this.router.navigate(['/admin-polDuty-eachSearch'])
+}
+DataManagerDutyEachSearch(){
+  this.router.navigate(['/admin-datDuty-eachSearch'])
+}
 
 }

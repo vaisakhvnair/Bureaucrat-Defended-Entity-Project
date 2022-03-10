@@ -38,6 +38,8 @@ import { AdminInOutSearchComponent } from './admin-in-out-search/admin-in-out-se
 import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
 import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
 import { AdminAutomatedReleaseRegisterComponent } from './admin-automated-release-register/admin-automated-release-register.component';
+import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-police-duty-each.component';
+import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import { AdminAutomatedReleaseRegisterComponent } from './admin-automated-releas
     AdminInOutSearchComponent,
     AdminPrisonerSearchComponent,
     AdminPrisonerReportComponent,
-    AdminAutomatedReleaseRegisterComponent
+    AdminAutomatedReleaseRegisterComponent,
+    AdminPoliceDutyEachComponent,
+    AdminDataManagerDutyEachComponent
   ],
   imports: [
     BrowserModule,
