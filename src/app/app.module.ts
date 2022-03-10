@@ -53,6 +53,8 @@ import { AdminDutyRegisterEditComponent } from './admin-duty-register-edit/admin
 import { AdminDutyRegisterAllComponent } from './admin-duty-register-all/admin-duty-register-all.component';
 import { AdminDutyRegisterCreateComponent } from './admin-duty-register-create/admin-duty-register-create.component';
 import { AdminDataManagerSearchComponent } from './admin-data-manager-search/admin-data-manager-search.component';
+import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-police-duty-each.component';
+import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +83,8 @@ import { AdminDataManagerSearchComponent } from './admin-data-manager-search/adm
     AdminDutyRegisterAllComponent,
     AdminDutyRegisterCreateComponent,
     AdminDataManagerSearchComponent,
+    AdminPoliceDutyEachComponent,
+    AdminDataManagerDutyEachComponent,
     AdminLoginComponent,
     AdminMainLayoutComponent,
     FIRAllComponent,

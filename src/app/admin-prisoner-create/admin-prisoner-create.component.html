@@ -1,7 +1,7 @@
 
 
 <h3>prisoner Register</h3> 
-<form (ngSubmit)="createPrisoner()"> 
+<form (ngSubmit)="createPrisoner()">
 
     Prisoner ID : <input type="text" [(ngModel)]="pr.pid" name="pid"/>  <br>
     First Name : <input type="text" [(ngModel)]="pr.firstName" name="firstName"/>  <br>
@@ -20,9 +20,9 @@
     eyeColor : <input type="text"  [(ngModel)]="pr.eyeColor" name="eyeColor"/>  <br>
     hairColor : <input type="text"  [(ngModel)]="pr.hairColor" name="hairColor"/>  <br>
     faceShape : <input type="text"  [(ngModel)]="pr.faceShape" name="faceShape"/>  <br>
-    remandDate : <input type="text"  [(ngModel)]="pr.remandDate" name="remandDate"/>  <br>
-    releaseDate : <input type="text"  [(ngModel)]="pr.releaseDate" name="releaseDate"/>  <br>
-    courtHearing : <input type="text"  [(ngModel)]="pr.courtHearing" name="courtHearing"/>  <br>
+    remandDate : <input type="date"  [(ngModel)]="pr.remandDate" name="remandDate"/>  <br>
+    releaseDate : <input type="date"  [(ngModel)]="pr.releaseDate" name="releaseDate"/>  <br>
+    courtHearing : <input type="date"  [(ngModel)]="pr.courtHearing" name="courtHearing"/>  <br>
     Cell Number : <input type="text"  [(ngModel)]="pr.cellNumber" name="cellNumber"/>  <br>
 
 <input type="submit" value="Register"/> <br>

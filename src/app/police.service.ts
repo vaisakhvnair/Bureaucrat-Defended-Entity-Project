@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Message } from './message';
 import { Police } from './police';
+import { ReturnPoliceDutyv1 } from './return-police-dutyv1';
 import { ReturnPolicePayV1 } from './return-police-pay-v1';
 import { ReturnPolicePayv0 } from './return-police-payv0';
 
@@ -38,6 +39,9 @@ export class PoliceService {
   }
   getOnePolicePay(id:string):Observable<ReturnPolicePayV1>{ 
     return this.http.get<ReturnPolicePayV1>(`${this.baseUrl}/red/${id}`); 
+  }
+  getOnePoliceDuty(id:string):Observable<ReturnPoliceDutyv1>{ 
+    return this.http.get<ReturnPoliceDutyv1>(`${this.baseUrl}/blue/${id}`); 
   }
 
 }
