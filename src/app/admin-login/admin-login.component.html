@@ -1,8 +1,17 @@
+<br>
+<br><br><br>
+
+<div class="container">
+<div class="container">
+    <h2>ADMINISTRATOR LOGIN</h2>
+    <br><br><br>
 <form>
     Username: <input type="text" name="username" [(ngModel)]="username"#tx1><br>
-    Password: <input type="password" name="upasswd" [(ngModel)]="upasswd"><br>
-    <input type="submit" value="login" (click)="getValidation(tx1)">
-    
+    <br>
+    Password: <input type="password" name="upasswd" [(ngModel)]="upasswd"><br><br>
+    <input class="btn btn-primary btn-block" type="submit" value="Log In" (click)="getValidation(tx1)">
     </form>
     <hr>
     {{msg}}
+</div>
+</div>
