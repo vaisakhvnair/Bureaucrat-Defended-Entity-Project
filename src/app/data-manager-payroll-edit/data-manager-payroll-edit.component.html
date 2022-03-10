@@ -1,0 +1,12 @@
+<h3>Pay Roll update</h3> 
+<form (ngSubmit)="updateDataManager()"> 
+
+    UserName : <input type="text" [(ngModel)]="pay.userName" name="userName"/>  <br>
+    Pay Roll Id : <input type="text" [(ngModel)]="pay.pid" name="pid"/>   <br>
+    Name : <input type="text" [(ngModel)]="pay.name" name="name"/>   <br>
+    Regular Salary : <input type="text"  [(ngModel)]="pay.regularSalary" name="regularSalary"/>   <br>
+    Part Time Salary : <input type="text"  [(ngModel)]="pay.partTimeSalary" name="partTimeSalary"/>   <br>
+    Annual Salary : <input type="text"  [(ngModel)]="pay.annualSalary" name="annualSalary"/>   <br>
+
+<input type="submit" value="update"/> 
+</form> 

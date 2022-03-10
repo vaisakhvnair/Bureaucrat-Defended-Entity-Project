@@ -11,14 +11,19 @@ import { Message } from '../message';
 })
 export class DataManagerInOutAllComponent implements OnInit {
 
-  inout: InOut= new InOut("","","","","","","","");
+  inout: InOut[] = [];
   message: Message = new Message("","");
+  constructor(private service: InOutService, private router: Router,private location: Location) { }
 
-  constructor(private service: InOutService, private router: Router) { }
   ngOnInit(): void {
-  }
-  createInOut() {
-    this.service.createInOut(this.inout).subscribe(data => { this.message = data; });
+    this.getAllInOut();
 
+  }
+  getAllInOut() {
+    this.service.getAllInOut().subscribe(data => { this.inout = data }, error => { this.inout = [] });
+  }
+ 
+  editInOut(id: any) {
+    this.router.navigate(['inout-edit', id]);
   }
 }

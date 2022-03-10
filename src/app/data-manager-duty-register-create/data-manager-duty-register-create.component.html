@@ -1,0 +1,13 @@
+<h3>duty-register</h3> 
+<form (ngSubmit)="createDutyRegister()"> 
+
+User Name : <input type="text" [(ngModel)]="duty.userName" name="userName"/>  
+Date : <input type="text" [(ngModel)]="duty.date" name="date"/>  
+Time On Duty : <input type="text" [(ngModel)]="duty.timeOnDuty" name="timeOnDuty"/>  
+Name : <input type="text"  [(ngModel)]="duty.name" name="name"/>  
+Duty Point : <input type="text"  [(ngModel)]="duty.dutyPoint" name="dutyPoint"/> 
+Time Off Duty : <input type="text"  [(ngModel)]="duty.timeOffDuty" name="timeOffDuty"/>  
+
+<input type="submit" value="Register"/>
+</form>
+{{message.message}} 

@@ -33,6 +33,23 @@ export class DataManagerMainLayoutComponent implements OnInit {
   editInOutData(){
     this.router.navigate(['dm-io-edit/:id'])
   }
-
+viewDutyRegister(){
+  this.router.navigate(['/dm-d-all'])
+}
+addDutyRegister(){
+  this.router.navigate(['/dm-d-add'])
+}
+editDutyRegister(){
+  this.router.navigate(['dm-d-edit/:id'])
+}
+viewPayrollRegister(){
+  this.router.navigate(['/dm-pay-all'])
+}
+addPayrollRegister(){
+  this.router.navigate(['/dm-pay-add'])
+}
+editPayrollRegister(){
+  this.router.navigate(['dm-pay-edit/:id'])
+}
 
 }

@@ -12,7 +12,7 @@ import { PrisonerService } from '../prisoner.service';
 export class DataManagerPrisonerCreateComponent implements OnInit {
 
   constructor(private service:PrisonerService,private router:Router) { }
-prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","");
+prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 
 message:Message=new Message("","");
   ngOnInit(): void {
@@ -21,8 +21,7 @@ message:Message=new Message("","");
     this.service.createPrisoner(this.prisoner).subscribe(data=>{      
        this.message=data; 
     }); 
-    this.prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","");
-
+    this.prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 }
 
 }

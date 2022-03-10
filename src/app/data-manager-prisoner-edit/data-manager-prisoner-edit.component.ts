@@ -10,12 +10,12 @@ import { PrisonerService } from '../prisoner.service';
 })
 export class DataManagerPrisonerEditComponent implements OnInit {
 
-  prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","");
+  prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 pid:string="";
   constructor(private service:PrisonerService,private activeRouter:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    this.prisoner =new Prisoner("","","","","","","","","","","","","","","","","","",""); 
+    this.prisoner =new Prisoner("","","","","","","","","","","","","","","","","","","","",""); 
     this.pid=this.activeRouter.snapshot.params['id'];    
      this.service.getOnePrisoner(this.pid).subscribe( data=>{ 
         this.prisoner=data; 

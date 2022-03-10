@@ -23,11 +23,17 @@ import { AdminPolicePayAllComponent } from './admin-police-pay-all/admin-police-
 import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
+import { DataManagerDutyRegisterAllComponent } from './data-manager-duty-register-all/data-manager-duty-register-all.component';
+import { DataManagerDutyRegisterCreateComponent } from './data-manager-duty-register-create/data-manager-duty-register-create.component';
+import { DataManagerDutyRegisterEditComponent } from './data-manager-duty-register-edit/data-manager-duty-register-edit.component';
 import { DataManagerInOutAddComponent } from './data-manager-in-out-add/data-manager-in-out-add.component';
 import { DataManagerInOutAllComponent } from './data-manager-in-out-all/data-manager-in-out-all.component';
 import { DataManagerInOutEditComponent } from './data-manager-in-out-edit/data-manager-in-out-edit.component';
 import { DataManagerLoginComponent } from './data-manager-login/data-manager-login.component';
 import { DataManagerMainLayoutComponent } from './data-manager-main-layout/data-manager-main-layout.component';
+import { DataManagerPayrollAllComponent } from './data-manager-payroll-all/data-manager-payroll-all.component';
+import { DataManagerPayrollCreateComponent } from './data-manager-payroll-create/data-manager-payroll-create.component';
+import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/data-manager-payroll-edit.component';
 import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/data-manager-prisoner-all.component';
 import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
 import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
@@ -56,6 +62,12 @@ const routes: Routes = [
   {path:'dm-io-all',component:DataManagerInOutAllComponent},
   {path:'dm-io-add',component:DataManagerInOutEditComponent},
   {path:'dm-io-edit/:id',component:DataManagerInOutAddComponent},
+  {path:'dm-d-all',component:DataManagerDutyRegisterAllComponent},
+  {path:'dm-d-add',component:DataManagerDutyRegisterCreateComponent},
+  {path:'dm-d-edit/:id',component:DataManagerDutyRegisterEditComponent},
+  {path:'dm-pay-all',component:DataManagerPayrollAllComponent},
+  {path:'dm-pay-add',component:DataManagerPayrollCreateComponent},
+  {path:'dm-pay-edit/:id',component:DataManagerPayrollEditComponent},
  {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},

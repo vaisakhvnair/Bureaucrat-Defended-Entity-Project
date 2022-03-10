@@ -30,6 +30,11 @@ import { DataManagerInOutAllComponent } from './data-manager-in-out-all/data-man
 import { DataManagerInOutAddComponent } from './data-manager-in-out-add/data-manager-in-out-add.component';
 import { DataManagerInOutEditComponent } from './data-manager-in-out-edit/data-manager-in-out-edit.component';
 import { DataManagerDutyRegisterAllComponent } from './data-manager-duty-register-all/data-manager-duty-register-all.component';
+import { DataManagerDutyRegisterCreateComponent } from './data-manager-duty-register-create/data-manager-duty-register-create.component';
+import { DataManagerDutyRegisterEditComponent } from './data-manager-duty-register-edit/data-manager-duty-register-edit.component';
+import { DataManagerPayrollAllComponent } from './data-manager-payroll-all/data-manager-payroll-all.component';
+import { DataManagerPayrollCreateComponent } from './data-manager-payroll-create/data-manager-payroll-create.component';
+import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/data-manager-payroll-edit.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +63,12 @@ import { DataManagerDutyRegisterAllComponent } from './data-manager-duty-registe
     DataManagerInOutAllComponent,
     DataManagerInOutAddComponent,
     DataManagerInOutEditComponent,
-    DataManagerDutyRegisterAllComponent
+    DataManagerDutyRegisterAllComponent,
+    DataManagerDutyRegisterCreateComponent,
+    DataManagerDutyRegisterEditComponent,
+    DataManagerPayrollAllComponent,
+    DataManagerPayrollCreateComponent,
+    DataManagerPayrollEditComponent
   ],
   imports: [
     BrowserModule,
