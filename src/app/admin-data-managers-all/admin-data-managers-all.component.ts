@@ -59,6 +59,8 @@ export class AdminDataManagersAllComponent implements OnInit {
   onSortClickAd(){
     this.dat = this.datman.sort((e1, e2) => {  return (e1["address"].charCodeAt(0) - e2["address"].charCodeAt(0)) * this.order;});
   }
-
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

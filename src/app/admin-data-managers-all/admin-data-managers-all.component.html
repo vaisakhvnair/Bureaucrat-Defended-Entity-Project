@@ -1,18 +1,20 @@
 <h3>ALL Data Manager</h3>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div class="container-fluid">
 
-<table border="2">
-  <tr>
-    <td><input type="button"value="UserName" (click)="onSortClickUs()"></td>
-    <td><input type="button"value="Password" (click)="onSortClickPs()"></td>
-    <td><input type="button"value="Id" (click)="onSortClickId()"></td>
-    <td><input type="button"value="Name" (click)="onSortClickNm()"></td>
-    <td><input type="button"value="Designation" (click)="onSortClickDs()"></td>
-    <td><input type="button"value="Hire date" (click)="onSortClickHd()"></td>
-    <td><input type="button"value="Email" (click)="onSortClickEm()"></td>
-    <td><input type="button"value="Address" (click)="onSortClickAd()"></td>
-    <td><input type="button"value="Operations"></td>
+  <table class="table table-sm">
+    <tr class="table-primary">
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="User Name" (click)="onSortClickUs()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Password" (click)="onSortClickPs()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Id" (click)="onSortClickId()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Name" (click)="onSortClickNm()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Designation" (click)="onSortClickDs()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Hire date" (click)="onSortClickHd()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Email" (click)="onSortClickEm()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Address" (click)="onSortClickAd()"></th>
+      <th scope="col"><input type="button"class="btn btn-outline-light text-dark-disable"value="Operations"></th>
   </tr>
-  <tr *ngFor="let p of datman">
+  <tr *ngFor="let p of datman" class="table-active">
     <td>{{ p.userName }}</td>
     <td>{{ p.password}}</td>
     <td>{{ p.id}}</td>
@@ -22,12 +24,13 @@
     <td>{{ p.email }}</td>
     <td>{{ p.address }}</td>
     <td>
-      <button class="btn btn-danger" style="color: black;"   (click)="deleteDataManager(p.userName)">
+      <button class="btn btn-outline-danger" style="color: black;"   (click)="deleteDataManager(p.userName)">
         DELETE
       </button>
       &nbsp;&nbsp;
-      <button class="btn btn-info" (click)="editDataManager(p.userName)">EDIT</button>
+      <button class="btn btn-outline-info" (click)="editDataManager(p.userName)">EDIT</button>
     </td>
   </tr>
 </table>
 {{ message.message }}
+</div>

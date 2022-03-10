@@ -38,7 +38,9 @@ export class AdminPrisonerAllComponent implements OnInit {
   back(): void {
     this.location.back()
   }
-
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
   onSortClick() {
    
@@ -97,5 +99,7 @@ export class AdminPrisonerAllComponent implements OnInit {
     });
 
   }
+
+  
 
 }

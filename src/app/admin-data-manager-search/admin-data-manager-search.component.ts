@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataManager } from '../data-manager';
 import { DataManagerService } from '../data-manager.service';
 
@@ -9,7 +10,7 @@ import { DataManagerService } from '../data-manager.service';
 })
 export class AdminDataManagerSearchComponent implements OnInit {
 
-  constructor(private service: DataManagerService) { }
+  constructor(private service: DataManagerService,private router:Router) { }
   police: DataManager[] = [];
   pol: DataManager[] = [];
   strUn: string = "";
@@ -31,6 +32,10 @@ export class AdminDataManagerSearchComponent implements OnInit {
       return e1.id.toLowerCase().indexOf(this.strId.toLowerCase()) >= 0 
       else
       return e1.name.toLowerCase().indexOf(this.strNm.toLowerCase()) >= 0 })
+  }
+
+  backtoadmin(){
+    this.router.navigate(['/admin'])
   }
 
 }

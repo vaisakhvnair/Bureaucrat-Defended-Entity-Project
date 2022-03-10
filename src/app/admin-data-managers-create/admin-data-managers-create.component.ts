@@ -21,5 +21,8 @@ export class AdminDataManagersCreateComponent implements OnInit {
     this.service.createDataManager(this.datman).subscribe(data => { this.message = data; });
     this.datman = new DataManager("","","","","","","","");
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

@@ -1,18 +1,19 @@
 <pre><br><h3>       ALL Police</h3></pre>
-<div class="container">
-<table class="table table-hover">
-  <tr>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="UserName" (click)="onSortClickUs()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Password" (click)="onSortClickPs()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Id" (click)="onSortClickId()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Name" (click)="onSortClickNm()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Designation" (click)="onSortClickDs()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Hire date" (click)="onSortClickHd()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Email" (click)="onSortClickEm()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Address" (click)="onSortClickAd()"></th>
-    <th scope="col"><input type="button"class="btn btn-outline-secondary"value="Operations"></th>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div class="container-fluid">
+<table class="table table-sm">
+  <tr class="table-dark">
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="User Name" (click)="onSortClickUs()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Password" (click)="onSortClickPs()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Id" (click)="onSortClickId()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Name" (click)="onSortClickNm()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Designation" (click)="onSortClickDs()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Hire date" (click)="onSortClickHd()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Email" (click)="onSortClickEm()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="Address" (click)="onSortClickAd()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark-disable"value="Operations"></th>
   </tr>
-  <tr *ngFor="let p of police">
+  <tr *ngFor="let p of police" class="table-warning">
     <td>{{ p.userName }}</td>
     <td>{{ p.password}}</td>
     <td>{{ p.id}}</td>
@@ -22,11 +23,11 @@
     <td>{{ p.email }}</td>
     <td>{{ p.address }}</td>
     <td>
-      <button class="btn btn-danger" style="color: black;"   (click)="deletePolice(p.userName)">
+      <button class="btn btn-outline-danger" style="color: black;"   (click)="deletePolice(p.userName)">
         DELETE
       </button>
       &nbsp;&nbsp;
-      <button class="btn btn-info" (click)="editPolice(p.userName)">EDIT</button>
+      <button class="btn btn-outline-info" (click)="editPolice(p.userName)">EDIT</button>
     </td>
   </tr>
 </table>

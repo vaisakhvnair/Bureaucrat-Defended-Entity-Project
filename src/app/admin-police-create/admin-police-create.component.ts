@@ -21,6 +21,8 @@ export class AdminPoliceCreateComponent implements OnInit {
     this.service.createPolice(this.police).subscribe(data => { this.message = data; });
     this.police = new Police("","","","","","","","");
   }
-
+  backtoadmin(){
+  this.router.navigate(['/admin'])
+}
 
 }
