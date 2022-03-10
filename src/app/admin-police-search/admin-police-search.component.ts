@@ -33,5 +33,8 @@ export class AdminPoliceSearchComponent implements OnInit {
       else
       return e1.name.toLowerCase().indexOf(this.strNm.toLowerCase()) >= 0 })
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

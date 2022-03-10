@@ -26,5 +26,7 @@ export class AdminPrisonerCreateComponent implements OnInit {
   back(): void {
     this.location.back();
   }
-
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

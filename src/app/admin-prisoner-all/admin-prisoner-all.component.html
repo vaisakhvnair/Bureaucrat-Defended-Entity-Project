@@ -1,5 +1,9 @@
 <h1>All Prisoners Details</h1>
-Sort:<select [(ngModel)]="sortColumn">
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+
+<div class="form-group">
+  <label for="sel1">Sort:</label>
+<select  class="form-control" style="width: 20%;"  [(ngModel)]="sortColumn">
   <option>pid</option>
   <option>firstName</option>
   <option>dateOfBirth</option>
@@ -16,41 +20,44 @@ Sort:<select [(ngModel)]="sortColumn">
   <option>courtHearing</option>
   <option>cellNumber</option>
 </select>
-
-<select [(ngModel)]="order">
+</div>
+<label for="sel1">Order:</label>
+<select class="form-control" style="width: 20%;" [(ngModel)]="order">
   <option value="1">Ascending Order</option>
   <option value="-1">Descending Order</option>
 </select>
-<input type="button" value="sort" (click)="onSortClick()" />
-<br />
-<br />
-<table border="1">
-  <tr>
-    <td>PrisonerId</td>
-    <td>FirstName</td>
-    <td>LastName</td>
-    <td>MiddleName</td>
-    <td>DateOfBirth</td>
-    <td>Gender</td>
-    <td>Age</td>
-    <td>Address</td>
-    <td>DateOfArrest</td>
-    <td>Case Id</td>
-    <td>CrimeType</td>
-    <td>EyeWitness</td>
-    <td>WitnessAddress</td>
-    <td>ComplaintCount</td>
-    <td>EyeColor</td>
-    <td>HairColor</td>
-    <td>FaceShape</td>
-    <td>RemandDate</td>
-    <td>ReleaseDate</td>
-    <td>CourtHearing</td>
-    <td>Cell Number</td>
-    <td>Operations</td>
+<button class="btn btn-info" value="sort" (click)="onSortClick()">
+  Search<span class="spinner-grow spinner-grow-sm"></span>
+  
+</button>
+
+<table class="table table-sm">
+  <tr class="table-info">
+    <th scope="col">PrisonerId</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">LastName</th>
+    <th scope="col">MiddleName</th>
+    <th scope="col">DateOfBirth</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Age</th>
+    <th scope="col">Address</th>
+    <th scope="col">DateOfArrest</th>
+    <th scope="col">Case Id</th>
+    <th scope="col">CrimeType</th>
+    <th scope="col">EyeWitness</th>
+    <th scope="col">WitnessAddress</th>
+    <th scope="col">ComplaintCount</th>
+    <th scope="col">EyeColor</th>
+    <th scope="col">HairColor</th>
+    <th scope="col">FaceShape</th>
+    <th scope="col">RemandDate</th>
+    <th scope="col">ReleaseDate</th>
+    <th scope="col">CourtHearing</th>
+    <th scope="col">Cell Number</th>
+    <th scope="col">Operations</th>
   </tr>
 
-  <tr *ngFor="let p of pris">
+  <tr *ngFor="let p of pris" class="table-active">
     <td>{{ p.pid }}</td>
     <td>{{ p.firstName }}</td>
     <td>{{ p.lastName }}</td>
@@ -86,4 +93,4 @@ Sort:<select [(ngModel)]="sortColumn">
   </tr>
 </table>
 {{ message.message }}
-<button (click)="back()">Back</button>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>

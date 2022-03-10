@@ -25,5 +25,8 @@ export class AdminDataManagersEditComponent implements OnInit {
       console.log(data), this.router.navigate(['/d-all']);
     });
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

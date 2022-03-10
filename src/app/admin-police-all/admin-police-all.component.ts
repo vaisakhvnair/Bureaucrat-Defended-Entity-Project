@@ -58,6 +58,8 @@ export class AdminPoliceAllComponent implements OnInit {
   onSortClickAd(){
     this.poli = this.police.sort((e1, e2) => {  return (e1["address"].charCodeAt(0) - e2["address"].charCodeAt(0)) * this.order;});
   }
-
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

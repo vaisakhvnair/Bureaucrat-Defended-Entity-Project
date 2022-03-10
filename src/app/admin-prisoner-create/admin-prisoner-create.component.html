@@ -1,9 +1,12 @@
 
 
 <h3>prisoner Register</h3> 
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+
 <form (ngSubmit)="createPrisoner()">
 
-    Prisoner ID : <input type="text" [(ngModel)]="pr.pid" name="pid"/>  <br>
+   
+    <label >Prisoner ID :</label><input type="text" [(ngModel)]="pr.pid" name="pid"/>  <br>
     First Name : <input type="text" [(ngModel)]="pr.firstName" name="firstName"/>  <br>
     Last Name : <input type="text" [(ngModel)]="pr.lastName" name="name"/>  <br>
     Middle Name : <input type="text"  [(ngModel)]="pr.middleName" name="middleName"/>  <br>
@@ -28,4 +31,4 @@
 <input type="submit" value="Register"/> <br>
 </form> 
 {{message.message}} 
-<button (click)="back()">Back</button>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>

@@ -26,4 +26,7 @@ export class AdminPoliceEditComponent implements OnInit {
     });
   }
 
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

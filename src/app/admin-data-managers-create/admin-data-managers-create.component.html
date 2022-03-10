@@ -1,15 +1,35 @@
-<h3>data-managers Register</h3> 
-<form (ngSubmit)="createDataManager()"> 
+<br>
+<h3>DataManagers Register</h3> 
 
-    DataManager User Name : <input type="text" [(ngModel)]="datman.userName" name="userName"/>  
-    password : <input type="text" [(ngModel)]="datman.password" name="password"/>  
-    ID : <input type="text"  [(ngModel)]="datman.id" name="id"/> 
-    Name : <input type="text" [(ngModel)]="datman.name" name="name"/>  
-    Designation : <input type="text"  [(ngModel)]="datman.designation" name="designation"/> 
-    Hire Date : <input type="text"  [(ngModel)]="datman.hiredate" name="hiredate"/> 
-    Email : <input type="text"  [(ngModel)]="datman.email" name="email"/>  
-    Address : <input type="text"  [(ngModel)]="datman.address" name="address"/>  
+<div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 
-<input type="submit" value="Register"/> 
-</form> 
-{{message.message}} 
+<br><div class="container" style="width: 400px; margin-left: 0%;">
+    <div class="form-group">
+    <form (ngSubmit)="createDataManager()">
+        <label>DataManager UserName :</label>
+        <input type="text" class="form-control" [(ngModel)]="datman.userName" name="userName" />
+        <label>Password :</label>
+        <input type="password" class="form-control" [(ngModel)]="datman.password" name="password" />
+        <label>ID :</label>
+        <input type="text" class="form-control" [(ngModel)]="datman.id" name="id" />
+        <label>Name : </label>
+        <input type="text" class="form-control" [(ngModel)]="datman.name" name="name" />
+        <label>Designation :</label>
+        <select class="form-control" [(ngModel)]="datman.designation" name="designation">
+            <option>DM1</option>
+            <option>DM2</option>
+            <option>DM3</option>
+            <option>DM4</option>
+            <option>DM5</option>
+          </select>
+        <label>Hire Date :</label>
+        <input type="date" class="form-control" [(ngModel)]="datman.hiredate" name="hiredate" />
+        <label>Email :</label>
+        <input type="text" class="form-control"id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="datman.email" name="email" />
+        <label>Address :</label>
+        <input type="text" class="form-control" [(ngModel)]="datman.address" name="address" /><br>
+        <input type="submit" value="Register" class="btn btn-success" />
+    </form>
+    {{message.message}}
+</div>
+</div>

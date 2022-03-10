@@ -23,13 +23,13 @@ export class AdminLoginComponent implements OnInit {
     var b = this.sobj.checkUserNameAndPassword(this.username, this.upasswd)
 
     if(b) {
-      this.msg = "successful login";
+      this.msg = "Successful Login";
       setTimeout(() => {
         this.router.navigate(['/admin'])
       },2000)
      
     } else {
-      this.msg = " login failed";
+      this.msg = " login failed !";
       //this.username="";
       this.upasswd="";
       tx1.focus();
