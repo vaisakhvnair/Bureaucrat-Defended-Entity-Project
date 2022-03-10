@@ -44,6 +44,7 @@ import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/dat
 import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/data-manager-prisoner-all.component';
 import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
 import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
+import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
 
 import { FIRAllComponent } from './fir-all/fir-all.component';
 
@@ -66,9 +67,10 @@ const routes: Routes = [
   {path:'dm-p-all',component:DataManagerPrisonerAllComponent},
   {path:'dm-p-add',component:DataManagerPrisonerCreateComponent},
   {path:'dm-p-edit/:id',component:DataManagerPrisonerEditComponent},
+  {path:'dm-p-search',component:DataManagerPrisonerSearchComponent},
   {path:'dm-io-all',component:DataManagerInOutAllComponent},
-  {path:'dm-io-add',component:DataManagerInOutEditComponent},
-  {path:'dm-io-edit/:id',component:DataManagerInOutAddComponent},
+  {path:'dm-io-add',component:DataManagerInOutAddComponent},
+  {path:'dm-io-edit/:id',component:DataManagerInOutEditComponent},
   {path:'dm-d-all',component:DataManagerDutyRegisterAllComponent},
   {path:'dm-d-add',component:DataManagerDutyRegisterCreateComponent},
   {path:'dm-d-edit/:id',component:DataManagerDutyRegisterEditComponent},

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AdminPoliceCreateComponent } from './admin-police-create/admin-police-create.component';
 import { AdminPoliceEditComponent } from './admin-police-edit/admin-police-edit.component';
 import { AdminPoliceAllComponent } from './admin-police-all/admin-police-all.component';
+import { AdminPoliceSearchComponent } from './admin-police-search/admin-police-search.component';
 import { AdminDataManagersCreateComponent } from './admin-data-managers-create/admin-data-managers-create.component';
 import { AdminDataManagersEditComponent } from './admin-data-managers-edit/admin-data-managers-edit.component';
 import { AdminDataManagersAllComponent } from './admin-data-managers-all/admin-data-managers-all.component';
@@ -35,6 +36,23 @@ import { DataManagerDutyRegisterEditComponent } from './data-manager-duty-regist
 import { DataManagerPayrollAllComponent } from './data-manager-payroll-all/data-manager-payroll-all.component';
 import { DataManagerPayrollCreateComponent } from './data-manager-payroll-create/data-manager-payroll-create.component';
 import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/data-manager-payroll-edit.component';
+import { AdminPolicePaySearchEachComponent } from './admin-police-pay-search-each/admin-police-pay-search-each.component';
+import { AdminAutomatedReleaseRegisterComponent } from './admin-automated-release-register/admin-automated-release-register.component';
+import { AdminCaseRegisterComponent } from './admin-case-register/admin-case-register.component';
+import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
+import { AdminDataManagerPaySearchEachComponent } from './admin-data-manager-pay-search-each/admin-data-manager-pay-search-each.component';
+import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
+import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
+import { AdminPolicePayAllComponent } from './admin-police-pay-all/admin-police-pay-all.component';
+import { AdminInOutSearchComponent } from './admin-in-out-search/admin-in-out-search.component';
+import { AdminPayRollAllComponent } from './admin-pay-roll-all/admin-pay-roll-all.component';
+import { AdminPayRollEditComponent } from './admin-pay-roll-edit/admin-pay-roll-edit.component';
+import { AdminPayRollCreateComponent } from './admin-pay-roll-create/admin-pay-roll-create.component';
+import { AdminDataManagerPayAllComponent } from './admin-data-manager-pay-all/admin-data-manager-pay-all.component';
+import { AdminDutyRegisterEditComponent } from './admin-duty-register-edit/admin-duty-register-edit.component';
+import { AdminDutyRegisterAllComponent } from './admin-duty-register-all/admin-duty-register-all.component';
+import { AdminDutyRegisterCreateComponent } from './admin-duty-register-create/admin-duty-register-create.component';
+import { AdminDataManagerSearchComponent } from './admin-data-manager-search/admin-data-manager-search.component';
 
 @NgModule({
   declarations: [
@@ -42,9 +60,27 @@ import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/dat
     AdminPoliceCreateComponent,
     AdminPoliceEditComponent,
     AdminPoliceAllComponent,
+    AdminPoliceSearchComponent,
     AdminDataManagersCreateComponent,
     AdminDataManagersEditComponent,
     AdminDataManagersAllComponent,
+    AdminPolicePaySearchEachComponent,
+    AdminAutomatedReleaseRegisterComponent,
+    AdminCaseRegisterComponent,
+    AdminPrisonerSearchComponent,
+    AdminDataManagerPaySearchEachComponent,
+    AdminCellDetailsComponent,
+    AdminPrisonerReportComponent,
+    AdminPolicePayAllComponent,
+    AdminInOutSearchComponent,
+    AdminPayRollAllComponent,
+    AdminPayRollEditComponent,
+    AdminPayRollCreateComponent,
+    AdminDataManagerPayAllComponent,
+    AdminDutyRegisterEditComponent,
+    AdminDutyRegisterAllComponent,
+    AdminDutyRegisterCreateComponent,
+    AdminDataManagerSearchComponent,
     AdminLoginComponent,
     AdminMainLayoutComponent,
     FIRAllComponent,

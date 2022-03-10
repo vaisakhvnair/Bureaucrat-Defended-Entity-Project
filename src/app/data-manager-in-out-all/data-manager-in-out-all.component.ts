@@ -13,7 +13,7 @@ export class DataManagerInOutAllComponent implements OnInit {
 
   inout: InOut[] = [];
   message: Message = new Message("","");
-  constructor(private service: InOutService, private router: Router,private location: Location) { }
+  constructor(private service: InOutService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllInOut();
@@ -24,6 +24,6 @@ export class DataManagerInOutAllComponent implements OnInit {
   }
  
   editInOut(id: any) {
-    this.router.navigate(['inout-edit', id]);
+    this.router.navigate(['dm-io-edit', id]);
   }
 }
