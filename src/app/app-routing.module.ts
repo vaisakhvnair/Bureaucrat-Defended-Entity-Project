@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminAutomatedReleaseRegisterComponent } from './admin-automated-release-register/admin-automated-release-register.component';
 import { AdminCaseRegisterComponent } from './admin-case-register/admin-case-register.component';
 import { AdminCellDetailsComponent } from './admin-cell-details/admin-cell-details.component';
 import { AdminDataManagerPayAllComponent } from './admin-data-manager-pay-all/admin-data-manager-pay-all.component';
@@ -53,6 +54,9 @@ const routes: Routes = [
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
   {path:'admin-prisonsearch',component:AdminPrisonerSearchComponent},
   {path:'admin-prison-report',component:AdminPrisonerReportComponent},
+
+  {path:'admin-automated-release-register',component:AdminAutomatedReleaseRegisterComponent},
+
   {path:'cell-all',component:AdminCellDetailsComponent},
   {path:'case-all',component:AdminCaseRegisterComponent},
   {path:'pay-all',component:AdminPayRollAllComponent},

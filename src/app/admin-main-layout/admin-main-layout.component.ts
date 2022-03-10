@@ -103,5 +103,10 @@ export class AdminMainLayoutComponent implements OnInit {
 PrisonerReport(){
   this.router.navigate(['/admin-prison-report'])
 }
+AutomatedReleaseRegister(){
+  this.router.navigate(['/admin-automated-release-register'])
+}
+
+
 
 }

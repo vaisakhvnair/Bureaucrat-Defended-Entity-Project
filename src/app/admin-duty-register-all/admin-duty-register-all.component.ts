@@ -14,11 +14,15 @@ export class AdminDutyRegisterAllComponent implements OnInit {
  
 
   datman: DutyRegister[] = [];
+  dat: DutyRegister[] = [];
   message: Message = new Message("","");
+  sortColumn = "";
+  order=1;
   constructor(private service: DutyRegisterService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllDutyRegister();
+    this.dat=this.datman;
 
   }
   getAllDutyRegister() {
@@ -31,4 +35,25 @@ export class AdminDutyRegisterAllComponent implements OnInit {
   editDutyRegister(id: any) {
     this.router.navigate(['duty-edit', id]);
   }
+
+ 
+  onSortClickUn(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["userName"].charCodeAt(0) - e2["userName"].charCodeAt(0)) * this.order;});
+  }
+  onSortClickDt(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["date"].charCodeAt(0) - e2["date"].charCodeAt(0)) * this.order;});
+  }
+  onSortClickTd(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["timeOnDuty"].charCodeAt(0) - e2["timeOnDuty"].charCodeAt(0)) * this.order;});
+  }
+  onSortClickNm(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["name"].charCodeAt(0) - e2["name"].charCodeAt(0)) * this.order;});
+  }
+  onSortClickDp(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["dutyPoint"].charCodeAt(0) - e2["dutyPoint"].charCodeAt(0)) * this.order;});
+  }
+  onSortClickTod(){
+    this.dat = this.datman.sort((e1, e2) => {  return (e1["timeOffDuty"].charCodeAt(0) - e2["timeOffDuty"].charCodeAt(0)) * this.order;});
+  }
+
 }

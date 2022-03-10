@@ -14,11 +14,15 @@ export class AdminInOutAllComponent implements OnInit {
 
 
   inout: InOut[] = [];
+  ino: InOut[] = [];
+  sortColumn = "";
+  order=1;
   message: Message = new Message("","");
   constructor(private service: InOutService, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
     this.getAllInOut();
+    this.ino=this.inout;
 
   }
   getAllInOut() {
@@ -35,5 +39,42 @@ export class AdminInOutAllComponent implements OnInit {
     this.location.back()
   }
 
+  onSortClick() {
+   
 
+    this.ino = this.inout.sort((e1, e2) => {
+
+      if (this.sortColumn == "siNo") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "date") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+
+      if (this.sortColumn == "name") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "dept") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "purpose") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "timeIn") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "timeOut") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      if (this.sortColumn == "dsignature") {
+        return (e1[this.sortColumn].charCodeAt(0) - e2[this.sortColumn].charCodeAt(0)) * this.order;
+      }
+      return 0;
+    });
+
+
+
+
+
+}
 }
