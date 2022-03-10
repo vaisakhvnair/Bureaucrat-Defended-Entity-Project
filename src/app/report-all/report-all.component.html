@@ -1,0 +1,29 @@
+<h2>Generate Report</h2><br><br><br>
+
+   <input type="text"placeholder="Id" name="un" [(ngModel)]="un" (click)="searchPrisonerDetails()"/> 
+<button  (click)="searchPrisonerDetails()">Generate Report</button>
+<br><br><br>
+<h3>Personal Details</h3>
+    
+       <b>PrisonerId :</b> {{pr.pid}}<br><br>
+      <b>FirstName :</b>   {{pr.firstName}}<br><br>
+       <b>LastName :</b>   {{pr.lastName}}<br><br>
+        <b>MiddleName :</b> {{pr.middleName}}<br><br>
+         <b>DateOfBirth :</b>{{pr.dateOfBirth}}<br><br>
+        <b>Gender :</b> {{pr.gender}}<br><br>
+        <b>Age :</b>{{pr.age}}<br><br>
+       <b>Address :</b> {{pr.address}}<br><br>
+       <h3>Crime Details</h3> 
+        <b>DateOfArrest :</b>{{pr.dateOfArrest}}<br><br>
+        <b>CrimeType :</b>{{pr.crimeType}}<br><br>
+        <b>ComplaintCount :</b>{{pr.complaintCount}}<br><br>
+       <b>RemandDate :</b> {{pr.remandDate}}<br><br>
+      <b>CourtHearing :</b>  {{pr.courtHearing}}<br><br>
+        <b>ReleaseDate :</b>{{pr.releaseDate}}<br><br>
+         <h3>Witness Details</h3>
+        <b>EyeWitness :</b>{{pr.eyeWitness}}<br><br>
+       <b>WitnessAddress :</b>{{pr.witnessAddress}}<br><br> 
+      <h3>Prisoner Physical Appearence</h3>
+        <b>EyeColor :</b>{{pr.eyeColor}}<br><br>
+       <b>HairColor :</b>{{pr.hairColor}}<br><br> 
+       <b>FaceShape :</b> {{pr.faceShape}}<br><br>  

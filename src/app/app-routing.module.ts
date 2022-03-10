@@ -49,6 +49,7 @@ import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/d
 import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
 
 import { FIRAllComponent } from './fir-all/fir-all.component';
+import { ReportAllComponent } from './report-all/report-all.component';
 
 
 const routes: Routes = [
@@ -63,6 +64,7 @@ const routes: Routes = [
   {path:'admin',component:AdminMainLayoutComponent},
   {path:'manager',component:DataManagerMainLayoutComponent},
   {path:'fir-all',component:FIRAllComponent},
+  {path:'report',component:ReportAllComponent},
   {path:'inout-all',component:AdminInOutAllComponent},
   {path:'inout-add',component:AdminInOutCreateComponent},
   {path:'inout-edit/:id',component:AdminInOutEditComponent},

@@ -55,6 +55,7 @@ import { AdminDutyRegisterCreateComponent } from './admin-duty-register-create/a
 import { AdminDataManagerSearchComponent } from './admin-data-manager-search/admin-data-manager-search.component';
 import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-police-duty-each.component';
 import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
+import { ReportAllComponent } from './report-all/report-all.component';
 
 @NgModule({
   declarations: [
@@ -108,7 +109,8 @@ import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-eac
     DataManagerDutyRegisterEditComponent,
     DataManagerPayrollAllComponent,
     DataManagerPayrollCreateComponent,
-    DataManagerPayrollEditComponent
+    DataManagerPayrollEditComponent,
+    ReportAllComponent
   ],
   imports: [
     BrowserModule,

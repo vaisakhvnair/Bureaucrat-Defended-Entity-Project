@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataManager } from '../data-manager';
@@ -43,13 +44,13 @@ export class DataManagerLoginComponent implements OnInit {
     var b = this.checkUserNameAndPassword(this.username, this.upasswd)
 
     if(b) {
-      this.msg = "successful login "+this.username +" !";
+      this.msg = "Successful login "+this.username +":)";
       setTimeout(() => {
         this.router.navigate(['/manager'])
       },2000)
      
-    } else {
-      this.msg = " login failed";
+    } else { 
+      this.msg = " login failed...!";
       //this.username="";
       this.upasswd="";
       tx1.focus();

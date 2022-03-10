@@ -113,5 +113,8 @@ PoliceDutyEachSearch(){
 DataManagerDutyEachSearch(){
   this.router.navigate(['/admin-datDuty-eachSearch'])
 }
+fir(){
+  this.router.navigate(['/fir-all'])
+}
 
 }

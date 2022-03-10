@@ -1,14 +1,21 @@
-<form>
-    <div class="form-group" style="width: 20%;">
+
+
+
+    <h1 >DataManager Login</h1>
+    
+    
+    <form>
+    <div class="form-group" style="width: 80%;">
         <label >Username</label>
     <input type="text"  class="form-control" id="exampleInputEmail1" placeholder="Enter username" name="username" [(ngModel)]="username"#tx1 >
 </div>
-<div class="form-group" style="width: 20%;">
-    <label for="exampleInputPassword1">Password</label>
+<div class="form-group" style="width: 80%;">
+    <label>Password</label>
    <input type="password"  class="form-control" placeholder="Enter password" name="upasswd" [(ngModel)]="upasswd">
 </div>
    <input type="submit" style="background-color: palevioletred;" class="btn btn-primary" value="login" (click)="getValidation(tx1)">
    
     </form>
+    <div>
     <hr>
-    {{msg}}
+    <div class="ms"><b>{{msg}}</b></div> 
