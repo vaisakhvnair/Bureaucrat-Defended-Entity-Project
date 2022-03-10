@@ -1,15 +1,18 @@
-<p>admin-duty-register-all works!</p>
+
 <h3>Duty Register</h3>
 
 <table border="2">
   <tr>
-    <td>date</td>
-    <td>timeOnDuty</td>
-    <td>Name</td>
-    <td>dutyPoint</td>
-    <td>timeOffDuty</td>
+    <td><input type="button" value="userName" (click)="onSortClickUn()"></td>
+    <td><input type="button" value="date" (click)="onSortClickDt()"></td>
+    <td><input type="button" value="timeOnDuty" (click)="onSortClickTd()"></td>
+    <td><input type="button" value="Name" (click)="onSortClickNm()"></td>
+    <td><input type="button" value="dutyPoint" (click)="onSortClickDp()"></td>
+    <td><input type="button" value="timeOffDuty" (click)="onSortClickTod()"></td>
+    <td><input type="button" value="Operations"></td>
   </tr>
   <tr *ngFor="let p of datman">
+    <td>{{ p.userName }}</td>
     <td>{{ p.date }}</td>
     <td>{{ p.timeOnDuty}}</td>
     <td>{{ p.name}}</td>

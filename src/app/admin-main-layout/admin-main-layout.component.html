@@ -4,6 +4,10 @@
 <button (click)="viewPolice()">view police</button>
 <button (click)="addPolice()">Add police</button>
 <button (click)="editPolice()">Edit police</button>
+&nbsp;&nbsp;
+<button (click)="PoliceSearch()">Search police</button>
+<button (click)="DataManagerSearch()">Search DataManager</button>
+&nbsp;&nbsp;
 <button (click)="viewDataManager()">view DataManager</button>
 <button (click)="addDataManager()">Add DataManager</button>
 <button (click)="editDataManager()">Edit DataManager</button>
@@ -12,6 +16,9 @@
     <button (click)="viewInOutReg()">view Inout Register</button>
     <button (click)="addInOutReg()">Add Inout Register</button>
     <button (click)="editInOutReg()">Edit Inout Register</button>
+    &nbsp;&nbsp;
+    <button (click)="SearchInOutReg()">Search Inout Register</button>
+    &nbsp;&nbsp;
 </div>
 <br>
 <hr>
@@ -19,6 +26,9 @@
     <button (click)="viewPrisonerReg()">view Prisoner Register</button>
     <button (click)="addPrisonerReg()">Add Prisoner Register</button>
     <button (click)="editPrisonerReg()">Edit Prisoner Register</button> 
+    &nbsp;
+    <button (click)="SearchPrisonerReg()">Search Prisoner Register</button>
+    &nbsp;
 </div>
 <div>
     <button (click)="viewCell()">view Cell</button>
@@ -30,11 +40,25 @@
     <button (click)="editPayReg()">Edit Pay Roll Register</button> 
 </div>
 <div>
-    <button (click)="policepay()">view PolicePAy Register</button>
+    <button (click)="policepay()">PayRoll For Police</button>
+    <button (click)="policepaySearch()">Search PayRoll Each Police</button>
+    
+</div>
+<div>
+    <button (click)="datpay()">PayRoll For DataManager</button>
+    <button (click)="datpaySearch()">Search PayRoll Each DataManager</button>
     
 </div>
 <div>
     <button (click)="viewDutyReg()">view Duty Register</button>
     <button (click)="addDutyReg()">Add Duty Register</button>
     <button (click)="editDutyReg()">Edit Duty Register</button> 
+</div>
+<br><br>
+<div>
+    <button (click)="PrisonerReport()">Admin Prisoner Report</button>
+</div>
+<br><br>
+<div>
+    <button (click)="AutomatedReleaseRegister()">Automated Release Register</button>
 </div>

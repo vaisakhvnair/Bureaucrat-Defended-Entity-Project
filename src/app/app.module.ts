@@ -54,6 +54,7 @@ import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/dat
     AdminPrisonerAllComponent,
     AdminPrisonerCreateComponent,
     AdminPrisonerEditComponent,
+<<<<<<< HEAD
     DataManagerPrisonerCreateComponent,
     DataManagerPrisonerEditComponent,
     DataManagerPrisonerAllComponent,
@@ -69,6 +70,26 @@ import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/dat
     DataManagerPayrollAllComponent,
     DataManagerPayrollCreateComponent,
     DataManagerPayrollEditComponent
+=======
+    AdminCellDetailsComponent,
+    AdminCaseRegisterComponent,
+    AdminPayRollAllComponent,
+    AdminPayRollCreateComponent,
+    AdminPayRollEditComponent,
+    AdminPolicePayAllComponent,
+    AdminDutyRegisterAllComponent,
+    AdminDutyRegisterCreateComponent,
+    AdminDutyRegisterEditComponent,
+    AdminPolicePaySearchEachComponent,
+    AdminDataManagerPaySearchEachComponent,
+    AdminDataManagerPayAllComponent,
+    AdminDataManagerSearchComponent,
+    AdminPoliceSearchComponent,
+    AdminInOutSearchComponent,
+    AdminPrisonerSearchComponent,
+    AdminPrisonerReportComponent,
+    AdminAutomatedReleaseRegisterComponent
+>>>>>>> d55a6d2b7df8689752328933e688c1b2e4f36f4d
   ],
   imports: [
     BrowserModule,

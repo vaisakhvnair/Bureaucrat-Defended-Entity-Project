@@ -2,14 +2,15 @@
 
 <table border="2">
   <tr>
-    <td>UserName</td>
-    <td>Password</td>
-    <td>Id</td>
-    <td>Name</td>
-    <td>Designation</td>
-    <td>Hiredate</td>
-    <td>Email</td>
-    <td>Address</td>
+    <td><input type="button"value="UserName" (click)="onSortClickUs()"></td>
+    <td><input type="button"value="Password" (click)="onSortClickPs()"></td>
+    <td><input type="button"value="Id" (click)="onSortClickId()"></td>
+    <td><input type="button"value="Name" (click)="onSortClickNm()"></td>
+    <td><input type="button"value="Designation" (click)="onSortClickDs()"></td>
+    <td><input type="button"value="Hire date" (click)="onSortClickHd()"></td>
+    <td><input type="button"value="Email" (click)="onSortClickEm()"></td>
+    <td><input type="button"value="Address" (click)="onSortClickAd()"></td>
+    <td><input type="button"value="Operations"></td>
   </tr>
   <tr *ngFor="let p of police">
     <td>{{ p.userName }}</td>

@@ -1,4 +1,29 @@
 <h1>All Prisoners Details</h1>
+Sort:<select [(ngModel)]="sortColumn">
+  <option>pid</option>
+  <option>firstName</option>
+  <option>dateOfBirth</option>
+  <option>gender</option>
+  <option>age</option>
+  <option>address</option>
+  <option>caseId</option>
+  <option>crimeType</option>
+  <option>eyeWitness</option>
+  <option>witnessAddress</option>
+  <option>complaintCount</option>
+  <option>remandDate</option>
+  <option>releaseDate</option>
+  <option>courtHearing</option>
+  <option>cellNumber</option>
+</select>
+
+<select [(ngModel)]="order">
+  <option value="1">Ascending Order</option>
+  <option value="-1">Descending Order</option>
+</select>
+<input type="button" value="sort" (click)="onSortClick()" />
+<br />
+<br />
 <table border="1">
   <tr>
     <td>PrisonerId</td>
@@ -22,6 +47,7 @@
     <td>ReleaseDate</td>
     <td>CourtHearing</td>
     <td>Cell Number</td>
+    <td>Operations</td>
   </tr>
 
   <tr *ngFor="let p of pris">

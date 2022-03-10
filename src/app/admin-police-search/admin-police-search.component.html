@@ -1,0 +1,31 @@
+
+<br>
+<h2>Police Search Form </h2>
+<br>
+<input type="text" class="form-control" placeholder="Search by UserName,ID,Name" [(ngModel)]="strUn"
+ [(ngModel)]="strId" [(ngModel)]="strNm"   (click)="search()">&nbsp;&nbsp;
+<input type="button" class="btn btn-info" value="Search" (click)="search()">
+<br>
+<table border="1">
+    <tr>
+        <td>UserName</td>
+        <td>Password</td>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Designation</td>
+        <td>Hiredate</td>
+        <td>Email</td>
+        <td>Address</td>
+    </tr>
+    <tr *ngFor="let p of police">
+        <td>{{ p.userName }}</td>
+    <td>{{ p.password}}</td>
+    <td>{{ p.id}}</td>
+    <td>{{ p.name}}</td>
+    <td>{{ p.designation}}</td>
+    <td>{{ p.hiredate}}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.address }}</td>
+    </tr>
+  
+   </table>

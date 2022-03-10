@@ -2,12 +2,13 @@
 
 <table border="2">
   <tr>
-    <td>UserName</td>
-    <td>Pay Roll Id</td>
-    <td>Name</td>
-    <td>Regular Salary</td>
-    <td>Part Time Salary</td>
-    <td>Annual Salary</td>
+    <td><input type="button" value="UserName" (click)="onSortClickUm()"></td>
+    <td><input type="button" value="PayRoll Id" (click)="onSortClickPd()"></td>
+    <td><input type="button" value="Name" (click)="onSortClickNm()"></td>
+    <td><input type="button" value="Regular Salary" (click)="onSortClickRs()"></td>
+    <td><input type="button" value="Part Time Salary" (click)="onSortClickPs()"></td>
+    <td><input type="button" value="Annual Salary" (click)="onSortClickAs()"></td>
+    <td><input type="button" value="Operations"></td>
   </tr>
   <tr *ngFor="let p of datman">
     <td>{{ p.userName }}</td>

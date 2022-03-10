@@ -1,0 +1,31 @@
+
+<br>
+<h2>InOut Search Form </h2>
+<br>
+<input type="text" class="form-control" placeholder="Search by SiNo,Date,Name,Department" [(ngModel)]="strUn"
+ [(ngModel)]="strId" [(ngModel)]="strNm"  [(ngModel)]="strDe" (click)="search()">&nbsp;&nbsp;
+<input type="button" class="btn btn-info" value="Search" (click)="search()">
+<br>
+<table border="1">
+    <tr>
+        <td>SI NO</td>
+        <td>Date</td>
+        <td>Name</td>
+        <td>Department</td>
+        <td>Purpose</td>
+        <td>Time In</td>
+        <td>Time Out</td>
+        <td>Digital Signature</td>
+    </tr>
+    <tr *ngFor="let i of police">
+        <td>{{ i.siNo }}</td>
+        <td>{{ i.date }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.dept }}</td>
+        <td>{{ i.purpose }}</td>
+        <td>{{ i.timeIn }}</td>
+        <td>{{ i.timeOut }}</td>
+        <td>{{ i.dsignature }}</td>
+    </tr>
+  
+   </table>
