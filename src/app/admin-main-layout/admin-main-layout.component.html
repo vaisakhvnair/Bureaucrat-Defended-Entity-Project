@@ -5,9 +5,9 @@
 <div id="logout-btn" (click)="homelogout()"><button class="btn btn-danger" (click)="homelogout()">Log Out</button></div>
 <br>
 <hr>
-<div style="border: 1px dotted black;">
-    <pre>                     <h3>Police And DataManager Operations </h3></pre>
-    <div style="float: left; border: 2px solid red;">
+<div style="border: 0.5px solid black;">
+    <pre>                     <h3>All Operations </h3></pre>
+    <div style="float: left; border: 2px solid rgb(15, 15, 15);">
         <div class="btn-group-vertical-lg" style="float: left; padding: 5px;">
 
 
@@ -35,7 +35,7 @@
     </div>
     <h5></h5>
 
-    <div style="float: right; border: 2px solid red;">
+    <div style="float: right; border: 2px solid rgb(15, 12, 12);">
 
         <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
             <button (click)="viewPrisonerReg()" class="btn btn-info">view Prisoner Register</button>&nbsp;
@@ -45,6 +45,7 @@
         <div class="btn-group-vertical" style="float: left;padding: 5px;">
             <button (click)="SearchPrisonerReg()" class="btn btn-info">Search Prisoner Register</button>
         </div>
+
         <br>
         <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
             <button (click)="viewInOutReg()" class="btn btn-info">view Inout Register</button>&nbsp;
@@ -90,7 +91,9 @@
 
         <div class="btn-group-vertical" style="float: left;padding: 5px;">
             <button (click)="PrisonerReport()" class="btn btn-info">Admin Prisoner Report</button>
+            <button (click)="nominalRollsAdmin()" class="btn btn-info">Nominal Rolls</button>
         </div>
+
 
         <div class="btn-group-vertical" style="float: left;padding: 5px;">
             <button (click)="AutomatedReleaseRegister()" class="btn btn-info">Automated Release Register</button>

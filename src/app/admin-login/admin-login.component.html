@@ -2,17 +2,17 @@
 <br><br><br>
 
 
-    <div class="container" style="border: 2px solid rgba(2, 0, 0, 0.089); width: 400px; ">
+    <div class="container" style="border: 2px solid rgba(2, 0, 0, 0.089); width: 400px; background-color: #9AB8DB; ">
         <h2>ADMINISTRATOR LOGIN</h2>
         <br><br>
         <form>
-            <label>Username:</label>
+            <label>Username :</label>
             <input type="text" name="username" [(ngModel)]="username" #tx1>
             <br><br>
-            <label>Password:</label>
+            <label>Password :</label>
             <input type="password" name="upasswd" [(ngModel)]="upasswd">
             <br><br>
-            <input style="width: 150px; margin-left: 90px;" class="btn btn-primary " type="submit" value="Log In" (click)="getValidation(tx1)">
+            <input style="width: 150px; margin-left: 90px;" class="btn btn-secondary " type="submit" value="Log In" (click)="getValidation(tx1)">
         </form>
         <hr>
         <div>{{msg}}</div>

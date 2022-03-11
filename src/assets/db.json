@@ -1,0 +1,16 @@
+[
+    {"pid":"1003",
+      "photoloc":"https://th.bing.com/th/id/OIP.T1oW1SG1LPgJ2WgpqLRrbgAAAA?pid=ImgDet&rs=1",
+      "lphotoloc":"https://th.bing.com/th/id/OIP.T1oW1SG1LPgJ2WgpqLRrbgAAAA?pid=ImgDet&rs=1",
+      "rphotoloc":"https://th.bing.com/th/id/OIP.T1oW1SG1LPgJ2WgpqLRrbgAAAA?pid=ImgDet&rs=1",
+      "bphotoloc":"https://th.bing.com/th/id/OIP.T1oW1SG1LPgJ2WgpqLRrbgAAAA?pid=ImgDet&rs=1"
+    },
+
+    {"pid":"1111",
+        "photoloc":"assets/img/1.jpg",
+        "lphotoloc":"assets/img/1.jpg",
+        "rphotoloc":"assets/img/1.jpg",
+        "bphotoloc":"assets/img/1.jpg"
+      }
+
+]

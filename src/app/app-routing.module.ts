@@ -31,6 +31,7 @@ import { AdminPolicePaySearchEachComponent } from './admin-police-pay-search-eac
 import { AdminPoliceSearchComponent } from './admin-police-search/admin-police-search.component';
 import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-all.component';
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
+import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
 import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
 import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
@@ -76,6 +77,7 @@ const routes: Routes = [
   {path:'admin-d-search',component:AdminDataManagerSearchComponent},
   {path:'admin-polDuty-eachSearch',component:AdminPoliceDutyEachComponent},
   {path:'admin-datDuty-eachSearch',component:AdminDataManagerDutyEachComponent},
+  {path:'admin-prisoner-eachSearch',component:AdminPrisonerEachSearchComponent},
 ];
 
 @NgModule({
