@@ -56,6 +56,7 @@ import { AdminDataManagerSearchComponent } from './admin-data-manager-search/adm
 import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-police-duty-each.component';
 import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 import { ReportAllComponent } from './report-all/report-all.component';
+import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { ReportAllComponent } from './report-all/report-all.component';
     AdminDataManagerSearchComponent,
     AdminPoliceDutyEachComponent,
     AdminDataManagerDutyEachComponent,
+    AdminPrisonerEachSearchComponent,
     AdminLoginComponent,
     AdminMainLayoutComponent,
     FIRAllComponent,

@@ -1,16 +1,18 @@
+<div>
 <h3>ALL Pay Roll</h3>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 
-<table border="2">
-  <tr>
-    <td><input type="button" value="UserName" (click)="onSortClickUm()"></td>
-    <td><input type="button" value="PayRoll Id" (click)="onSortClickPd()"></td>
-    <td><input type="button" value="Name" (click)="onSortClickNm()"></td>
-    <td><input type="button" value="Regular Salary" (click)="onSortClickRs()"></td>
-    <td><input type="button" value="Part Time Salary" (click)="onSortClickPs()"></td>
-    <td><input type="button" value="Annual Salary" (click)="onSortClickAs()"></td>
-    <td><input type="button" value="Operations"></td>
+<table class="table table-sm">
+  <tr class="table-success">
+    <th scope="col"><input type="button" class="btn btn-outline-dark"value="UserName" (click)="onSortClickUm()"></th>
+    <th scope="col"><input type="button" class="btn btn-outline-dark"value="PayRoll Id" (click)="onSortClickPd()"></th>
+    <th scope="col"><input type="button" class="btn btn-outline-dark"value="Name" (click)="onSortClickNm()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-dark" value="Regular Salary" (click)="onSortClickRs()"></th>
+    <th scope="col"><input type="button" class="btn btn-outline-dark"value="Part Time Salary" (click)="onSortClickPs()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-dark" value="Annual Salary" (click)="onSortClickAs()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-dark-disable" value="Operations"></th>
   </tr>
-  <tr *ngFor="let p of datman">
+  <tr *ngFor="let p of datman" class="table-warning">
     <td>{{ p.userName }}</td>
     <td>{{ p.pid}}</td>
     <td>{{ p.name}}</td>
@@ -27,3 +29,6 @@
   </tr>
 </table>
 {{ message.message }}
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

@@ -116,6 +116,9 @@ DataManagerDutyEachSearch(){
 fir(){
   this.router.navigate(['/fir-all'])
 }
+nominalRollsAdmin(){
+  this.router.navigate(['/admin-prisoner-eachSearch'])
+}
 
 homelogout(){
   this.router.navigate(['/'])

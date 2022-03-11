@@ -1,0 +1,53 @@
+
+<div>
+    <br>
+    <h2>Nominal Rolls</h2><br>
+    <div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+        (click)="backtoadmin()">Back To Admin</button></div>
+  
+    <input type="text" class="form-control" style="width: 400px;"
+      placeholder="Enter Prisoner Id to get Report of Prisoner" name="un" [(ngModel)]="un" (click)="grtOne()" />
+    <button class="btn btn-info" (click)="grtOne()" value="Search">
+      Get Report
+      <span class="spinner-grow spinner-grow-sm"></span>
+    </button>
+  
+    <br>
+    <br>
+    <div>
+      <pre>
+      <h2>                               Prisoner RollOff</h2>     
+                                                                                                                                                 <img src={{pic}} alt="image">
+    PrisonerId : {{ p.pid }} <br>
+    FirstName : {{ p.firstName }} <br>
+    LastName : {{ p.lastName }} <br>
+    MiddleName : {{ p.middleName }} <br>
+    DateOfBirth : {{ p.dateOfBirth }} <br>
+    Gender : {{ p.gender }} <br>
+    Age : {{ p.age }} <br>
+    Address : {{ p.address }} <br>
+    DateOfArrest : {{ p.dateOfArrest}} <br>
+    Case Id : {{ p.caseId }} <br>
+    CrimeType : {{ p.crimeType }} <br>
+    ComplaintCount : {{ p.complaintCount }} <br>
+    EyeColor : {{ p.eyeColor }} <br>
+    HairColor : {{ p.hairColor }} <br>
+    FaceShape : {{ p.faceShape }} <br>
+    Cell Number : {{ p.cellNumber }} <br>
+
+
+    <label>Prisoner Front Image</label><img src={{pic}} alt="Front image">      <label>Prisoner Left Image</label><img src={{lpic}} alt="Image image">
+    
+    <label>Prisoner Right Image</label><img src={{rpic}} alt="Right image">     <label>Prisoner Back Image</label><img src={{bpic}} alt="Back image">
+   
+
+  </pre>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  </div>

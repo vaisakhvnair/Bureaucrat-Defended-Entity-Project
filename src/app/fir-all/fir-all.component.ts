@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FIR } from '../fir';
@@ -16,7 +17,7 @@ export class FIRAllComponent implements OnInit {
   fire: FIR = new FIR("","","","","","","","");
   un:string="";
   message: Message = new Message("","");
-  constructor(private service: FIRService, private router: Router, private activeRouter: ActivatedRoute) { }
+  constructor(private service: FIRService, private router: Router, private activeRouter: ActivatedRoute,private location: Location) { }
 
   ngOnInit(): void {
     this.getAllFIR();
@@ -43,6 +44,12 @@ export class FIRAllComponent implements OnInit {
     this.service.updateFIR(this.fire).subscribe(data => {
       console.log(data), this.router.navigate(['/fir-all']);
     });
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
+  back(): void {
+    this.location.back()
   }
 
 

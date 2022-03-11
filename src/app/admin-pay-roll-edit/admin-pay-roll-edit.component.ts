@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PayRoll } from '../pay-roll';
@@ -14,7 +15,7 @@ export class AdminPayRollEditComponent implements OnInit {
   datman: PayRoll = new PayRoll("","","","","","");
   un:string="";
 
-  constructor(private service: PayRollService, private activeRouter: ActivatedRoute, private router: Router) { }
+  constructor(private service: PayRollService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
     this.datman = new PayRoll("","","","","","");
@@ -26,5 +27,10 @@ export class AdminPayRollEditComponent implements OnInit {
       console.log(data), this.router.navigate(['/pay-all']);
     });
   }
-
+  back(): void {
+    this.location.back()
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

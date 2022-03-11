@@ -1,30 +1,96 @@
+<div>
+<br>
+<h3>Prisoner Update</h3> 
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div class="container"><br>
+<form (ngSubmit)="updatePrisoner()">
+
+   
+    <label >Prisoner ID :</label> <input type="text"class="form-control" [(ngModel)]="pr.pid" name="pid"/>  <br>
+    <label > First Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.firstName" name="firstName"/>  <br>
+    <label > Last Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.lastName" name="name"/>  <br>
+    <label >Middle Name :</label> <input type="text"class="form-control"  [(ngModel)]="pr.middleName" name="middleName"/>  <br>
+    <label > Date Of Birth :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfBirth" name="dateOfBirth"/>  <br>
+
+    <label >Gender :</label><br>
+    <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Male"/>Male
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Female"/>Female
+        </label>
+      </div>
+      <div class="form-check-inline disabled">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Others"/>Others
+        </label>
+      </div><br><br>
+
+    <label >Age :</label> <input type="number" class="form-control" [(ngModel)]="pr.age" name="age"/>  <br>
+    <label >Address :</label> <input type="text" class="form-control" [(ngModel)]="pr.address" name="address"/>  <br>
+    <label >DateOfArrest :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfArrest" name="dateOfArrest"/>  <br>
+    <label >Case ID :</label> <input type="text"class="form-control"  [(ngModel)]="pr.caseId" name="caseId"/>  <br>
+
+    <div class="form-group">
+        <label >CrimeType :</label>
+        <select class="form-control" [(ngModel)]="pr.crimeType" name="crimeType">
+          <option>Murder</option>
+          <option>Theft</option>
+          <option>Burglary</option>
+          <option>Rape</option>
+          <option>Terrorism</option>
+          <option>Sexual harassment</option>
+          <option>Child abuse</option>
+        </select>
+      </div>
+
+    <label >EyeWitness :</label> <input type="text" class="form-control" [(ngModel)]="pr.eyeWitness" name="eyeWitness"/>  <br>
+    <label >WitnessAddress :</label> <input type="text" class="form-control"  [(ngModel)]="pr.witnessAddress" name="witnessAddress"/>  <br>
+    <label >ComplaintCount :</label> <input type="number" class="form-control" [(ngModel)]="pr.complaintCount" name="complaintCount"/>  <br>
 
 
-<h3>prisoner Update</h3> 
-<form (ngSubmit)="updatePrisoner()"> 
+    <div class="form-group">
+        <label for="sel1">EyeColor :</label>
+        <select class="form-control" [(ngModel)]="pr.eyeColor" name="eyeColor">
+          <option>Black</option>
+          <option>Brown</option>
+          <option>Blue</option>
+          <option>Grey</option>
+        </select>
+      </div>
 
-    Prisoner ID : <input type="text" [(ngModel)]="pr.pid" name="pid"/>  <br>
-    First Name : <input type="text" [(ngModel)]="pr.firstName" name="firstName"/>  <br>
-    Last Name : <input type="text" [(ngModel)]="pr.lastName" name="name"/>  <br>
-    Middle Name : <input type="text"  [(ngModel)]="pr.middleName" name="middleName"/>  <br>
-    Date Of Birth : <input type="text"  [(ngModel)]="pr.dateOfBirth" name="dateOfBirth"/>  <br>
-    Gender : <input type="text"  [(ngModel)]="pr.gender" name="gender"/>  <br>
-    Age : <input type="text"  [(ngModel)]="pr.age" name="age"/>  <br>
-    Address : <input type="text"  [(ngModel)]="pr.address" name="address"/>  <br>
-    dateOfArrest : <input type="text"  [(ngModel)]="pr.dateOfArrest" name="dateOfArrest"/>  <br>
-    Case ID : <input type="text"  [(ngModel)]="pr.caseId" name="caseId"/>  <br>
-    crimeType : <input type="text"  [(ngModel)]="pr.crimeType" name="crimeType"/>  <br>
-    eyeWitness : <input type="text"  [(ngModel)]="pr.eyeWitness" name="eyeWitness"/>  <br>
-    witnessAddress : <input type="text"  [(ngModel)]="pr.witnessAddress" name="witnessAddress"/>  <br>
-    complaintCount : <input type="text"  [(ngModel)]="pr.complaintCount" name="complaintCount"/>  <br>
-    eyeColor : <input type="text"  [(ngModel)]="pr.eyeColor" name="eyeColor"/>  <br>
-    hairColor : <input type="text"  [(ngModel)]="pr.hairColor" name="hairColor"/>  <br>
-    faceShape : <input type="text"  [(ngModel)]="pr.faceShape" name="faceShape"/>  <br>
-    remandDate : <input type="date"  [(ngModel)]="pr.remandDate" name="remandDate"/>  <br>
-    releaseDate : <input type="date"  [(ngModel)]="pr.releaseDate" name="releaseDate"/>  <br>
-    courtHearing : <input type="date"  [(ngModel)]="pr.courtHearing" name="courtHearing"/>  <br>
-    Cell Number : <input type="text"  [(ngModel)]="pr.cellNumber" name="cellNumber"/>  <br>
+    <div class="form-group">
+        <label for="sel1">HairColor :</label>
+        <select class="form-control" [(ngModel)]="pr.hairColor" name="hairColor">
+          <option>Black</option>
+          <option>White</option>
+          <option>Red</option>
+          <option>Grey</option>
+        </select>
+      </div>
 
-<input type="submit" value="Register"/> <br>
+    <div class="form-group">
+        <label for="sel1">FaceShape :</label>
+        <select class="form-control"  [(ngModel)]="pr.faceShape" name="faceShape">
+          <option>Round</option>
+          <option>Oval</option>
+          <option>Square</option>
+          <option>Oblong</option>
+          <option>Daimond</option>
+        </select>
+      </div>
+
+    <label >RemandDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.remandDate" name="remandDate"/>  <br>
+    <label >ReleaseDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.releaseDate" name="releaseDate"/>  <br>
+    <label >CourtHearing :</label> <input type="date" class="form-control" [(ngModel)]="pr.courtHearing" name="courtHearing"/>  <br>
+    <label > Cell Number :</label> <input type="text" class="form-control" [(ngModel)]="pr.cellNumber" name="cellNumber"/>  <br>
+
+<input type="submit" class="btn btn-success" value="Update"/> <br>
 </form> 
-<button (click)="back()">Back</button>
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>
+</div>

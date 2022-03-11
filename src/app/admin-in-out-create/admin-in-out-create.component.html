@@ -1,17 +1,30 @@
 
-<h3>data-managers Register</h3> 
+<div><br>
+<h3>In-Out Register Create</h3> 
+<div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div class="form-group">
 <form (ngSubmit)="createInOut()"> 
+    <label> SI NO :</label>
+    <input type="number"class="form-control" [(ngModel)]="inout.siNo" name="siNo"/>
+    <label> Date : </label>
+   <input type="date"class="form-control" [(ngModel)]="inout.date" name="date"/>
+    <label>Name : </label>
+    <input type="text"class="form-control" [(ngModel)]="inout.name" name="name"/> 
+    <label> Department : </label>
+   <input type="text" class="form-control" [(ngModel)]="inout.dept" name="dept"/> 
+    <label>Purpose : </label>
+    <input type="text" class="form-control" [(ngModel)]="inout.purpose" name="purpose"/> 
+    <label>Time In : </label>
+    <input type="time" class="form-control" [(ngModel)]="inout.timeIn" name="timeIn"/> 
+    <label> Time Out : </label>
+    <input type="time" class="form-control" [(ngModel)]="inout.timeOut" name="timeOut"/> 
+    <label> Digital Signature :</label>
+     <input type="text" class="form-control" [(ngModel)]="inout.dsignature" name="dsignature"/><br>
 
-    SI NO : <input type="text" [(ngModel)]="inout.siNo" name="siNo"/>  <br>
-    Date : <input type="text" [(ngModel)]="inout.date" name="date"/>  <br>
-    Name : <input type="text" [(ngModel)]="inout.name" name="name"/>  <br>
-    Department : <input type="text"  [(ngModel)]="inout.dept" name="dept"/>  <br>
-    Purpose : <input type="text"  [(ngModel)]="inout.purpose" name="purpose"/>  <br>
-    Time In : <input type="text"  [(ngModel)]="inout.timeIn" name="timeIn"/>  <br>
-    Time Out : <input type="text"  [(ngModel)]="inout.timeOut" name="timeOut"/>  <br>
-    Digital Signature : <input type="text"  [(ngModel)]="inout.dsignature" name="dsignature"/>  <br>
-
-<input type="submit" value="Register"/> <br>
+<input type="submit" value="Register" class="btn btn-success"/> <br>
 </form> 
 {{message.message}} 
-<button (click)="back()">Back</button>
+<br>
+<button (click)="back()" class="btn btn-info">Back</button>
+</div> 
+</div>

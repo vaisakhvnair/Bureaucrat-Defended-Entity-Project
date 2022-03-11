@@ -23,6 +23,7 @@ export class DataManagerLoginComponent implements OnInit {
   ngOnInit(): void {
     
   }
+  
   checkUserNameAndPassword(uname:string,passwrd:string):boolean{
     this.sobj.getAllDataManager().subscribe(data=>{
       this.datam=data;

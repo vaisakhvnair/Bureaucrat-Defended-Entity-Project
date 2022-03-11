@@ -1,31 +1,36 @@
+<div>
+  <br>
 <h2>Admin Police Duty search</h2>
+<div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 
 <input
-  type="text"
+  type="text"class="form-control" style="width: 450px;"
   placeholder="Enter Username to get Duty Details of Employee"
   name="un"
   [(ngModel)]="un"
   (click)="grtOne()"
-/><button (click)="grtOne()">click</button>
+/>  <button class="btn btn-info" (click)="grtOne()">
+  Search<span class="spinner-grow spinner-grow-sm"></span>
+</button>
 <br>
 <br>
-
-<table border="2">
-  <tr>
-    <td>User Name</td>
-    <td>Password</td>
-    <td>Police Id</td>
-    <td>Name</td>
-    <td>Designation</td>
-    <td>Hire Date</td>
-    <td>Email</td>
-    <td>Address</td>
-    <td>Date</td>
-    <td>Time On Duty</td>
-    <td>Duty Point</td>
-    <td>Time Off Duty</td>
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tr class="table-primary">
+    <th scope="col">User Name</th>
+    <th scope="col">Password</th>
+    <th scope="col">Police Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Designation</th>
+    <th scope="col">Hire Date</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Date</th>
+    <th scope="col">Time On Duty</th>
+    <th scope="col">Duty Point</th>
+    <th scope="col">Time Off Duty</th>
   </tr>
-  <tr>
+  <tr class="table-active">
     <td>{{ rpp.police.userName }}</td>
     <td>{{ rpp.police.password }}</td>
     <td>{{ rpp.police.id }}</td>
@@ -40,3 +45,7 @@
     <td>{{ rpp.duty.timeOffDuty }}</td>
   </tr>
 </table>
+</div>
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

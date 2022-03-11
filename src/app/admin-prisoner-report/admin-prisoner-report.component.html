@@ -1,42 +1,50 @@
-<h2>Admin Prisoner Report</h2>
+<div>
+  <br>
+  <h2>Admin Prisoner Report</h2><br>
+  <div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+      (click)="backtoadmin()">Back To Admin</button></div>
 
-<input
-  type="text"
-  placeholder="Enter PId to get Report of Prisoner"
-  name="un"
-  [(ngModel)]="un"
-  (click)="grtOne()"
-/><button (click)="grtOne()">click</button>
-<br>
-<br>
+  <input type="text" class="form-control" style="width: 400px;"
+    placeholder="Enter Prisoner Id to get Report of Prisoner" name="un" [(ngModel)]="un" (click)="grtOne()" />
+  <button class="btn btn-info" (click)="grtOne()" value="Search">
+    Get Report
+    <span class="spinner-grow spinner-grow-sm"></span>
+  </button>
 
-    PrisonerId:{{ p.pid }}  <br>
-    FirstName:{{ p.firstName }}  <br>
-    LastName:{{ p.lastName }}  <br>
-    MiddleName:{{ p.middleName }}  <br>
-    DateOfBirth:{{ p.dateOfBirth }}  <br>
-    Gender:{{ p.gender }}  <br>
-    Age:{{ p.age }}  <br>
-    Address:{{ p.address }}  <br>
-    DateOfArrest:{{ p.dateOfArrest }}  <br>
-    Case Id:{{ p.caseId }}  <br>
-    CrimeType:{{ p.crimeType }}  <br>
-    EyeWitness:{{ p.eyeWitness }}  <br>
-    WitnessAddress:{{ p.witnessAddress }}  <br>
-    ComplaintCount:{{ p.complaintCount }}  <br>
-    EyeColor:{{ p.eyeColor }}  <br>
-    HairColor:{{ p.hairColor }}  <br>
-    FaceShape:{{ p.faceShape }}  <br>
-    RemandDate:{{ p.remandDate }}  <br>
-    ReleaseDate:{{ p.releaseDate }}  <br>
-    CourtHearing:{{ p.courtHearing }}  <br>
-    Cell Number:{{ p.cellNumber }}  <br>
-  
+  <br>
+  <br>
+  <div>
+    <pre>
+    <h2>                                        <u>Prisoner Report</u></h2>
+                                                                                                                                              <img src={{pic}} alt="image" class="img-thumbnail" style="height: 200px;width: 200px;">
+  PrisonerId : {{ p.pid }} <br> 
+  FirstName : {{ p.firstName }} <br>
+  LastName : {{ p.lastName }} <br>
+  MiddleName : {{ p.middleName }} <br>
+  DateOfBirth : {{ p.dateOfBirth }} <br>
+  Gender : {{ p.gender }} <br>
+  Age : {{ p.age }} <br>
+  Address : {{ p.address }} <br>
+  DateOfArrest : {{ p.dateOfArrest}} <br>
+  Case Id : {{ p.caseId }} <br>
+  CrimeType : {{ p.crimeType }} <br>
+  EyeWitness : {{ p.eyeWitness }} <br>
+  WitnessAddress : {{ p.witnessAddress }} <br>
+  ComplaintCount : {{ p.complaintCount }} <br>
+  EyeColor : {{ p.eyeColor }} <br>
+  HairColor : {{ p.hairColor }} <br>
+  FaceShape : {{ p.faceShape }} <br>
+  RemandDate : {{ p.remandDate }} <br>
+  ReleaseDate : {{ p.releaseDate }} <br>
+  CourtHearing : {{ p.courtHearing }} <br>
+  Cell Number : {{ p.cellNumber }} <br>
+</pre>
+  </div>
 
-   
-    
-  
-   
-   
-    
- 
+
+
+
+
+
+
+</div>

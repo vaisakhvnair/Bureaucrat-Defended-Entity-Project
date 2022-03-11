@@ -1,14 +1,19 @@
-
-<h3>duty-register</h3> 
+<div>
+<h3>Duty-register Create</h3> 
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 <form (ngSubmit)="createDutyRegister()"> 
+    <div class="form-group">
+User Name : <input type="text" class="form-control"[(ngModel)]="datman.userName" name="userName"/>  
+Date : <input type="date"class="form-control" [(ngModel)]="datman.date" name="date"/>  
+Time On Duty : <input type="time"class="form-control" [(ngModel)]="datman.timeOnDuty" name="timeOnDuty"/>  
+Name : <input type="text" class="form-control" [(ngModel)]="datman.name" name="name"/>  
+Duty Point : <input type="text" class="form-control" [(ngModel)]="datman.dutyPoint" name="dutyPoint"/> 
+Time Off Duty : <input type="time" class="form-control" [(ngModel)]="datman.timeOffDuty" name="timeOffDuty"/>  <br>
 
-User Name : <input type="text" [(ngModel)]="datman.userName" name="userName"/>  
-Date : <input type="text" [(ngModel)]="datman.date" name="date"/>  
-Time On Duty : <input type="text" [(ngModel)]="datman.timeOnDuty" name="timeOnDuty"/>  
-Name : <input type="text"  [(ngModel)]="datman.name" name="name"/>  
-Duty Point : <input type="text"  [(ngModel)]="datman.dutyPoint" name="dutyPoint"/> 
-Time Off Duty : <input type="text"  [(ngModel)]="datman.timeOffDuty" name="timeOffDuty"/>  
-
-<input type="submit" value="Register"/>
+<input type="submit" class="btn btn-success" value="Register"/>
+    </div>
 </form>
 {{message.message}} 
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

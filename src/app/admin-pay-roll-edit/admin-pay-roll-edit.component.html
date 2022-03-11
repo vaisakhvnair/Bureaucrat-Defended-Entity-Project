@@ -1,12 +1,26 @@
+<div>
 <h3>Pay Roll update</h3> 
-<form (ngSubmit)="updateDataManager()"> 
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+    (click)="backtoadmin()">Back To Admin</button></div>
+    <div class="form-group">
+        <br>
+<form (ngSubmit)="updateDataManager()">
 
-    UserName : <input type="text" [(ngModel)]="datman.userName" name="userName"/>  <br>
-    Pay Roll Id : <input type="text" [(ngModel)]="datman.pid" name="pid"/>   <br>
-    Name : <input type="text" [(ngModel)]="datman.name" name="name"/>   <br>
-    Regular Salary : <input type="text"  [(ngModel)]="datman.regularSalary" name="regularSalary"/>   <br>
-    Part Time Salary : <input type="text"  [(ngModel)]="datman.partTimeSalary" name="partTimeSalary"/>   <br>
-    Annual Salary : <input type="text"  [(ngModel)]="datman.annualSalary" name="annualSalary"/>   <br>
+<label>UserName :</label>
+<input type="text"class="form-control" [(ngModel)]="datman.userName" name="userName" /> 
+<label>PayRoll Id : </label>
+<input type="text"class="form-control" [(ngModel)]="datman.pid" name="pid" /> 
+<label>Name : </label>
+<input type="text"class="form-control" [(ngModel)]="datman.name" name="name" /> 
+<label>Regular Salary :</label>
+<input type="text" class="form-control"[(ngModel)]="datman.regularSalary" name="regularSalary" /> 
+<label>Part Time Salary :</label>
+<input type="text"class="form-control" [(ngModel)]="datman.partTimeSalary" name="partTimeSalary" /> 
+<label>Annual Salary : </label>
+<input type="text" class="form-control" [(ngModel)]="datman.annualSalary" name="annualSalary" /> <br>
 
-<input type="submit" value="update"/> 
-</form> 
+<input type="submit" style="width: 10%;" class="btn btn-success"value="Register" />
+</form>
+</div>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

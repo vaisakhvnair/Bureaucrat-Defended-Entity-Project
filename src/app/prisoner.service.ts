@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Message } from './message';
+import { Pimg } from './pimg';
 import { Prisoner } from './prisoner';
 
 @Injectable({
@@ -27,6 +28,11 @@ export class PrisonerService {
   updatePrisoner(pris:Prisoner):Observable<Message>{
    return this.http.put<Message>(`${this.baseUrl}/update`,pris); 
   } 
+
+  urlb="assets/db.json";
+  getImg(){
+    return this.http.get<Pimg[]>(this.urlb)
+  }
 
 
 }

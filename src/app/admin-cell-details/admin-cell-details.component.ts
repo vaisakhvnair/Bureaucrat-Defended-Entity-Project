@@ -27,6 +27,9 @@ export class AdminCellDetailsComponent implements OnInit {
   back(): void {
     this.location.back()
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 
 }
