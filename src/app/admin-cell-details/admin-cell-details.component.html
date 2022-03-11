@@ -1,13 +1,18 @@
+
+<div>
+  <br>
 <h1>Cell Details</h1>
-<table border="1">
-  <tr>
-    <td>Cell Number</td>
-    <td>PrisonerId</td>
-    <td>FirstName</td>
-    <td>LastName</td>
-    <td>MiddleName</td>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div class="container-fluid">
+  <table class="table table-sm">
+    <tr class="table-dark">
+    <th scope="col">Cell Number</th>
+    <th scope="col">PrisonerId</th>
+    <th scope="col">FirstName</th>
+    <th scope="col">LastName</th>
+    <th scope="col">MiddleName</th>
   </tr>
-  <tr *ngFor="let p of pris">
+  <tr *ngFor="let p of pris"class="table-warning">
     <td>{{ p.cellNumber }}</td>
     <td>{{ p.pid }}</td>
     <td>{{ p.firstName }}</td>
@@ -15,3 +20,6 @@
     <td>{{ p.middleName }}</td>
   </tr>
 </table>
+<br>
+<button (click)="back()" class="btn btn-info">Back</button>
+</div>

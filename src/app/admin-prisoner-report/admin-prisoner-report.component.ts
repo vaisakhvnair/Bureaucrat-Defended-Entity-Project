@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Prisoner } from '../prisoner';
@@ -13,12 +14,18 @@ export class AdminPrisonerReportComponent implements OnInit {
   p: Prisoner = new Prisoner("", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "")
 
   un: string = "";
-  constructor(private service: PrisonerService, private activeRouter: ActivatedRoute, private router: Router) { }
+  constructor(private service: PrisonerService, private activeRouter: ActivatedRoute, private router: Router, private location: Location) { }
 
   ngOnInit(): void {
   }
   grtOne() {
     this.service.getOnePrisoner(this.un).subscribe(data => { this.p = data })
+  }
+  back(): void {
+    this.location.back();
+  }
+  backtoadmin() {
+    this.router.navigate(['/admin'])
   }
 
 

@@ -1,31 +1,35 @@
+<div>
 <h2>Admin Data Manager PayRoll search</h2>
-
+<div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 <input
-  type="text"
-  placeholder="Enter Username to get Payroll Details of DataMAnager"
+  type="text"class="form-control" style="width: 450px;"
+  placeholder="Enter Username to get Payroll Details of Employee"
   name="un"
   [(ngModel)]="un"
-  (click)="grtOne()"
-/><button (click)="grtOne()">click</button>
-<br>
-<br>
+  (click)="grtOne()"/>
 
-<table border="2">
-  <tr>
-    <td>User Name</td>
-    <td>Password</td>
-    <td>DataMAnager Id</td>
-    <td>Name</td>
-    <td>Designation</td>
-    <td>Hire Date</td>
-    <td>Email</td>
-    <td>Address</td>
-    <td>PayRoll Id</td>
-    <td>Regular Salary</td>
-    <td>Part Time Salary</td>
-    <td>Annual Salary</td>
+  <button class="btn btn-info" (click)="grtOne()">
+    Search<span class="spinner-grow spinner-grow-sm"></span>
+</button>
+<br>
+<br>
+<div class="table-responsive">
+<table class="table table-hover">
+  <tr class="table-primary">
+    <th scope="col">User Name</th>
+    <th scope="col">Password</th>
+    <th scope="col">Police Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Designation</th>
+    <th scope="col">Hire Date</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">PayRoll Id</th>
+    <th scope="col">Regular Salary</th>
+    <th scope="col">Part Time Salary</th>
+    <th scope="col">Annual Salary</th>
   </tr>
-  <tr>
+  <tr class="table-active">
     <td>{{ rpp.police.userName }}</td>
     <td>{{ rpp.police.password }}</td>
     <td>{{ rpp.police.id }}</td>
@@ -40,3 +44,7 @@
     <td>{{ rpp.payroll.annualSalary }}</td>
   </tr>
 </table>
+</div>
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

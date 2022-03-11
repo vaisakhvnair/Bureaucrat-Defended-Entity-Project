@@ -1,31 +1,37 @@
+<div>
+    <br>
+    <h2>InOut Search Form </h2>
+    <div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+            (click)="backtoadmin()">Back To Admin</button></div>
+    <br>
+    <input type="text" class="form-control" style="width: 350px;" placeholder="Search by SiNo,Date,Name,Department"
+        [(ngModel)]="strUn" [(ngModel)]="strId" [(ngModel)]="strNm" [(ngModel)]="strDe" (click)="search()">&nbsp;&nbsp;
 
-<br>
-<h2>InOut Search Form </h2>
-<br>
-<input type="text" class="form-control" placeholder="Search by SiNo,Date,Name,Department" [(ngModel)]="strUn"
- [(ngModel)]="strId" [(ngModel)]="strNm"  [(ngModel)]="strDe" (click)="search()">&nbsp;&nbsp;
-<input type="button" class="btn btn-info" value="Search" (click)="search()">
-<br>
-<table border="1">
-    <tr>
-        <td>SI NO</td>
-        <td>Date</td>
-        <td>Name</td>
-        <td>Department</td>
-        <td>Purpose</td>
-        <td>Time In</td>
-        <td>Time Out</td>
-        <td>Digital Signature</td>
-    </tr>
-    <tr *ngFor="let i of police">
-        <td>{{ i.siNo }}</td>
-        <td>{{ i.date }}</td>
-        <td>{{ i.name }}</td>
-        <td>{{ i.dept }}</td>
-        <td>{{ i.purpose }}</td>
-        <td>{{ i.timeIn }}</td>
-        <td>{{ i.timeOut }}</td>
-        <td>{{ i.dsignature }}</td>
-    </tr>
-  
-   </table>
+    <button class="btn btn-info" (click)="search()">
+        Search<span class="spinner-border spinner-border-sm"></span>
+    </button>
+    <br>
+    <table class="table table-bordered">
+        <tr>
+            <th scope="col">SI NO</th>
+            <th scope="col">Date</th>
+            <th scope="col">Name</th>
+            <th scope="col">Department</th>
+            <th scope="col" d>Purpose</th>
+            <th scope="col">Time In</th>
+            <th scope="col">Time Out</th>
+            <th scope="col">Digital Signature</th>
+        </tr>
+        <tr *ngFor="let i of police">
+            <td>{{ i.siNo }}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.dept }}</td>
+            <td>{{ i.purpose }}</td>
+            <td>{{ i.timeIn }}</td>
+            <td>{{ i.timeOut }}</td>
+            <td>{{ i.dsignature }}</td>
+        </tr>
+
+    </table>
+</div>

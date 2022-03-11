@@ -1,6 +1,10 @@
+<div>
+<br><h3> In-Out Register</h3>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 
-<h3> In-Out Register</h3>
-Sort:<select [(ngModel)]="sortColumn">
+<div class="form-group">
+  <label for="sel1">Sort:</label>
+  <select  class="form-control" style="width: 20%;"  [(ngModel)]="sortColumn">
 <option>siNo</option>
 <option>date</option>
 <option>name</option>
@@ -9,26 +13,30 @@ Sort:<select [(ngModel)]="sortColumn">
 <option>timeIn</option>
 <option>timeOut</option>
 <option>dsignature</option>
-</select>
-Order:<select [(ngModel)]="order">
+</select></div>
+<label for="sel1">Order:</label>
+<select class="form-control" style="width: 20%;" [(ngModel)]="order">
 <option value="1">Ascending Order</option>
 <option value="-1">Descending Order</option>
 </select>
-<input type="button" value="sort" (click)="onSortClick()" />
-<br><br>
-<table border="2">
-  <tr>
-    <td>SI NO</td>
-    <td>Date</td>
-    <td>Name</td>
-    <td>Department</td>
-    <td>Purpose</td>
-    <td>Time In</td>
-    <td>Time Out</td>
-    <td>Digital Signature</td>
-    <td>Operations</td>
+<button class="btn btn-info" value="sort" (click)="onSortClick()">
+  Sort<span class="spinner-grow spinner-grow-sm"></span>
+  
+</button>
+
+<table class="table table-sm">
+  <tr class="table-info">
+    <th scope="col">SI NO</th>
+    <th scope="col">Date</th>
+    <th scope="col">Name</th>
+    <th scope="col">Department</th>
+    <th scope="col">Purpose</th>
+    <th scope="col">Time In</th>
+    <th scope="col">Time Out</th>
+    <th scope="col">Digital Signature</th>
+    <th scope="col">Operations</th>
   </tr>
-  <tr *ngFor="let i of inout">
+  <tr *ngFor="let i of inout" class="table-active">
     <td>{{ i.siNo }}</td>
     <td>{{ i.date }}</td>
     <td>{{ i.name }}</td>
@@ -48,4 +56,5 @@ Order:<select [(ngModel)]="order">
   </tr>
 </table>
 {{ message.message }}
-<button (click)="back()">Back</button>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

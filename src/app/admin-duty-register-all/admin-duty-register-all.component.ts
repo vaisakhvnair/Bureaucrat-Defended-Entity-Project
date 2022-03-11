@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DutyRegister } from '../duty-register';
@@ -18,7 +19,7 @@ export class AdminDutyRegisterAllComponent implements OnInit {
   message: Message = new Message("","");
   sortColumn = "";
   order=1;
-  constructor(private service: DutyRegisterService, private router: Router) { }
+  constructor(private service: DutyRegisterService, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
     this.getAllDutyRegister();
@@ -35,6 +36,13 @@ export class AdminDutyRegisterAllComponent implements OnInit {
   editDutyRegister(id: any) {
     this.router.navigate(['duty-edit', id]);
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
+  back(): void {
+    this.location.back()
+  }
+
 
  
   onSortClickUn(){

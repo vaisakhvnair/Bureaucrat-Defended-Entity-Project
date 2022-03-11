@@ -1,35 +1,37 @@
+<div>
+    <br>
+    <h2>Police Search Form </h2>
+    <div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+            (click)="backtoadmin()">Back To Admin</button></div>
+    <br>
+    <input type="text" class="form-control" style="width: 300px;" placeholder="Search by UserName,ID,Name"
+        [(ngModel)]="strUn" [(ngModel)]="strId" [(ngModel)]="strNm" (click)="search()">
+    <button class="btn btn-info" (click)="search()">
+        <span class="spinner-border spinner-border-sm"></span>
+        Search
+    </button>
+    <br>
+    <table class="table table-bordered">
+        <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">Password</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Hiredate</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+        </tr>
+        <tr *ngFor="let p of police">
+            <td>{{ p.userName }}</td>
+            <td>{{ p.password}}</td>
+            <td>{{ p.id}}</td>
+            <td>{{ p.name}}</td>
+            <td>{{ p.designation}}</td>
+            <td>{{ p.hiredate}}</td>
+            <td>{{ p.email }}</td>
+            <td>{{ p.address }}</td>
+        </tr>
 
-<br>
-<h2>Police Search Form </h2>
-<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
-<br>
-<input type="text" class="form-control" style="width: 300px;" placeholder="Search by UserName,ID,Name" [(ngModel)]="strUn"
- [(ngModel)]="strId" [(ngModel)]="strNm"   (click)="search()">
-<button class="btn btn-info" (click)="search()">
-    <span class="spinner-border spinner-border-sm"></span>
-    Search
-  </button>
-<br>
-<table class="table table-bordered">
-    <tr>
-        <th scope="col">UserName</th>
-        <th scope="col">Password</th>
-        <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Designation</th>
-        <th scope="col">Hiredate</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-    </tr>
-    <tr *ngFor="let p of police">
-        <td>{{ p.userName }}</td>
-    <td>{{ p.password}}</td>
-    <td>{{ p.id}}</td>
-    <td>{{ p.name}}</td>
-    <td>{{ p.designation}}</td>
-    <td>{{ p.hiredate}}</td>
-    <td>{{ p.email }}</td>
-    <td>{{ p.address }}</td>
-    </tr>
-  
-   </table>
+    </table>
+</div>

@@ -1,35 +1,41 @@
-
+<div>
 <br>
 <h2>Prisoner Search Form </h2>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 <br>
-<input type="text" class="form-control" placeholder="Search by id,Name,age,CaseId,CaseType" [(ngModel)]="strUn"
- [(ngModel)]="strId" [(ngModel)]="strNm"  [(ngModel)]="strDe" [(ngModel)]="strAg" [(ngModel)]="strCt" 
+<input type="text" class="form-control" style="width: 400px;" placeholder="Search by Id,Name,Age,CaseId,CaseType,CellNo" [(ngModel)]="strUn"
+ [(ngModel)]="strId" [(ngModel)]="strNm"  [(ngModel)]="strDe" [(ngModel)]="strAg" [(ngModel)]="strCt"  [(ngModel)]="strCn"
  [(ngModel)]="strCi" (click)="search()">&nbsp;&nbsp;
-<input type="button" class="btn btn-info" value="Search" (click)="search()">
+<button class="btn btn-info" (click)="search()" value="Search">
+    Search
+    <span class="spinner-grow spinner-grow-sm"></span>
+  </button>
 <br>
-<table border="1">
+<br>
+<div class="table-responsive">
+<table class="table table-bordered">
     <tr>
-        <td>PrisonerId</td>
-        <td>FirstName</td>
-        <td>LastName</td>
-        <td>MiddleName</td>
-        <td>DateOfBirth</td>
-        <td>Gender</td>
-        <td>Age</td>
-        <td>Address</td>
-        <td>DateOfArrest</td>
-        <td>Case Id</td>
-        <td>CrimeType</td>
-        <td>EyeWitness</td>
-        <td>WitnessAddress</td>
-        <td>ComplaintCount</td>
-        <td>EyeColor</td>
-        <td>HairColor</td>
-        <td>FaceShape</td>
-        <td>RemandDate</td>
-        <td>ReleaseDate</td>
-        <td>CourtHearing</td>
-        <td>Cell Number</td>
+        <th scope="col">PrisonerId</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">MiddleName</th>
+        <th scope="col">DateOfBirth</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">DateOfArrest</th>
+        <th scope="col">Case Id</th>
+        <th scope="col">CrimeType</th>
+        <th scope="col">EyeWitness</th>
+        <th scope="col">WitnessAddress</th>
+        <th scope="col">ComplaintCount</th>
+        <th scope="col">EyeColor</th>
+        <th scope="col">HairColor</th>
+        <th scope="col">FaceShape</th>
+        <th scope="col">RemandDate</th>
+        <th scope="col">ReleaseDate</th>
+        <th scope="col">CourtHearing</th>
+        <th scope="col">Cell Number</th>
     </tr>
     <tr *ngFor="let p of police">
         <td>{{ p.pid }}</td>
@@ -56,3 +62,5 @@
     </tr>
   
    </table>
+</div>
+</div>

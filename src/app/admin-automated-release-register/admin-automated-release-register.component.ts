@@ -38,4 +38,10 @@ export class AdminAutomatedReleaseRegisterComponent implements OnInit {
   getAllPrisoner() {
     this.service.getAllPrisoner().subscribe(data => { this.pris = data }, error => { this.pris = [] });
   }
+  back(): void {
+    this.location.back()
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

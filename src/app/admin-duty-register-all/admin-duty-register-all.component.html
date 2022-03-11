@@ -1,17 +1,18 @@
-
+<div>
+  <br>
 <h3>Duty Register</h3>
-
-<table border="2">
-  <tr>
-    <td><input type="button" value="userName" (click)="onSortClickUn()"></td>
-    <td><input type="button" value="date" (click)="onSortClickDt()"></td>
-    <td><input type="button" value="timeOnDuty" (click)="onSortClickTd()"></td>
-    <td><input type="button" value="Name" (click)="onSortClickNm()"></td>
-    <td><input type="button" value="dutyPoint" (click)="onSortClickDp()"></td>
-    <td><input type="button" value="timeOffDuty" (click)="onSortClickTod()"></td>
-    <td><input type="button" value="Operations"></td>
+<div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<table class="table table-sm">
+  <tr class="table-dark">
+    <th scope="col"><input type="button" class="btn btn-outline-light text-dark"value="userName" (click)="onSortClickUn()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark" value="date" (click)="onSortClickDt()"></th>
+    <th scope="col"><input type="button" class="btn btn-outline-light text-dark"value="timeOnDuty" (click)="onSortClickTd()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark" value="Name" (click)="onSortClickNm()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark" value="dutyPoint" (click)="onSortClickDp()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark" value="timeOffDuty" (click)="onSortClickTod()"></th>
+    <th scope="col"><input type="button"class="btn btn-outline-light text-dark-disable" value="Operations"></th>
   </tr>
-  <tr *ngFor="let p of datman">
+  <tr *ngFor="let p of datman"class="table-warning">
     <td>{{ p.userName }}</td>
     <td>{{ p.date }}</td>
     <td>{{ p.timeOnDuty}}</td>
@@ -28,3 +29,6 @@
   </tr>
 </table>
 {{ message.message }}
+<br>
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+</div>

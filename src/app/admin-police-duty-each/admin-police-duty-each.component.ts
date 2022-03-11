@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DutyRegister } from '../duty-register';
@@ -19,12 +20,18 @@ export class AdminPoliceDutyEachComponent implements OnInit {
   )
 
   un: string = "";
-  constructor(private service: PoliceService, private activeRouter: ActivatedRoute, private router: Router) { }
+  constructor(private service: PoliceService, private activeRouter: ActivatedRoute, private router: Router,private location:Location) { }
 
   ngOnInit(): void {
   }
   grtOne() {
     this.service.getOnePoliceDuty(this.un).subscribe(data => { this.rpp = data })
+  }
+  back(): void {
+    this.location.back()
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
   }
 
 }

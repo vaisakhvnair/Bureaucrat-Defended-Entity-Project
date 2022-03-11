@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Message } from '../message';
@@ -16,7 +17,7 @@ export class AdminPayRollAllComponent implements OnInit {
   message: Message = new Message("","");
   sortColumn = "";
   order=1;
-  constructor(private service: PayRollService, private router: Router) { }
+  constructor(private service: PayRollService, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
     this.getAllPayRoll();
@@ -53,5 +54,10 @@ export class AdminPayRollAllComponent implements OnInit {
     this.dat = this.datman.sort((e1, e2) => {  return (e1["annualSalary"].charCodeAt(0) - e2["annualSalary"].charCodeAt(0)) * this.order;});
   }
 
-
+  back(): void {
+    this.location.back()
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

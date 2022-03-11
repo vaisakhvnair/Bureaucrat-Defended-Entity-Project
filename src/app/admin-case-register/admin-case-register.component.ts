@@ -26,5 +26,8 @@ export class AdminCaseRegisterComponent implements OnInit {
   back(): void {
     this.location.back()
   }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 
 }

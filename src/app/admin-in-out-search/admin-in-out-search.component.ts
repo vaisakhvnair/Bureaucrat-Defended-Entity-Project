@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { InOut } from '../in-out';
 import { InOutService } from '../in-out.service';
 
@@ -9,7 +11,7 @@ import { InOutService } from '../in-out.service';
 })
 export class AdminInOutSearchComponent implements OnInit {
 
-  constructor(private service: InOutService) { }
+  constructor(private service: InOutService, private router: Router,private location: Location) { }
 
   police: InOut[] = [];
   pol: InOut[] = [];
@@ -37,4 +39,10 @@ export class AdminInOutSearchComponent implements OnInit {
       return e1.name.toLowerCase().indexOf(this.strNm.toLowerCase()) >= 0 })
   }
 
+  back(): void {
+    this.location.back();
+  }
+  backtoadmin(){
+    this.router.navigate(['/admin'])
+  }
 }

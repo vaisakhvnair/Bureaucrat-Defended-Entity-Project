@@ -1,33 +1,43 @@
-<h1>Case Register</h1>
-<table border="1">
-  <tr>
-    <td>Case Id</td>
-    <td>CrimeType</td>
-    <td>PrisonerId</td>
-    <td>EyeWitness</td>
-    <td>WitnessAddress</td>
-    <td>ComplaintCount</td>
-    <td>EyeColor</td>
-    <td>HairColor</td>
-    <td>FaceShape</td>
-    <td>RemandDate</td>
-    <td>ReleaseDate</td>
-    <td>CourtHearing</td>
-    <td>Cell Number</td>
-  </tr>
-  <tr *ngFor="let p of pris">
-    <td>{{ p.caseId }}</td>
-    <td>{{ p.crimeType }}</td>
-    <td>{{ p.pid }}</td>
-    <td>{{ p.eyeWitness }}</td>
-    <td>{{ p.witnessAddress }}</td>
-    <td>{{ p.complaintCount }}</td>
-    <td>{{ p.eyeColor }}</td>
-    <td>{{ p.hairColor }}</td>
-    <td>{{ p.faceShape }}</td>
-    <td>{{ p.remandDate }}</td>
-    <td>{{ p.releaseDate }}</td>
-    <td>{{ p.courtHearing }}</td>
-    <td>{{ p.cellNumber }}</td>
-  </tr>
-</table>
+<div>
+  <br>
+  <h1>Case Register</h1>
+  <div style="float: right; padding: 0%;margin-bottom: 10px;"><button class="btn btn-outline-secondary"
+      (click)="backtoadmin()">Back To Admin</button></div>
+  <div class="container-fluid">
+
+    <table class="table table-sm">
+      <tr class="table-primary">
+        <th scope="col">Case Id</th>
+        <th scope="col">CrimeType</th>
+        <th scope="col">PrisonerId</th>
+        <th scope="col">EyeWitness</th>
+        <th scope="col">WitnessAddress</th>
+        <th scope="col">ComplaintCount</th>
+        <th scope="col">EyeColor</th>
+        <th scope="col">HairColor</th>
+        <th scope="col">FaceShape</th>
+        <th scope="col">RemandDate</th>
+        <th scope="col">ReleaseDate</th>
+        <th scope="col">CourtHearing</th>
+        <th scope="col">Cell Number</th>
+      </tr>
+      <tr *ngFor="let p of pris" class="table-active">
+        <td>{{ p.caseId }}</td>
+        <td>{{ p.crimeType }}</td>
+        <td>{{ p.pid }}</td>
+        <td>{{ p.eyeWitness }}</td>
+        <td>{{ p.witnessAddress }}</td>
+        <td>{{ p.complaintCount }}</td>
+        <td>{{ p.eyeColor }}</td>
+        <td>{{ p.hairColor }}</td>
+        <td>{{ p.faceShape }}</td>
+        <td>{{ p.remandDate }}</td>
+        <td>{{ p.releaseDate }}</td>
+        <td>{{ p.courtHearing }}</td>
+        <td>{{ p.cellNumber }}</td>
+      </tr>
+    </table>
+  </div>
+  <br>
+<button (click)="back()" class="btn btn-info">Back</button>
+</div>
