@@ -1,5 +1,7 @@
-<h1>Search Form</h1>
-Search By :<select [(ngModel)]="search" >
+<h1 style="color: plum;"><b>Search Form</b></h1>
+<form class="form-inline">
+    <div>
+<em>Search By</em><select [(ngModel)]="search"  class="form-control" style="width:25%;"> 
     <option>---</option>
     <option>pid</option>
     <option>firstName</option>
@@ -19,52 +21,62 @@ Search By :<select [(ngModel)]="search" >
     <option>courtHearing</option>
 
 </select>
+&nbsp;
+
 <input type="text" name="search" [(ngModel)]="str1" >
-<input type="button" value="search" (click)="searchPrisonerDetails()">
-<table border="1">
+&nbsp;
+<input type="button" class="btn btn-info" value="search" (click)="searchPrisonerDetails()">
+
+</div>
+</form>
+<br>
+
+
+<table class="table">
+    <thead class="thead-dark">
     <tr>
-        <td>PrisonerId</td>
-        <td>FirstName </td>
-        <td>LastName </td>
-        <td>MiddleName </td>
-        <td>DateOfBirth </td>
-        <td>Gender</td>
-        <td>Age</td>
-        <td>Address</td>
-        <td>DateOfArrest</td>
-        <td>CrimeType</td>
-        <td>EyeWitness</td>
-        <td>WitnessAddress</td>
-        <td>ComplaintCount</td>
-        <td>EyeColor</td>
-        <td>HairColor</td>
-        <td>FaceShape</td>
-        <td>RemandDate</td>
-        <td>ReleaseDate</td>
-        <td>CourtHearing</td>
+        <th scope="col">PrisonerId</th>
+        <th scope="col">FirstName </th>
+        <th scope="col">LastName </th>
+        <th scope="col">MiddleName </th>
+        <th scope="col">DateOfBirth </th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">DateOfArrest</th>
+        <th scope="col">CrimeType</th>
+        <th scope="col">EyeWitness</th>
+        <th scope="col">WitnessAddress</th>
+        <th scope="col">ComplaintCount</th>
+        <th scope="col">EyeColor</th>
+        <th scope="col">HairColor</th>
+        <th scope="col">FaceShape</th>
+        <th scope="col">RemandDate</th>
+        <th scope="col">ReleaseDate</th>
+        <th scope="col">CourtHearing</th>
         
     </tr>
-    
+</thead>
     <tr *ngFor="let p of prison">
-        <td>{{p.pid}}</td>
-        <td>{{p.firstName}}</td>
-        <td>{{p.lastName}}</td>
-        <td>{{p.middleName}}</td>
-        <td>{{p.dateOfBirth}}</td>
-        <td>{{p.gender}}</td>
-        <td>{{p.age}}</td>
-        <td>{{p.address}}</td>
-        <td>{{p.dateOfArrest}}</td>
-        <td>{{p.crimeType}}</td>
-        <td>{{p.eyeWitness}}</td>
-        <td>{{p.witnessAddress}}</td>
-        <td>{{p.complaintCount}}</td>
-        <td>{{p.eyeColor}}</td>
-        <td>{{p.hairColor}}</td>
-        <td>{{p.faceShape}}</td>
-        <td>{{p.remandDate}}</td>
-        <td>{{p.releaseDate}}</td>
-        <td>{{p.courtHearing}}</td>
+        <td scope="row">{{p.pid}}</td>
+        <td scope="row">{{p.firstName}}</td>
+        <td scope="row">{{p.lastName}}</td>
+        <td scope="row">{{p.middleName}}</td>
+        <td scope="row">{{p.dateOfBirth}}</td>
+        <td scope="row">{{p.gender}}</td>
+        <td scope="row">{{p.age}}</td>
+        <td scope="row">{{p.address}}</td>
+        <td scope="row">{{p.dateOfArrest}}</td>
+        <td scope="row">{{p.crimeType}}</td>
+        <td scope="row">{{p.eyeWitness}}</td>
+        <td scope="row">{{p.witnessAddress}}</td>
+        <td scope="row">{{p.complaintCount}}</td>
+        <td scope="row">{{p.eyeColor}}</td>
+        <td scope="row">{{p.hairColor}}</td>
+        <td scope="row">{{p.faceShape}}</td>
+        <td scope="row">{{p.remandDate}}</td>
+        <td scope="row">{{p.releaseDate}}</td>
+        <td scope="row">{{p.courtHearing}}</td>
        
 
     </tr>

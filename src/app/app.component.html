@@ -10,14 +10,28 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-<a class="navbar-brand" href="#" routerLink="">HOME</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a  routerLink="">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#" routerLink="login-admin">ADMIN</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#" routerLink="login-manager">DATAMANAGER</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#" routerLink="fir-all">FIR</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="#" routerLink="report">REPORT</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" routerLink="">HOME <span class="sr-only">(current)</span></a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="login-admin">ADMIN</a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" href="#">POLICE</a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="login-manager">DATA MANAGER</a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" href="#">NOMINAL ROLLS</a>
+            </li>&nbsp;&nbsp;
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="report">REPORT</a>
+            </li>&nbsp;&nbsp;
+        </ul>
+    </div>
+</nav>
 
 <router-outlet></router-outlet>

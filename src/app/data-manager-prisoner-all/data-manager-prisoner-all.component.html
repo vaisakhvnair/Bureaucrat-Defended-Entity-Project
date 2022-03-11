@@ -1,9 +1,10 @@
 
 <div>
-<button class="btn btn-info" (click)="searchPrisonerData()">Search Prisoner Data</button>
+<button class="btn btn-info" style="margin-top: 2%;" (click)="searchPrisonerData()">Search Prisoner Data</button>
 </div>
-<h1>All Prisoners Details</h1>
-<table border="1"class="table-active">
+<h1 style="color: plum; text-align: center;">All Prisoners Details</h1>
+<table class="table">
+    <thead class="thead-dark">
     <tr>
         <th scope="col">PrisonerId </th>
         <th scope="col">FirstName </th>
@@ -24,9 +25,10 @@
         <th scope="col">RemandDate</th>
         <th scope="col">ReleaseDate</th>
         <th scope="col">CourtHearing</th>
-        <th scope="col" >Cell Number</th>
+        <th scope="col" >CellNumber</th>
         <th scope="col">Operations</th>
     </tr>
+    </thead>
     
     <tr *ngFor="let p of prisoner">
         <td scope="row">{{p.pid}}</td>
@@ -54,3 +56,4 @@
     </tr>
 </table>
 
+<button class="btn btn-info btn-sm" (click)="back()">Back</button>

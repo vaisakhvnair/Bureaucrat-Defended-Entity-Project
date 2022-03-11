@@ -1,14 +1,17 @@
-<h3>ALL Pay Roll</h3>
+<h3 style="color: plum;">ALL Pay Roll</h3>
 
-<table border="2">
+<table class="table">
+  <thead class="thead-dark">
   <tr>
-    <td>UserName</td>
-    <td>Pay Roll Id</td>
-    <td>Name</td>
-    <td>Regular Salary</td>
-    <td>Part Time Salary</td>
-    <td>Annual Salary</td>
+    
+    <th>UserName</th>
+    <th>Pay Roll Id</th>
+    <th>Name</th>
+    <th>Regular Salary</th>
+    <th>Part Time Salary</th>
+    <th>Annual Salary</th>
   </tr>
+  </thead>
   <tr *ngFor="let p of pay">
     <td>{{ p.userName }}</td>
     <td>{{ p.pid}}</td>
@@ -17,7 +20,7 @@
     <td>{{ p.partTimeSalary }}</td>
     <td>{{ p.annualSalary }}</td>
     <td>
-      <button class="btn btn-info" (click)="editPayRoll(p.userName)">EDIT</button>
+      <button class="btn btn-secondary" (click)="editPayRoll(p.userName)">EDIT</button>
     </td>
   </tr>
 </table>

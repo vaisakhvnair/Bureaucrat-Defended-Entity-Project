@@ -1,27 +1,29 @@
-<h3> In-Out Register-Data</h3>
+<h3 style="color: plum;"> In-Out Register-Data</h3>
 
-<table border="2">
+<table class="table">
+  <thead class="thead-dark">
   <tr>
-    <td>SI NO</td>
-    <td>Date</td>
-    <td>Name</td>
-    <td>Department</td>
-    <td>Purpose</td>
-    <td>Time In</td>
-    <td>Time Out</td>
-    <td>Digital Signature</td>
+    <th scope="col">SI NO</th>
+    <th scope="col">Date</th>
+    <th scope="col">Name</th>
+    <th scope="col">Department</th>
+    <th scope="col">Purpose</th>
+    <th scope="col">Time In</th>
+    <th scope="col">Time Out</th>
+    <th scope="col">Digital Signature</th>
   </tr>
+  </thead>
   <tr *ngFor="let i of inout">
-    <td>{{ i.siNo }}</td>
-    <td>{{ i.date }}</td>
-    <td>{{ i.name }}</td>
-    <td>{{ i.dept }}</td>
-    <td>{{ i.purpose }}</td>
-    <td>{{ i.timeIn }}</td>
-    <td>{{ i.timeOut }}</td>
-    <td>{{ i.dsignature }}</td>
+    <td scope="row">{{ i.siNo }}</td>
+    <td scope="row">{{ i.date }}</td>
+    <td scope="row">{{ i.name }}</td>
+    <td scope="row">{{ i.dept }}</td>
+    <td scope="row">{{ i.purpose }}</td>
+    <td scope="row">{{ i.timeIn }}</td>
+    <td scope="row">{{ i.timeOut }}</td>
+    <td scope="row">{{ i.dsignature }}</td>
     <td>
-     <button class="btn btn-info" (click)="editInOut(i.siNo)">EDIT</button>
+     <button class="btn btn-secondary" (click)="editInOut(i.siNo)">EDIT</button>
     </td>
   </tr>
 </table>

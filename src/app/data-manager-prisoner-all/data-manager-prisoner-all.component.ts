@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Message } from '../message';
@@ -17,7 +18,7 @@ export class DataManagerPrisonerAllComponent implements OnInit {
   
   
   
-    constructor(private service:PrisonerService, private router:Router) { }
+    constructor(private service:PrisonerService, private router:Router,private location:Location) { }
   
     ngOnInit(): void {
       this.getAllDetails();
@@ -36,6 +37,12 @@ export class DataManagerPrisonerAllComponent implements OnInit {
     } 
     searchPrisonerData(){
       this.router.navigate(['dm-p-search']);
+    }
+    back(): void {
+      this.location.back();
+    }
+    backtoadmin(){
+      this.router.navigate(['/manager'])
     }
 
 }

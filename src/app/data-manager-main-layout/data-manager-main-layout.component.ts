@@ -51,5 +51,8 @@ addPayrollRegister(){
 editPayrollRegister(){
   this.router.navigate(['dm-pay-edit/:id'])
 }
-
+homelogout(){
+  this.router.navigate(['/'])
+  alert("Do you want to log out")
+}
 }

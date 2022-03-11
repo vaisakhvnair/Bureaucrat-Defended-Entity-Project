@@ -1,81 +1,134 @@
-<h3>Prisoner Update</h3> 
+<h3 style="color: plum;">Prisoner Update</h3> 
 <form (ngSubmit)="updateDetails()"> 
-  <h4>Personal Details</h4>
-
- Prisoner Id : <input type="text"   [(ngModel)]="prisoner.pid" name="pid"/>  <br>
- <br>
-FirstName : <input type="text"  [(ngModel)]="prisoner.firstName" name="firstName"/>  <br><br>
-
-LastName : <input type="text"  [(ngModel)]="prisoner.lastName" name="lastName"/>  <br><br>
-Middle Name : <input type="text"  [(ngModel)]="prisoner.middleName" name="middleName"/>  <br>
- <br>
-DateOfBirth : <input type="date" [(ngModel)]="prisoner.dateOfBirth" name="dateOfBirth"/>  <br><br>
-
-Gender : <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="male"/>Male
-         <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="female"/>Female
-  <br><br>
-
-Age:<input type="text"  [(ngModel)]="prisoner.age" name="age"/>  <br><br>
-Adress:<input type="text"  [(ngModel)]="prisoner.address" name="address"/>  <br><br>
-<hr>
-<h4>Crime Details</h4>
-DateOfArrest:<input type="date"  [(ngModel)]="prisoner.dateOfArrest" name="dateOfArrest"/>  <br><br>
-CrimeType:<select [(ngModel)]="prisoner.crimeType" name="crimeType">
-  <option value="">---</option>
-  <option>Murder</option>
-  <option>ChainSnatching</option>
-  <option>Rape</option>
-  <option>Pocso</option>
-  <option>AttempttoMurder</option>
-</select>
-<br>
-<br>
-RemandDate:<input type="date"  [(ngModel)]="prisoner.remandDate" name="remandDate"/>  <br><br>
-CourtHearing:<input type="date"  [(ngModel)]="prisoner.courtHearing" name="courtHearing"/>  <br><br>
-ReleaseDate:<input type="date"  [(ngModel)]="prisoner.releaseDate" name="releaseDate"/>  <br><br>
-
-ComplaintCount:<input type="number"  [(ngModel)]="prisoner.complaintCount" name="complaintCount"/>  <br><br>
-<hr>
-<h4>Witness Details</h4>
-Name Of Eye Witness:<input type="text" [(ngModel)]="prisoner.eyeWitness" name="eyeWitness"><br><br>
-WitnessAddress:<input type="text"  [(ngModel)]="prisoner.witnessAddress" name="witnessAddress"/>  <br><br>
-<hr>
-<h4>Prioner physical Apperance Details</h4>
-EyeColor:<select  [(ngModel)]="prisoner.eyeColor" name="eyeColor"> 
-  <option value="">---</option>
-  <option>Black</option>
-  <option>Grey</option>
-  <option>Brown</option>
-  <option>Blue</option>
-  <option>Other</option>
-  </select>
-  <br><br>
-HairColor:<select [(ngModel)]="prisoner.hairColor" name="age">  
-  <option value="">---</option>
-  <option>Black</option>
-  <option>White</option>
-  <option>Brown</option>
-  <option>Salt&Pepper</option>
-  <option>Other</option>
-  </select>
   
-  <br><br>
-  FaceShape:<select [(ngModel)]="prisoner.faceShape" name="faceShape">  
-    <option value="">---</option>
-    <option>Round</option>
-    <option>Oval</option>
-    <option>Square</option>
-    <option>Oblong</option>
-    <option>Diamond</option>
-    <option>Other</option>
-    </select>
-    <br><br>
+    
+    
+      <h4 style="color: rosybrown;">Personal Details</h4>
+    <div class="form-group">
+      <label> Prisoner Id</label>
+     <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.pid" name="pid"/>
+     </div>
+      
+      <div class="form-group" >
+        <label> FirstName </label>  
+    <input type="text" class="form-control" style="width: 40%;"   [(ngModel)]="prisoner.firstName" name="firstName"/> 
+    </div> 
+    <div class="form-group" >
+      <label> LastName  </label>  
+    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.lastName" name="lastName"/> 
+    </div> 
+    <div class="form-group" >
+      <label> Middle Name  </label>  
+    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.middleName" name="middleName"/>
+    </div> 
+    
+    Gender : <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Male"/>Male
+             <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Female"/>Female
+      <br><br>
+      <div class="form-group" >
+        <label> AGE </label>  
+      <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.age" name="age"/> 
+      </div>
+      <div class="form-group" >
+        <label>ADDRESS </label>  
+      <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.address" name="address"/>
+      </div>
+    
+    
+    
     <hr>
-    <h4></h4>
+    <h4 style="color: rosybrown;"><b>Crime Details</b></h4>
+    <div class="form-group" >
+      <label>DateOfArrest:</label>  
+    <input type="date" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.dateOfArrest" name="dateOfArrest"/>
+    </div>
+    <div class="form-group" >
+    CrimeType &nbsp; <select [(ngModel)]="prisoner.crimeType" class="form-control" style="width: 40%;"  name="crimeType">
+      <option value="">---</option>
+      <option>Murder</option>
+      <option>ChainSnatching</option>
+      <option>Rape</option>
+      <option>Pocso</option>
+      <option>AttempttoMurder</option>
+    </select>
+    </div>
+    <div  class="form-group">
+    <label>Remand-Date</label>  
+    <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.remandDate" name="remandDate"/>
+    </div>
+    <div  class="form-group">
+      <label>Court-Hearing</label>  
+      <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.courtHearing" name="courtHearing"/>
+      </div>
+      <div  class="form-group">
+        <label>Release-Date</label>  
+        <input type="date" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.releaseDate" name="releaseDate"/>  
+        </div>
+        <div  class="form-group">
+          <label>ComplaintCount</label>  
+          <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.complaintCount" name="complaintCount"/> 
+          </div>
+          <div  class="form-group">
+            <label>CellNumber</label>  
+            <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.cellNumber" name="cellNumber"/> 
+            </div>
+    <hr>
+    <h4 style="color: rosybrown;">Witness Details</h4>
+    <div class="form-group" >
+      <label>Name Of Eye Witness</label>  
+    <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.eyeWitness" name="eyeWitness">
+    </div>
+    <div class="form-group" >
+      <label>WitnessAddress</label>  
+    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.witnessAddress" name="witnessAddress"/>
+    </div>
+    
+    
+    <hr>
+    <h4 style="color: rosybrown;">Prisoner physical Apperance Details</h4>
+    <div class="form-group">
+    <label>EyeColor</label> 
+    <select  [(ngModel)]="prisoner.eyeColor" class="form-control" style="width: 40%;" name="eyeColor"> 
+      <option value="">---</option>
+      <option>Black</option>
+      <option>Grey</option>
+      <option>Brown</option>
+      <option>Blue</option>
+      <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+    <label>HairColor</label>
+    <select [(ngModel)]="prisoner.hairColor" class="form-control" style="width: 40%;" name="age">  
+      <option value="">---</option>
+      <option>Black</option>
+      <option>White</option>
+      <option>Brown</option>
+      <option>Salt&Pepper</option>
+      <option>Other</option>
+      </select>
+      </div>
+      <div class="form-group">
+      FaceShape:<select [(ngModel)]="prisoner.faceShape" class="form-control" style="width: 40%;" name="faceShape">  
+        <option value="">---</option>
+        <option>Round</option>
+        <option>Oval</option>
+        <option>Square</option>
+        <option>Oblong</option>
+        <option>Diamond</option>
+        <option>Other</option>
+        </select>
+        </div>
+        <hr>
+    
+    
+   
+   
+    
+    
 
 
-<input type="submit" value="Update"/> <br><br>
+<input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="Update"/> <br><br>
 </form> 
-
 
 

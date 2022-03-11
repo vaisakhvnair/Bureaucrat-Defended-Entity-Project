@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Message } from '../message';
@@ -11,7 +12,7 @@ import { PrisonerService } from '../prisoner.service';
 })
 export class DataManagerPrisonerCreateComponent implements OnInit {
 
-  constructor(private service:PrisonerService,private router:Router) { }
+  constructor(private service:PrisonerService,private router:Router,private location: Location) { }
 prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 
 message:Message=new Message("","");
@@ -22,6 +23,12 @@ message:Message=new Message("","");
        this.message=data; 
     }); 
     this.prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
+}
+back(): void {
+  this.location.back();
+}
+backtoadmin(){
+  this.router.navigate(['/manager'])
 }
 
 }

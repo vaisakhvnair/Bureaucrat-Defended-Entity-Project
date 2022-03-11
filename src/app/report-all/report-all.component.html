@@ -1,29 +1,75 @@
-<h2>Generate Report</h2><br><br><br>
 
-   <input type="text"placeholder="Id" name="un" [(ngModel)]="un" (click)="searchPrisonerDetails()"/> 
-<button  (click)="searchPrisonerDetails()">Generate Report</button>
-<br><br><br>
-<h3>Personal Details</h3>
-    
-       <b>PrisonerId :</b> {{pr.pid}}<br><br>
-      <b>FirstName :</b>   {{pr.firstName}}<br><br>
-       <b>LastName :</b>   {{pr.lastName}}<br><br>
-        <b>MiddleName :</b> {{pr.middleName}}<br><br>
-         <b>DateOfBirth :</b>{{pr.dateOfBirth}}<br><br>
-        <b>Gender :</b> {{pr.gender}}<br><br>
-        <b>Age :</b>{{pr.age}}<br><br>
-       <b>Address :</b> {{pr.address}}<br><br>
-       <h3>Crime Details</h3> 
-        <b>DateOfArrest :</b>{{pr.dateOfArrest}}<br><br>
-        <b>CrimeType :</b>{{pr.crimeType}}<br><br>
-        <b>ComplaintCount :</b>{{pr.complaintCount}}<br><br>
-       <b>RemandDate :</b> {{pr.remandDate}}<br><br>
-      <b>CourtHearing :</b>  {{pr.courtHearing}}<br><br>
-        <b>ReleaseDate :</b>{{pr.releaseDate}}<br><br>
-         <h3>Witness Details</h3>
-        <b>EyeWitness :</b>{{pr.eyeWitness}}<br><br>
-       <b>WitnessAddress :</b>{{pr.witnessAddress}}<br><br> 
-      <h3>Prisoner Physical Appearence</h3>
-        <b>EyeColor :</b>{{pr.eyeColor}}<br><br>
-       <b>HairColor :</b>{{pr.hairColor}}<br><br> 
-       <b>FaceShape :</b> {{pr.faceShape}}<br><br>  
+
+<form class="form-inline" style="padding-left: 70%; margin-top: 2%;">
+<div class="form-group mx-sm-3 mb-2">
+   <input type="text"placeholder="Id" class="form-control" name="un" [(ngModel)]="un" (click)="searchPrisonerDetails()"/> 
+  </div>
+<button  (click)="searchPrisonerDetails()" class="btn btn-primary mb-2">Generate Report</button>
+
+</form>
+<h1 style="color: blueviolet; padding-left:40%; " >REPORT</h1>
+<div action="/action_page.php" style="background-color:peachpuff; width: 800px;margin-left: 20%;" >
+<h3 style="padding-left: 5%;" >Personal Details</h3>
+    <div class="form-group" style="padding-left: 5%;">
+       <b>PrisonerId :</b> {{pr.pid}}
+      </div >
+      <div class="form-group" style="padding-left: 5%;">
+        <b>FirstName :</b>   {{pr.firstName}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>LastName :</b>   {{pr.lastName}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>MiddleName :</b> {{pr.middleName}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>DateOfBirth :</b>{{pr.dateOfBirth}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>Address :</b> {{pr.address}}
+       </div>
+       <hr>
+       <h3 style="padding-left: 5%;">Crime Details</h3>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>DateOfArrest :</b>{{pr.dateOfArrest}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>CrimeType :</b>{{pr.crimeType}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>ComplaintCount :</b>{{pr.complaintCount}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>RemandDate :</b> {{pr.remandDate}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>CourtHearing :</b>  {{pr.courtHearing}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>ReleaseDate :</b>{{pr.releaseDate}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>Cell Number :</b> {{pr.cellNumber}}
+       </div>
+       <hr>
+       <h3 style="padding-left: 5%;">Witness Details</h3>
+       <div class="form-group"style="padding-left: 5%;">
+        <b>EyeWitness :</b>{{pr.eyeWitness}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>WitnessAddress :</b>{{pr.witnessAddress}}
+       </div>
+       <hr>
+       <h3 style="padding-left: 5%;">Prisoner Physical Appearence</h3>
+       <div class="form-group"style="padding-left: 5%;">
+        <b>EyeColor :</b>{{pr.eyeColor}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>HairColor :</b>{{pr.hairColor}}
+       </div>
+       <div class="form-group" style="padding-left: 5%;">
+        <b>FaceShape :</b> {{pr.faceShape}}
+       </div>
+       
+       
+</div>

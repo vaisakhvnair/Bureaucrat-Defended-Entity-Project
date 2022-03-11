@@ -15,6 +15,8 @@ export class DataManagerLoginComponent implements OnInit {
   username: string = "";
   upasswd: string = "";
   msg: string = "";
+  //status:string="";
+  myClass:string="";
   datam:DataManager[]=[];
   constructor(private sobj:DataManagerService,private router: Router, private activeRouter: ActivatedRoute) { }
 
@@ -42,7 +44,6 @@ export class DataManagerLoginComponent implements OnInit {
   getValidation(tx1: any) {
 
     var b = this.checkUserNameAndPassword(this.username, this.upasswd)
-
     if(b) {
       this.msg = "Successful login "+this.username +":)";
       setTimeout(() => {

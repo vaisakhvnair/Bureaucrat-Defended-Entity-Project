@@ -1,14 +1,16 @@
 
-<h3>Duty Register</h3>
+<h3 style="color: plum;">Duty Register</h3>
 
-<table border="2">
+<table  class="table">
+  <thead class="thead-dark">
   <tr>
-    <td>date</td>
-    <td>timeOnDuty</td>
-    <td>Name</td>
-    <td>dutyPoint</td>
-    <td>timeOffDuty</td>
+    <th>DATE</th>
+    <th>TIME-ON-DUTY</th>
+    <th>NAME</th>
+    <th>DUTY-POINT</th>
+    <th>TIME-OFF-DUTY</th>
   </tr>
+  </thead>
   <tr *ngFor="let p of duty">
     <td>{{ p.date }}</td>
     <td>{{ p.timeOnDuty}}</td>
@@ -16,7 +18,7 @@
     <td>{{ p.dutyPoint }}</td>
     <td>{{ p.timeOffDuty }}</td>
     <td>
-      <button class="btn btn-info" (click)="editDutyRegister(p.userName)">EDIT</button>
+      <button class="btn btn-secondary" (click)="editDutyRegister(p.userName)">EDIT</button>
     </td>
   </tr>
 </table>

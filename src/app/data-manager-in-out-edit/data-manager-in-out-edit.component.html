@@ -1,16 +1,46 @@
-<h3> Update In-Out Register</h3> 
+<h3 style="color: plum;"> Update In-Out Register</h3> 
 <form (ngSubmit)="updateInOut()"> 
 
-    SI NO : <input type="text" [(ngModel)]="inout.siNo" name="siNo"/>  <br><br>
-    Date : <input type="date" [(ngModel)]="inout.date" name="date"/>  <br><br>
-    Name : <input type="text" [(ngModel)]="inout.name" name="name"/>  <br><br>
-    Department : <input type="text"  [(ngModel)]="inout.dept" name="dept"/>  <br><br>
-    Purpose : <input type="text"  [(ngModel)]="inout.purpose" name="purpose"/>  <br><br>
-    Time In : <input type="time"  [(ngModel)]="inout.timeIn" name="timeIn"/> <br><br>
-    Time Out : <input type="time"  [(ngModel)]="inout.timeOut" name="timeOut"/>  <br><br>
-    Digital Signature : <input type="text"  [(ngModel)]="inout.dsignature" name="dsignature"/>  <br><br>
+   
+    <div class="form-group">
+        <label>  SI NO </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.siNo" name="siNo"/>
+       </div>
+       <div class="form-group">
+        <label> Date </label>
+       <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="inout.date" name="date"/>
+       </div>
+       <div class="form-group">
+        <label>Name  </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.name" name="name"/>
+       </div>
+       <div class="form-group">
+        <label> Department </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.dept" name="dept"/>
+       </div>
+       <div class="form-group">
+        <label>Purpose </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.purpose" name="purpose"/>
+       </div>
+       <div class="form-group">
+        <label>Time In </label>
+       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.timeIn" name="timeIn"/>
+       </div>
+       <div class="form-group">
+        <label>Time Out  </label>
+       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.timeOut" name="timeOut"/>
+       </div>
+       <div class="form-group">
+        <label>Digital Signature </label>
+       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.dsignature" name="dsignature"/>
+       </div>
+     
+     
+    
 
-<input type="submit" value="Update"/> <br>
+
+
+<input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="Update"/> <br>
 </form> 
 
 <!--<button (click)="back()">Back</button>-->

@@ -1,14 +1,34 @@
-<h3>Pay Roll Register</h3> 
+<h3 style="color: plum;">Pay Roll Register</h3> 
 <form (ngSubmit)="createPayRoll()"> 
+    <div class="form-group">
+        <label>User Name </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.userName" name="userName"/>   
+       </div>
+       <div class="form-group">
+        <label>Pay Roll Id  </label>
+       <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="pay.pid" name="pid"/>    
+       </div>
+       <div class="form-group">
+        <label>Name  </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.name" name="name"/>   
+       </div>
+       <div class="form-group">
+        <label>Regular Salary </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.regularSalary" name="regularSalary"/>   
+       </div>
+       <div class="form-group">
+        <label>Part Time Salary </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.partTimeSalary" name="partTimeSalary"/>   
+       </div>
+       <div class="form-group">
+        <label>Annual Salary </label>
+       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.annualSalary" name="annualSalary"/>  
+       </div>
+    
+    
+     
 
-    UserName : <input type="text" [(ngModel)]="pay.userName" name="userName"/>  <br>
-    Pay Roll Id : <input type="text" [(ngModel)]="pay.pid" name="pid"/>   <br>
-    Name : <input type="text" [(ngModel)]="pay.name" name="name"/>   <br>
-    Regular Salary : <input type="text"  [(ngModel)]="pay.regularSalary" name="regularSalary"/>   <br>
-    Part Time Salary : <input type="text"  [(ngModel)]="pay.partTimeSalary" name="partTimeSalary"/>   <br>
-    Annual Salary : <input type="text"  [(ngModel)]="pay.annualSalary" name="annualSalary"/>   <br>
-
-<input type="submit" value="Register"/> 
+<input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="Register"/> 
 </form> 
 {{message.message}}
 
