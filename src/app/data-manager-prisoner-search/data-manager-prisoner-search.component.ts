@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Prisoner } from '../prisoner';
@@ -14,9 +15,15 @@ export class DataManagerPrisonerSearchComponent implements OnInit {
   prison:Prisoner[]=[];
 str1:string="";
 search="";
-  constructor(private service:PrisonerService, private router:Router) { }
+  constructor(private service:PrisonerService, private router:Router,private location:Location) { }
 
   ngOnInit(): void {
+  }
+  back(): void {
+    this.location.back();
+  }
+  backtoadmin(){
+    this.router.navigate(['/manager'])
   }
   
   searchPrisonerDetails(){

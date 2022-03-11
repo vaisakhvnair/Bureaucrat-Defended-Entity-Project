@@ -25,7 +25,7 @@ pid:string="";
   updateDetails(){ 
     this.service.updatePrisoner(this.prisoner).subscribe(data=>{      
        console.log(data), 
-       this.router.navigate(['/d-all']);
+       this.router.navigate(['/dm-p-all']);
     });
   }
 
