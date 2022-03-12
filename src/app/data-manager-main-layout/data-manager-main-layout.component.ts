@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataManager } from '../data-manager';
+import { DataManagerService } from '../data-manager.service';
 
 @Component({
   selector: 'app-data-manager-main-layout',
@@ -7,10 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./data-manager-main-layout.component.css']
 })
 export class DataManagerMainLayoutComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  userName: string = "";
+  datam:DataManager=new DataManager("","","","","","","","");
+  uname:string="";
+  constructor(private sobj:DataManagerService,private router:Router) { }
 
   ngOnInit(): void {
+   
   }
 
   viewPrisonerData(){

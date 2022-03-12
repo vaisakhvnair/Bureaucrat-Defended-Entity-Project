@@ -3,15 +3,12 @@
 <form>
     <div class="form-group" style="width: 20%;">
       <label>Username</label>
-       <input type="text" class="form-control" placeholder="Enter username" name="username" [(ngModel)]="userName"#tx1><br>
+       <input type="text" class="form-control" placeholder="Enter username" name="username" (click)="getValidation(tx1)" [(ngModel)]="userName"#tx1><br>
     </div>
     <div class="form-group" style="width: 20%;">
       <label>Password</label> 
        <input type="password" class="form-control" placeholder="Enter password" name="upasswd" [(ngModel)]="password"><br>
     </div>
-    <div class="checkbox">
-        <label><input type="checkbox"> Remember Me</label>
-        </div>
        <input type="submit" style="background-color: blueviolet;" value="login" (click)="getValidation(tx1)">
     
 </form>

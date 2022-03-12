@@ -41,21 +41,27 @@ export class PoliceLoginComponent implements OnInit {
 }
 
  getValidation(tx1: any){
+  this.sobj.getAllPolice().subscribe(data=>{
+    this.pol=data;
+  })
    var b=this.checkUsernameAndPassword(this.userName,this.password)
    if(b){
      this.msg="successful login"+this.userName+" !";
      setTimeout(() => {
+       
        this.router.navigate(['/police'])
        
      }, 2000)
    }else{
+    setTimeout(()=>{
      this.msg="login failed";
      //this.userName="";
      this.password="";
      tx1.focus();
-   }
+   },20000)
  }
 
 }
 
 
+}
