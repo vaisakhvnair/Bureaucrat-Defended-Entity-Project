@@ -1,107 +1,263 @@
 <div>
     <br>
+    <div id="logout-btn" (click)="homelogout()"><button class="btn btn-outline-danger" (click)="homelogout()">Log Out</button></div>
+    <br>
     <h2>Welcome Admin</h2>
 </div>
-<div id="logout-btn" (click)="homelogout()"><button class="btn btn-danger" (click)="homelogout()">Log Out</button></div>
-<br>
+
 <hr>
-<div style="border: 0.5px solid black;">
-    <pre>                     <h3>All Operations </h3></pre>
-    <div style="float: left; border: 2px solid rgb(15, 15, 15);">
-        <div class="btn-group-vertical-lg" style="float: left; padding: 5px;">
+<br>
+<h4>All Operations</h4>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>Personnel Operations</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
 
 
-
-            <button (click)="viewDataManager()" class="btn btn-info">view DataManager</button>&nbsp;
-            <button (click)="addDataManager()" class="btn btn-info">Add DataManager</button>&nbsp;
-            <button (click)="editDataManager()" class="btn btn-info">Edit DataManager</button>
-        </div>
-        <br><br>
-
-        <div class="btn-group-vertical-lg" style="left: right;padding: 5px;">
-            <button (click)="viewPolice()" class="btn btn-info">view police</button>&nbsp;
-            <button (click)="addPolice()" class="btn btn-info">Add police</button>&nbsp;
-            <button (click)="editPolice()" class="btn btn-info">Edit police</button>
-
-
-        </div>
-        <div class="btn-group-vertical-lg" style="float:left;padding: 5px;">
-            <button (click)="PoliceSearch()" class="btn btn-info">Search police</button>&nbsp;
-            <button (click)="DataManagerSearch()" class="btn btn-info">Search DataManager</button>
-
-        </div>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+             <button class="btn btn-info">Police  </button> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+                <button (click)="viewPolice()" class="btn btn-info">view police Register</button>&nbsp;
+                <button (click)="addPolice()" class="btn btn-info">Add police Register</button>&nbsp;
+                <button (click)="editPolice()" class="btn btn-info">Edit police Register</button>
+            
+            </div>
+          </li>
 
 
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+           <button class="btn btn-info">DataManager  </button> 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
+            <button (click)="viewDataManager()" class="btn btn-info">View DataManager Register</button>
+            <button (click)="addDataManager()" class="btn btn-info">Add DataManager Register</button>
+            <button (click)="editDataManager()" class="btn btn-info">Edit DataManager Register</button>
+          
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+             <button class="btn btn-info">Search Personnel </button> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+                <button (click)="PoliceSearch()" class="btn btn-info">Police</button>&nbsp;
+                <button (click)="DataManagerSearch()" class="btn btn-info">DataManager</button>
+            
+            </div>
+          </li>
+
+      </ul>
     </div>
-    <h5></h5>
+  </nav>
 
-    <div style="float: right; border: 2px solid rgb(15, 12, 12);">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>Inmate Operations</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
 
-        <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
-            <button (click)="viewPrisonerReg()" class="btn btn-info">view Prisoner Register</button>&nbsp;
-            <button (click)="addPrisonerReg()" class="btn btn-info">Add Prisoner Register</button>&nbsp;
-            <button (click)="editPrisonerReg()" class="btn btn-info">Edit Prisoner Register</button>
-        </div>
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <button (click)="SearchPrisonerReg()" class="btn btn-info">Search Prisoner Register</button>
-        </div>
 
-        <br>
-        <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
-            <button (click)="viewInOutReg()" class="btn btn-info">view Inout Register</button>&nbsp;
-            <button (click)="addInOutReg()" class="btn btn-info">Add Inout Register</button>&nbsp;
-            <button (click)="editInOutReg()" class="btn btn-info">Edit Inout Register</button>
-        </div>
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+             <button class="btn btn-info">Inmate  </button> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+                <button (click)="viewPrisonerReg()" class="btn btn-info">View Prisoner Register</button>
+                <button (click)="addPrisonerReg()" class="btn btn-info">Add Prisoner Register</button>
+                <button (click)="editPrisonerReg()" class="btn btn-info">Edit Prisoner Register</button>
+            
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+            <button (click)="SearchPrisonerReg()" class="btn btn-info">Search Inmate Register</button>
+          </li>
+
+
+
+      </ul>
+    </div>
+  </nav>
+  
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>In-Out Register Operations</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+             <button class="btn btn-info">In-Out Register  </button> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+                <button (click)="viewInOutReg()" class="btn btn-info">view Inout Register</button>&nbsp;
+                <button (click)="addInOutReg()" class="btn btn-info">Add Inout Register</button>&nbsp;
+                <button (click)="editInOutReg()" class="btn btn-info">Edit Inout Register</button>
+            
+            </div>
+          </li>
+
+
+          <li class="nav-item">
             <button (click)="SearchInOutReg()" class="btn btn-info">Search Inout Register</button>
-        </div>
-        <br>
-        <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
-            <button (click)="viewPayReg()" class="btn btn-info">view Pay Roll Register</button>&nbsp;
-            <button (click)="addPayReg()" class="btn btn-info">Add Pay Roll Register</button>&nbsp;
-            <button (click)="editPayReg()" class="btn btn-info">Edit Pay Roll Register</button>
-        </div>
-        <br>
-        <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
-            <button (click)="viewCell()" class="btn btn-info">view Cell</button>&nbsp;
-            <button (click)="viewCaseReg()" class="btn btn-info">view Case Register</button>
-        </div>
-        <br>
-        <div class="btn-group-vertical-lg" style="float: left;padding: 5px;">
+          </li>
+
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>PayRoll And Duty Operations</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+             <button class="btn btn-info">PayRoll  </button> 
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+                <button (click)="viewPayReg()" class="btn btn-info">view Pay Roll Register</button>&nbsp;
+                <button (click)="addPayReg()" class="btn btn-info">Add Pay Roll Register</button>&nbsp;
+                <button (click)="editPayReg()" class="btn btn-info">Edit Pay Roll Register</button>
+            
+            </div>
+          </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+           <button class="btn btn-info">Duty Register  </button> 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            
             <button (click)="viewDutyReg()" class="btn btn-info">view Duty Register</button>&nbsp;
             <button (click)="addDutyReg()" class="btn btn-info">Add Duty Register</button>&nbsp;
             <button (click)="editDutyReg()" class="btn btn-info">Edit Duty Register</button>
-        </div>
+          
+          </div>
+        </li>
 
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <!-- <button (click)="policepay()" class="btn btn-info">PayRoll For Police</button>-->
-            <button (click)="policepaySearch()" class="btn btn-info"> PayRoll Each Police</button>
-            <!--  <button (click)="datpay()" class="btn btn-info">PayRoll For DataManager</button> -->
-            <button (click)="datpaySearch()" class="btn btn-info"> PayRoll Each DataManager</button>
-        </div>
-
-
-        <br>
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <button (click)="PoliceDutyEachSearch()" class="btn btn-info">Duty For Police</button>
-            <button (click)="DataManagerDutyEachSearch()" class="btn btn-info">Duty For DataManager</button>
-        </div>
-
-
-
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <button (click)="PrisonerReport()" class="btn btn-info">Admin Prisoner Report</button>
-            <button (click)="nominalRollsAdmin()" class="btn btn-info">Nominal Rolls</button>
-        </div>
+        <li class="nav-item">
+                        <!-- <button (click)="policepay()" class="btn btn-info">PayRoll For Police</button>-->
+                        <button (click)="policepaySearch()" class="btn btn-info"> PayRoll Each Police</button>&nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+                        <!--  <button (click)="datpay()" class="btn btn-info">PayRoll For DataManager</button> -->
+                        <button (click)="datpaySearch()" class="btn btn-info"> PayRoll Each DataManager</button>&nbsp;&nbsp;&nbsp;
+        </li>
+        <li class="nav-item">
+            <button (click)="PoliceDutyEachSearch()" class="btn btn-info">Duty For Police</button>&nbsp;&nbsp;&nbsp;
+</li>
+<li class="nav-item">
+    <button (click)="DataManagerDutyEachSearch()" class="btn btn-info">Duty For DataManager</button>
+</li>
 
 
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <button (click)="AutomatedReleaseRegister()" class="btn btn-info">Automated Release Register</button>
-        </div>
 
-        <div class="btn-group-vertical" style="float: left;padding: 5px;">
-            <button (click)="fir()" class="btn btn-info">FIR</button>
-        </div>
-
+      </ul>
     </div>
+  </nav>
+   
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>Case And Cell Details </h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+            &nbsp;&nbsp;&nbsp;<button (click)="viewCell()" class="btn btn-info">view Cell</button>&nbsp;&nbsp;&nbsp;
+            
+          </li>
+          <li class="nav-item">
+            <button (click)="viewCaseReg()" class="btn btn-info">view Case Register</button>
+          </li>
+
+
+
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h5>Others </h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+    
+          <li class="nav-item">
+           &nbsp;&nbsp;&nbsp; <button (click)="fir()" class="btn btn-info">FIR</button> &nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+            <button (click)="nominalRollsAdmin()" class="btn btn-info">Nominal Rolls</button> &nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+            <button (click)="AutomatedReleaseRegister()" class="btn btn-info">Automated Release Register</button> &nbsp;&nbsp;&nbsp;
+          </li>
+          <li class="nav-item">
+            <button (click)="PrisonerReport()" class="btn btn-info">Admin Prisoner Report</button>
+          </li>
+
+
+
+      </ul>
+    </div>
+  </nav>
 </div>
+  
+
+<br>
+<br>
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
