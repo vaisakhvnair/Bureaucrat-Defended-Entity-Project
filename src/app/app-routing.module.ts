@@ -50,7 +50,6 @@ import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/dat
 import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
 import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
 import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
-
 import { FIRAllComponent } from './fir-all/fir-all.component';
 import { PoliceLoginComponent } from './police-login/police-login.component';
 import { PoliceMainLayoutComponent } from './police-main-layout/police-main-layout.component';
@@ -88,22 +87,17 @@ const routes: Routes = [
   {path:'dm-pay-all',component:DataManagerPayrollAllComponent},
   {path:'dm-pay-add',component:DataManagerPayrollCreateComponent},
   {path:'dm-pay-edit/:id',component:DataManagerPayrollEditComponent},
- {path:'prison-all',component:AdminPrisonerAllComponent},
+  {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
-<<<<<<< HEAD
   {path:'login-police',component:PoliceLoginComponent},
   {path:'police',component:PoliceMainLayoutComponent},
   {path:'police-all',component:PolicePrisonerAllComponent},
+  {path:'admin-prisonsearch',component:AdminPrisonerSearchComponent},
   {path:'police-search',component:PolicePrisonerSearchComponent},
-
-=======
-{path:'admin-prisonsearch',component:AdminPrisonerSearchComponent},
-{path:'admin-prison-report',component:AdminPrisonerReportComponent},
-{path:'admin-inoutsearch',component:AdminInOutSearchComponent},
->>>>>>> cc781b3b40b0cc4f14a6e32f4d66279b7cd095bf
+  {path:'admin-prison-report',component:AdminPrisonerReportComponent},
+  {path:'admin-inoutsearch',component:AdminInOutSearchComponent},
   {path:'admin-automated-release-register',component:AdminAutomatedReleaseRegisterComponent},
-
   {path:'cell-all',component:AdminCellDetailsComponent},
   {path:'case-all',component:AdminCaseRegisterComponent},
   {path:'pay-all',component:AdminPayRollAllComponent},

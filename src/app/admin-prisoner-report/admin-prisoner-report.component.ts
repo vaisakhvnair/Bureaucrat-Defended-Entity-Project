@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Pimg } from '../pimg';
 import { Prisoner } from '../prisoner';
 import { PrisonerService } from '../prisoner.service';
-import { jsPDF } from "jspdf"
+import { jsPDF }from "jspdf";
 
 @Component({
   selector: 'app-admin-prisoner-report',
