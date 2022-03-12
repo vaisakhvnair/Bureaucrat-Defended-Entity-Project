@@ -1,132 +1,232 @@
 <h3 style="color: plum;">Prisoner Update</h3> 
 <form (ngSubmit)="updateDetails()"> 
+    <h4 style="color: rosybrown;">Personal Details</h4>
+  <div class="form-group">
+    <label> Prisoner Id</label>
+   <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.pid" name="pid" required="required" pattern="^[0-9]*$" #control1="ngModel"/>
+   <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('required')">
+     *This field cannot be blank
+   </span>
+   <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('pattern')">
+    *Alphabets Not Allowed
+   </span>
+  </div>
+    
+    <div class="form-group" >
+      <label> FirstName </label>  
+  <input type="text" class="form-control" style="width: 40%;"   [(ngModel)]="prisoner.firstName" name="firstName" required="required" minlength="3" maxlength="20"
+  pattern="^[a-zA-Z]*$" #control2="ngModel"/> 
+  <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('required')">
+    *This field cannot be blank
+  </span>
+  <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('minlength')">
+    *Requires minimum three character
+  </span>
+  <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('pattern')">
+   * Only Alphabets Allowed
+  </span> 
+  </div> 
+  <div class="form-group" >
+    <label> LastName  </label>  
+  <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.lastName" name="lastName" required="required" minlength="1" maxlength="15"
+  pattern="^[a-zA-Z]*$" #control3="ngModel"/> 
+  <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('required')">
+    *This field cannot be blank
+  </span>
+  <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('minlength')">
+    *Requires minimum three character
+  </span>
+  <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('pattern')">
+   * Only Alphabets Allowed
+  </span>
   
+  </div> 
+  <div class="form-group" >
+    <label> Middle Name  </label>  
+  <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.middleName" name="middleName"required="required" minlength="1" maxlength="15"
+  pattern="^[a-zA-Z]*$" #control4="ngModel"/>
+  <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('required')">
+    *This field cannot be blank
+  </span>
+  <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('minlength')">
+    *Requires minimum three character
+  </span>
+  <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('pattern')">
+   * Only Alphabets Allowed
+  </span>
+  
+  </div> 
+  
+  Gender : <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Male" required="required"  
+  #control5="ngModel"/>Male
+           <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Female" required="required"  
+           #control5="ngModel"/>Female
+           <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('required')">
+            *This field is reuqired please select
+            </span>
     
-    
-      <h4 style="color: rosybrown;">Personal Details</h4>
-    <div class="form-group">
-      <label> Prisoner Id</label>
-     <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.pid" name="pid"/>
-     </div>
-      
-      <div class="form-group" >
-        <label> FirstName </label>  
-    <input type="text" class="form-control" style="width: 40%;"   [(ngModel)]="prisoner.firstName" name="firstName"/> 
-    </div> 
     <div class="form-group" >
-      <label> LastName  </label>  
-    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.lastName" name="lastName"/> 
-    </div> 
-    <div class="form-group" >
-      <label> Middle Name  </label>  
-    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.middleName" name="middleName"/>
-    </div> 
-    
-    Gender : <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Male"/>Male
-             <input type="radio" [(ngModel)]="prisoner.gender" name="gender" value="Female"/>Female
-      <br><br>
-      <div class="form-group" >
-        <label> AGE </label>  
-      <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.age" name="age"/> 
-      </div>
-      <div class="form-group" >
-        <label>ADDRESS </label>  
-      <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.address" name="address"/>
-      </div>
-    
-    
-    
-    <hr>
-    <h4 style="color: rosybrown;"><b>Crime Details</b></h4>
-    <div class="form-group" >
-      <label>DateOfArrest:</label>  
-    <input type="date" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.dateOfArrest" name="dateOfArrest"/>
+      <label> AGE </label>  
+    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.age" name="age" required="required" pattern="^[0-9]*$" #control6="ngModel"/> 
+    <span class="error" *ngIf="control6.touched && control6.invalid && control6.hasError('required')">
+      *This field cannot be blank
+    </span>
+    <span class="error" *ngIf="control6.touched && control6.invalid && control6.hasError('pattern')">
+     *Alphabets Not Allowed
+    </span>
     </div>
     <div class="form-group" >
-    CrimeType &nbsp; <select [(ngModel)]="prisoner.crimeType" class="form-control" style="width: 40%;"  name="crimeType">
-      <option value="">---</option>
-      <option>Murder</option>
-      <option>ChainSnatching</option>
-      <option>Rape</option>
-      <option>Pocso</option>
-      <option>AttempttoMurder</option>
-    </select>
+      <label>ADDRESS </label>  
+    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.address" name="address" required="required" minlength="1" maxlength="15"
+    pattern="^[a-zA-Z]*$" #control7="ngModel"/>
+    <span class="error" *ngIf="control7.touched && control7.invalid && control7.hasError('required')">
+      *This field cannot be blank
+    </span>
+    <span class="error" *ngIf="control7.touched && control7.invalid && control7.hasError('minlength')">
+      *Requires minimum three character
+    </span>
+    <span class="error" *ngIf="control7.touched && control7.invalid && control7.hasError('pattern')">
+     * Only Alphabets Allowed
+    </span>
+    </div>
+  
+  
+  
+  <hr>
+  <h4 style="color: rosybrown;"><b>Crime Details</b></h4>
+  <div class="form-group" >
+    <label>DateOfArrest:</label>  
+  <input type="date" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.dateOfArrest" name="dateOfArrest" required="required"  #control8="ngModel"/>
+  <span class="error" *ngIf="control8.touched && control8.invalid && control8.hasError('required')">
+    *This field cannot be blank
+  </span>
+  </div>
+  <div class="form-group" >
+  CrimeType &nbsp; <select [(ngModel)]="prisoner.crimeType" class="form-control" style="width: 40%;"  name="crimeType" required="required"  #control9="ngModel">
+  
+    <option value="">---</option>
+    <option>Murder</option>
+    <option>ChainSnatching</option>
+    <option>Rape</option>
+    <option>Pocso</option>
+    <option>AttempttoMurder</option>
+  </select>
+  <span class="error" *ngIf="control9.touched && control9.invalid && control9.hasError('required')">
+    *please select the Category
+    </span>
+  </div>
+  <div  class="form-group">
+  <label>Remand-Date</label>  
+  <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.remandDate" name="remandDate" required="required"  #control10="ngModel"/>
+  <span class="error" *ngIf="control10.touched && control10.invalid && control10.hasError('required')">
+    *This field cannot be blank
+  </span>
+  </div>
+  <div  class="form-group">
+    <label>Court-Hearing</label>  
+    <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.courtHearing" name="courtHearing" required="required"  #control11="ngModel"/>
+    <span class="error" *ngIf="control11.touched && control11.invalid && control11.hasError('required')">
+      *This field cannot be blank
+    </span>
     </div>
     <div  class="form-group">
-    <label>Remand-Date</label>  
-    <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.remandDate" name="remandDate"/>
-    </div>
-    <div  class="form-group">
-      <label>Court-Hearing</label>  
-      <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.courtHearing" name="courtHearing"/>
+      <label>Release-Date</label>  
+      <input type="date" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.releaseDate" name="releaseDate" required="required"  #control12="ngModel"/>
+      <span class="error" *ngIf="control12.touched && control12.invalid && control12.hasError('required')">
+        *This field cannot be blank
+      </span>
       </div>
       <div  class="form-group">
-        <label>Release-Date</label>  
-        <input type="date" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.releaseDate" name="releaseDate"/>  
+        <label>ComplaintCount</label>  
+        <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.complaintCount" name="complaintCount" required="required"  #control13="ngModel"/>
+        <span class="error" *ngIf="control13.touched && control13.invalid && control13.hasError('required')">
+          *This field cannot be blank
+        </span>
         </div>
         <div  class="form-group">
-          <label>ComplaintCount</label>  
-          <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.complaintCount" name="complaintCount"/> 
+          <label>CellNumber</label>  
+          <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.cellNumber" name="cellNumber" required="required"  #control14="ngModel"/>
+          <span class="error" *ngIf="control14.touched && control14.invalid && control14.hasError('required')">
+            *This field cannot be blank
+          </span>
           </div>
-          <div  class="form-group">
-            <label>CellNumber</label>  
-            <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.cellNumber" name="cellNumber"/> 
-            </div>
-    <hr>
-    <h4 style="color: rosybrown;">Witness Details</h4>
-    <div class="form-group" >
-      <label>Name Of Eye Witness</label>  
-    <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.eyeWitness" name="eyeWitness">
+  <hr>
+  <h4 style="color: rosybrown;">Witness Details</h4>
+  <div class="form-group" >
+    <label>Name Of Eye Witness</label>  
+  <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="prisoner.eyeWitness" name="eyeWitness"required="required" minlength="3" maxlength="15"
+  pattern="^[a-zA-Z]*$" #control15="ngModel"/>
+  <span class="error" *ngIf="control7.touched && control15.invalid && control15.hasError('required')">
+    *This field cannot be blank
+  </span>
+  <span class="error" *ngIf="control7.touched && control15.invalid && control15.hasError('minlength')">
+    *Requires minimum three character
+  </span>
+  <span class="error" *ngIf="control7.touched && control15.invalid && control15.hasError('pattern')">
+   * Only Alphabets Allowed
+  </span>
+  </div>
+  <div class="form-group" >
+    <label>WitnessAddress</label>  
+  <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.witnessAddress" name="witnessAddress"required="required" minlength="3" maxlength="15"
+  pattern="^[a-zA-Z]*$" #control16="ngModel"/>
+  <span class="error" *ngIf="control16.touched && control16.invalid && control16.hasError('required')">
+    *This field cannot be blank
+  </span>
+  <span class="error" *ngIf="control16.touched && control16.invalid && control16.hasError('minlength')">
+    *Requires minimum three character
+  </span>
+  <span class="error" *ngIf="control16.touched && control16.invalid && control16.hasError('pattern')">
+   * Only Alphabets Allowed
+  </span>
+  </div>
+  
+  
+  <hr>
+  <h4 style="color: rosybrown;">Prisoner physical Apperance Details</h4>
+  <div class="form-group">
+  <label>EyeColor</label> 
+  <select  [(ngModel)]="prisoner.eyeColor" class="form-control" style="width: 40%;" name="eyeColor" required="required"  #control17="ngModel"> 
+    <option value="">---</option>
+    <option>Black</option>
+    <option>Grey</option>
+    <option>Brown</option>
+    <option>Blue</option>
+    <option>Other</option>
+    </select>
+    <span class="error" *ngIf="control17.touched && control17.invalid && control17.hasError('required')">
+      *please select the Category
+      </span>
+  </div>
+  <div class="form-group">
+  <label>HairColor</label>
+  <select [(ngModel)]="prisoner.hairColor" class="form-control" style="width: 40%;" name="hairColor" required="required"  #control18="ngModel">  
+    <option value="">---</option>
+    <option>Black</option>
+    <option>White</option>
+    <option>Brown</option>
+    <option>Salt&Pepper</option>
+    <option>Other</option>
+    </select>
+    <span class="error" *ngIf="control18.touched && control18.invalid && control18.hasError('required')">
+      *please select the Category
+      </span>
     </div>
-    <div class="form-group" >
-      <label>WitnessAddress</label>  
-    <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="prisoner.witnessAddress" name="witnessAddress"/>
-    </div>
-    
-    
-    <hr>
-    <h4 style="color: rosybrown;">Prisoner physical Apperance Details</h4>
     <div class="form-group">
-    <label>EyeColor</label> 
-    <select  [(ngModel)]="prisoner.eyeColor" class="form-control" style="width: 40%;" name="eyeColor"> 
+    FaceShape:<select [(ngModel)]="prisoner.faceShape" class="form-control" style="width: 40%;" name="faceShape" required="required"  #control19="ngModel">  
       <option value="">---</option>
-      <option>Black</option>
-      <option>Grey</option>
-      <option>Brown</option>
-      <option>Blue</option>
+      <option>Round</option>
+      <option>Oval</option>
+      <option>Square</option>
+      <option>Oblong</option>
+      <option>Diamond</option>
       <option>Other</option>
       </select>
-    </div>
-    <div class="form-group">
-    <label>HairColor</label>
-    <select [(ngModel)]="prisoner.hairColor" class="form-control" style="width: 40%;" name="age">  
-      <option value="">---</option>
-      <option>Black</option>
-      <option>White</option>
-      <option>Brown</option>
-      <option>Salt&Pepper</option>
-      <option>Other</option>
-      </select>
+      <span class="error" *ngIf="control19.touched && control19.invalid && control19.hasError('required')">
+        *please select the Category
+        </span>
       </div>
-      <div class="form-group">
-      FaceShape:<select [(ngModel)]="prisoner.faceShape" class="form-control" style="width: 40%;" name="faceShape">  
-        <option value="">---</option>
-        <option>Round</option>
-        <option>Oval</option>
-        <option>Square</option>
-        <option>Oblong</option>
-        <option>Diamond</option>
-        <option>Other</option>
-        </select>
-        </div>
-        <hr>
-    
-    
-   
-   
-    
-    
-
+      <hr>
 
 <input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="Update"/> <br><br>
 </form> 

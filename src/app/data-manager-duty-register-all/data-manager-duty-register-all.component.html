@@ -2,7 +2,7 @@
 <h3 style="color: plum;">Duty Register</h3>
 
 <table  class="table">
-  <thead class="thead-dark">
+  
   <tr>
     <th>DATE</th>
     <th>TIME-ON-DUTY</th>
@@ -10,7 +10,7 @@
     <th>DUTY-POINT</th>
     <th>TIME-OFF-DUTY</th>
   </tr>
-  </thead>
+
   <tr *ngFor="let p of duty">
     <td>{{ p.date }}</td>
     <td>{{ p.timeOnDuty}}</td>
@@ -22,4 +22,4 @@
     </td>
   </tr>
 </table>
-{{ message.message }}
+

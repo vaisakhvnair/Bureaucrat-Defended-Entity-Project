@@ -1,4 +1,6 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InOut } from '../in-out';
 import { InOutService } from '../in-out.service';
@@ -13,7 +15,7 @@ export class DataManagerInOutEditComponent implements OnInit {
   inout: InOut = new InOut("","","","","","","","");
   un:string="";
 
-  constructor(private service: InOutService, private activeRouter: ActivatedRoute, private router: Router) { }
+  constructor(private service: InOutService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) { }
 
   ngOnInit(): void {
     this.inout = new InOut("","","","","","","","");
@@ -22,10 +24,8 @@ export class DataManagerInOutEditComponent implements OnInit {
   }
   updateInOut() {
     this.service.updateInOut(this.inout).subscribe(data => {
-      console.log(data), 
-      this.router.navigate(['/dm-io-all']);
+      console.log(data), this.router.navigate(['/dm-io-all']);
     });
 
   }
-
 }

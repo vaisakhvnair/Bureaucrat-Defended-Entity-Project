@@ -20,7 +20,9 @@ export class DataManagerInOutAllComponent implements OnInit {
 
   }
   getAllInOut() {
-    this.service.getAllInOut().subscribe(data => { this.inout = data }, error => { this.inout = [] });
+    this.service.getAllInOut().subscribe(data => 
+      { this.inout = data }, 
+      error => { this.inout =[] });
   }
  
   editInOut(id: any) {

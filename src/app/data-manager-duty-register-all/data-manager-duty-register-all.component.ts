@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DutyRegister } from '../duty-register';
@@ -26,4 +27,5 @@ export class DataManagerDutyRegisterAllComponent implements OnInit {
   editDutyRegister(id: any) {
     this.router.navigate(['dm-d-edit', id]);
   }
+  
 }

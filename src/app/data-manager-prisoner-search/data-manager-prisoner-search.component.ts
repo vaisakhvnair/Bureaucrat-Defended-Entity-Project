@@ -15,15 +15,9 @@ export class DataManagerPrisonerSearchComponent implements OnInit {
   prison:Prisoner[]=[];
 str1:string="";
 search="";
-  constructor(private service:PrisonerService, private router:Router,private location:Location) { }
+  constructor(private service:PrisonerService, private router:Router) { }
 
   ngOnInit(): void {
-  }
-  back(): void {
-    this.location.back();
-  }
-  backtoadmin(){
-    this.router.navigate(['/manager'])
   }
   
   searchPrisonerDetails(){

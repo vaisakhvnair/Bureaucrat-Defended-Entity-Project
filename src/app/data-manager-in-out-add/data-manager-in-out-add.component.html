@@ -1,42 +1,30 @@
-<h3 style="color: plum;">In-Out Register</h3> 
-<form (ngSubmit)="createInOut()"> 
-    <div class="form-group">
-        <label>  SI NO </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.siNo" name="siNo"/>
-       </div>
-       <div class="form-group">
-        <label> Date </label>
-       <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="inout.date" name="date"/>
-       </div>
-       <div class="form-group">
-        <label>Name  </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.name" name="name"/>
-       </div>
-       <div class="form-group">
-        <label> Department </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.dept" name="dept"/>
-       </div>
-       <div class="form-group">
-        <label>Purpose </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="inout.purpose" name="purpose"/>
-       </div>
-       <div class="form-group">
-        <label>Time In </label>
-       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.timeIn" name="timeIn"/>
-       </div>
-       <div class="form-group">
-        <label>Time Out  </label>
-       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.timeOut" name="timeOut"/>
-       </div>
-       <div class="form-group">
-        <label>Digital Signature </label>
-       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="inout.dsignature" name="dsignature"/>
-       </div>
-     
-     
-    
 
-<input type="submit"  class="btn btn-primary" style="background-color: palevioletred;" value="Register"/> <br><br>
-</form> 
-{{message.message}} 
-<!--<button (click)="back()">Back</button>-->
+<div><br>
+  <h3>In-Out Register Create</h3> 
+  <div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+  <div class="form-group">
+  <form (ngSubmit)="createInOut()"> 
+      <label> SI NO :</label>
+      <input type="number"class="form-control" [(ngModel)]="inout.siNo" name="siNo"/>
+      <label> Date : </label>
+     <input type="date"class="form-control" [(ngModel)]="inout.date" name="date"/>
+      <label>Name : </label>
+      <input type="text"class="form-control" [(ngModel)]="inout.name" name="name"/> 
+      <label> Department : </label>
+     <input type="text" class="form-control" [(ngModel)]="inout.dept" name="dept"/> 
+      <label>Purpose : </label>
+      <input type="text" class="form-control" [(ngModel)]="inout.purpose" name="purpose"/> 
+      <label>Time In : </label>
+      <input type="time" class="form-control" [(ngModel)]="inout.timeIn" name="timeIn"/> 
+      <label> Time Out : </label>
+      <input type="time" class="form-control" [(ngModel)]="inout.timeOut" name="timeOut"/> 
+      <label> Digital Signature :</label>
+       <input type="text" class="form-control" [(ngModel)]="inout.dsignature" name="dsignature"/><br>
+  
+  <input type="submit" value="Register" class="btn btn-success"/> <br>
+  </form> 
+  {{message.message}} 
+  <br>
+  <!--<button (click)="back()" class="btn btn-info">Back</button>-->
+  </div> 
+  </div>

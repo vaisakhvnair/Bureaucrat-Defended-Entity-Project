@@ -1,30 +1,19 @@
-<h3 style="color: plum;">duty-register</h3> 
-<form (ngSubmit)="createDutyRegister()"> 
-    <div class="form-group">
-        <label>User Name </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.userName" name="userName"/>  
-       </div>
-       <div class="form-group">
-        <label>Date </label>
-       <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="duty.date" name="date"/> 
-       </div>
-       <div class="form-group">
-        <label>Time On Duty  </label>
-       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="duty.timeOnDuty" name="timeOnDuty"/> 
-       </div>
-       <div class="form-group">
-        <label>Name </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.name" name="name"/>  
-       </div>
-       <div class="form-group">
-        <label>Duty Point </label>
-       <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.dutyPoint" name="dutyPoint"/>  
-       </div>
-       <div class="form-group">
-        <label>Time Off Duty</label>
-       <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="duty.timeOffDuty" name="timeOffDuty"/>  
-       </div> 
-
-<input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="Register"/>
-</form>
-{{message.message}} 
+<div>
+  <h3>Duty-register Create</h3> 
+  
+  <form (ngSubmit)="createDutyRegister()"> 
+      <div class="form-group">
+  User Name : <input type="text" class="form-control"[(ngModel)]="datman.userName" name="userName"/>  
+  Date : <input type="date"class="form-control" [(ngModel)]="datman.date" name="date"/>  
+  Time On Duty : <input type="time"class="form-control" [(ngModel)]="datman.timeOnDuty" name="timeOnDuty"/>  
+  Name : <input type="text" class="form-control" [(ngModel)]="datman.name" name="name"/>  
+  Duty Point : <input type="text" class="form-control" [(ngModel)]="datman.dutyPoint" name="dutyPoint"/> 
+  Time Off Duty : <input type="time" class="form-control" [(ngModel)]="datman.timeOffDuty" name="timeOffDuty"/>  <br>
+  
+  <input type="submit" class="btn btn-success" value="Register"/>
+      </div>
+  </form>
+  {{message.message}} 
+  <br>
+  
+  </div>

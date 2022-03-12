@@ -106,6 +106,7 @@ const routes: Routes = [
   {path:'admin-d-search',component:AdminDataManagerSearchComponent},
   {path:'admin-polDuty-eachSearch',component:AdminPoliceDutyEachComponent},
   {path:'admin-datDuty-eachSearch',component:AdminDataManagerDutyEachComponent},
+  {path:'admin-prisoner-eachSearch',component:AdminPrisonerEachSearchComponent}
   
   
 ];

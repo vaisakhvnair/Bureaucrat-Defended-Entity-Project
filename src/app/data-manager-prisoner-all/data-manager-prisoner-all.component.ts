@@ -18,7 +18,7 @@ export class DataManagerPrisonerAllComponent implements OnInit {
   
   
   
-    constructor(private service:PrisonerService, private router:Router,private location:Location) { }
+    constructor(private service:PrisonerService, private router:Router) { }
   
     ngOnInit(): void {
       this.getAllDetails();
@@ -38,11 +38,5 @@ export class DataManagerPrisonerAllComponent implements OnInit {
     searchPrisonerData(){
       this.router.navigate(['dm-p-search']);
     }
-    back(): void {
-      this.location.back();
-    }
-    backtoadmin(){
-      this.router.navigate(['/manager'])
-    }
-
+    
 }
