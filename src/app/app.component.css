@@ -8,3 +8,12 @@ marquee{
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px;
 }
+.inventory-body {
+    position: fixed;
+    min-width: 98%;
+    background-image: url("https://i1.wp.com/actifypress.com/wp-content/uploads/2020/03/prison-barbed-wire.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    }
