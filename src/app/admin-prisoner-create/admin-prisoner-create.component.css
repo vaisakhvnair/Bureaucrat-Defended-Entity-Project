@@ -1,0 +1,7 @@
+span{
+    color: red;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: small;
+    text-shadow: 0.5px 0.5px ;
+}

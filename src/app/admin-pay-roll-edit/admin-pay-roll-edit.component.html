@@ -4,23 +4,73 @@
     (click)="backtoadmin()">Back To Admin</button></div>
     <div class="form-group">
         <br>
-<form (ngSubmit)="updateDataManager()">
+        <form (ngSubmit)="updateDataManager()"[formGroup]="myform">
 
-<label>UserName :</label>
-<input type="text"class="form-control" [(ngModel)]="datman.userName" name="userName" /> 
-<label>PayRoll Id : </label>
-<input type="text"class="form-control" [(ngModel)]="datman.pid" name="pid" /> 
-<label>Name : </label>
-<input type="text"class="form-control" [(ngModel)]="datman.name" name="name" /> 
-<label>Regular Salary :</label>
-<input type="text" class="form-control"[(ngModel)]="datman.regularSalary" name="regularSalary" /> 
-<label>Part Time Salary :</label>
-<input type="text"class="form-control" [(ngModel)]="datman.partTimeSalary" name="partTimeSalary" /> 
-<label>Annual Salary : </label>
-<input type="text" class="form-control" [(ngModel)]="datman.annualSalary" name="annualSalary" /> <br>
-
-<input type="submit" style="width: 10%;" class="btn btn-success"value="Register" />
-</form>
-</div>
-<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+            <label>UserName :</label>
+            <input type="text"class="form-control" [(ngModel)]="datman.userName" name="userName"formControlName="userName" /> 
+            <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+            && myform.controls?.['userName']?.hasError('required')">userName Cannot be Blank</span>
+           
+            <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+            && myform.controls?.['userName']?.hasError('minlength')">Min 3 characters</span>
+           
+            <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+            && myform.controls?.['userName']?.hasError('maxlength')">Max 20 characters</span>
+           
+            <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+            && myform.controls?.['userName']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+            <br>
+            <label>PayRoll Id : </label>
+            <input type="text"class="form-control" [(ngModel)]="datman.pid" name="pid" formControlName="pid" /> 
+            <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+            && myform.controls?.['pid']?.hasError('required')">pid Cannot be Blank</span>
+    
+            <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+            && myform.controls?.['pid']?.hasError('pattern')"> Numbers Only Allowed</span>
+            <br>
+            <label>Name : </label>
+            <input type="text"class="form-control" [(ngModel)]="datman.name" name="name" formControlName="name" /> 
+            <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+            && myform.controls?.['name']?.hasError('required')">name Cannot be Blank</span>
+           
+            <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+            && myform.controls?.['name']?.hasError('minlength')">Min 3 characters</span>
+           
+            <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['name']?.invalid
+            && myform.controls?.['name']?.hasError('maxlength')">Max 20 characters</span>
+           
+            <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+            && myform.controls?.['name']?.hasError('pattern')">Alphabets Only Allowed</span>
+    
+    
+            <br>
+            <label>Regular Salary :</label>
+            <input type="text" class="form-control"[(ngModel)]="datman.regularSalary" name="regularSalary" formControlName="regularSalary" /> 
+            <span class="error" *ngIf="myform.controls?.['regularSalary']?.touched && myform.controls?.['regularSalary']?.invalid
+            && myform.controls?.['regularSalary']?.hasError('required')">regularSalary Cannot be Blank</span>
+            <span class="error" *ngIf="myform.controls?.['regularSalary']?.touched && myform.controls?.['regularSalary']?.invalid
+            && myform.controls?.['regularSalary']?.hasError('pattern')">Numbers Only Allowed</span>
+            <br>
+    
+            <label>Part Time Salary :</label>
+            <input type="text"class="form-control" [(ngModel)]="datman.partTimeSalary" name="partTimeSalary" formControlName="partTimeSalary" /> 
+            <span class="error" *ngIf="myform.controls?.['partTimeSalary']?.touched && myform.controls?.['partTimeSalary']?.invalid
+            && myform.controls?.['partTimeSalary']?.hasError('required')">partTimeSalary Cannot be Blank</span>
+            <span class="error" *ngIf="myform.controls?.['partTimeSalary']?.touched && myform.controls?.['partTimeSalary']?.invalid
+            && myform.controls?.['partTimeSalary']?.hasError('pattern')">Numbers Only Allowed</span>
+            <br>
+    
+            <label>Annual Salary : </label>
+            <input type="text" class="form-control" [(ngModel)]="datman.annualSalary" name="annualSalary" formControlName="annualSalary" /> 
+            <span class="error" *ngIf="myform.controls?.['annualSalary']?.touched && myform.controls?.['annualSalary']?.invalid
+            && myform.controls?.['annualSalary']?.hasError('required')">annualSalary Cannot be Blank</span>
+            <span class="error" *ngIf="myform.controls?.['annualSalary']?.touched && myform.controls?.['annualSalary']?.invalid
+            && myform.controls?.['annualSalary']?.hasError('pattern')">Numbers Only Allowed</span>
+     
+            <br>
+    
+            <input type="submit" style="width: 10%;" [disabled]="myform.invalid" class="btn btn-success"value="Update" />
+        </form>
+        </div>
+        <button class="btn btn-info btn-sm" (click)="back()">Back</button>
 </div>
