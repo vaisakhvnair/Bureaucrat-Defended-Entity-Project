@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FIR } from '../fir';
 import { FIRService } from '../fir.service';
@@ -17,7 +18,27 @@ export class FIRAllComponent implements OnInit {
   fire: FIR = new FIR("","","","","","","","");
   un:string="";
   message: Message = new Message("","");
-  constructor(private service: FIRService, private router: Router, private activeRouter: ActivatedRoute,private location: Location) { }
+  myform:FormGroup;
+  constructor(private service: FIRService, private router: Router, private activeRouter: ActivatedRoute,private location: Location) {
+    this.myform=new FormGroup({
+      complaintNumber:new FormControl("",[Validators.required, Validators.pattern("^C[0-9]*$")]),
+      victimName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z ]*$")]),
+      offence:new FormControl("",[Validators.required]),
+      timeOfCrime:new FormControl("",[Validators.required]),
+      dateOfCrime:new FormControl("",[Validators.required]),
+      placeOfCrime:new FormControl("",[Validators.required]),
+      witnessStatement:new FormControl("",[Validators.required]),
+      culpritName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z ]*$")]),
+      complaintNumber1:new FormControl("",[Validators.required, Validators.pattern("^C[0-9]*$")]),
+      victimName1:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z ]*$")]),
+      offence1:new FormControl("",[Validators.required]),
+      timeOfCrime1:new FormControl("",[Validators.required]),
+      dateOfCrime1:new FormControl("",[Validators.required]),
+      placeOfCrime1:new FormControl("",[Validators.required]),
+      witnessStatement1:new FormControl("",[Validators.required]),
+      culpritName1:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z ]*$")])
+    });
+   }
 
   ngOnInit(): void {
     this.getAllFIR();

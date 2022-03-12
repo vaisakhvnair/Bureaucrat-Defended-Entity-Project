@@ -3,30 +3,73 @@
 <div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 <div class="container" style="width: 400px; margin-left: 0%;">
     <div class="form-group">
-    <form (ngSubmit)="updatePolice()">
+    <form (ngSubmit)="updatePolice()"[formGroup]="myform">
         <label>Police UserName :</label>
-        <input type="text" class="form-control" [(ngModel)]="police.userName" name="userName" />
+        <input type="text" class="form-control" [(ngModel)]="police.userName" name="userName" formControlName="userName"/>
+        <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+        && myform.controls?.['userName']?.hasError('required')">userName Cannot be Blank</span>
+       
+        <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+        && myform.controls?.['userName']?.hasError('minlength')">Min 3 characters</span>
+       
+        <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+        && myform.controls?.['userName']?.hasError('maxlength')">Max 20 characters</span>
+       
+        <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+        && myform.controls?.['userName']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+       
+       
+        <br>
         <label>Password :</label>
-        <input type="password" class="form-control" [(ngModel)]="police.password" name="password" />
+        <input type="password" class="form-control" [(ngModel)]="police.password" name="password" formControlName="password"/>
+        <span class="error" *ngIf="myform.controls?.['password']?.touched && myform.controls?.['password']?.invalid
+        && myform.controls?.['password']?.hasError('required')">password Cannot be Blank</span>
+<br>
         <label>ID :</label>
-        <input type="text" class="form-control" [(ngModel)]="police.id" name="id" />
+        <input type="text" class="form-control" [(ngModel)]="police.id" name="id" formControlName="id"/>
+        <span class="error" *ngIf="myform.controls?.['id']?.touched && myform.controls?.['id']?.invalid
+        && myform.controls?.['id']?.hasError('required')">id Cannot be Blank</span>
+        <span class="error" *ngIf="myform.controls?.['id']?.touched && myform.controls?.['id']?.invalid
+        && myform.controls?.['id']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+        <br>
         <label>Name : </label>
-        <input type="text" class="form-control" [(ngModel)]="police.name" name="name" />
+        <input type="text" class="form-control" [(ngModel)]="police.name" name="name" formControlName="name"/>
+        <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+        && myform.controls?.['name']?.hasError('required')">name Cannot be Blank</span>
+        <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+        && myform.controls?.['name']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+
+        <br>
         <label>Designation :</label>
-        <select class="form-control" [(ngModel)]="police.designation" name="designation">
+        <select class="form-control" [(ngModel)]="police.designation" name="designation"formControlName="designation">
             <option>Guard</option>
             <option>Training Guard</option>
             <option>Head Guard</option>
             <option>Warden</option>
             <option>Head Warden</option>
           </select>
+          <span class="error" *ngIf="myform.controls?.['designation']?.touched && myform.controls?.['designation']?.invalid
+          && myform.controls?.['designation']?.hasError('required')">designation Field is Required</span>
+          <br>
         <label>Hire Date :</label>
-        <input type="date" class="form-control" [(ngModel)]="police.hiredate" name="hiredate" />
+        <input type="date" class="form-control" [(ngModel)]="police.hiredate" name="hiredate" formControlName="hiredate"/>
+        <span class="error" *ngIf="myform.controls?.['hiredate']?.touched && myform.controls?.['hiredate']?.invalid
+        && myform.controls?.['hiredate']?.hasError('required')">hiredate Field is Required</span>
+        <br>
         <label>Email :</label>
-        <input type="text" class="form-control"id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="police.email" name="email" />
+        <input type="text" class="form-control"id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="police.email" name="email" formControlName="email"/>
+        <span class="error" *ngIf="myform.controls?.['email']?.touched && myform.controls?.['email']?.invalid
+        && myform.controls?.['email']?.hasError('required')">Email Field is Required</span>
+       
+        <span class="error" *ngIf="myform.controls?.['email']?.touched && myform.controls?.['email']?.invalid
+        && myform.controls?.['email']?.hasError('email')">Enter the valid email</span>
+        <br>
         <label>Address :</label>
-        <input type="text" class="form-control" [(ngModel)]="police.address" name="address" /><br>
-        <input type="submit" value="Update" class="btn btn-success" />
+        <input type="text" class="form-control" [(ngModel)]="police.address" name="address" formControlName="address"/>
+        <span class="error" *ngIf="myform.controls?.['address']?.touched && myform.controls?.['address']?.invalid
+        && myform.controls?.['address']?.hasError('required')">address Field is Required</span>
+        <br>
+        <input type="submit" value="Update" [disabled]="myform.invalid" class="btn btn-success" />
     </form>
 </div>
 </div>

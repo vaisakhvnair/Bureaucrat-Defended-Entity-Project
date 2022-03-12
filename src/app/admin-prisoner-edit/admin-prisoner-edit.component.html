@@ -3,40 +3,118 @@
 <h3>Prisoner Update</h3> 
 <div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
 <div class="container"><br>
-<form (ngSubmit)="updatePrisoner()">
+<form (ngSubmit)="updatePrisoner()" [formGroup]="myform">
 
    
-    <label >Prisoner ID :</label> <input type="text"class="form-control" [(ngModel)]="pr.pid" name="pid"/>  <br>
-    <label > First Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.firstName" name="firstName"/>  <br>
-    <label > Last Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.lastName" name="name"/>  <br>
-    <label >Middle Name :</label> <input type="text"class="form-control"  [(ngModel)]="pr.middleName" name="middleName"/>  <br>
-    <label > Date Of Birth :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfBirth" name="dateOfBirth"/>  <br>
+    <label >Prisoner ID :</label> <input type="text"class="form-control" [(ngModel)]="pr.pid" name="pid" formControlName="pid"/>
+    <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+    && myform.controls?.['pid']?.hasError('required')">PID Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+    && myform.controls?.['pid']?.hasError('minlength')">Min 3 characters</span>
+   
+    <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+    && myform.controls?.['pid']?.hasError('maxlength')">Max 20 characters</span>
+   
+    <span class="error" *ngIf="myform.controls?.['pid']?.touched && myform.controls?.['pid']?.invalid
+    && myform.controls?.['pid']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+    
+    
+    <br>
+    <label > First Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.firstName" name="firstName" formControlName="firstName"/>
+    <span class="error" *ngIf="myform.controls?.['firstName']?.touched && myform.controls?.['firstName']?.invalid
+    && myform.controls?.['firstName']?.hasError('required')">FirstName Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['firstName']?.touched && myform.controls?.['firstName']?.invalid
+    && myform.controls?.['firstName']?.hasError('minlength')">Min 3 characters</span>
+   
+    <span class="error" *ngIf="myform.controls?.['firstName']?.touched && myform.controls?.['firstName']?.invalid
+    && myform.controls?.['firstName']?.hasError('maxlength')">Max 20 characters</span>
+   
+    <span class="error" *ngIf="myform.controls?.['firstName']?.touched && myform.controls?.['firstName']?.invalid
+    && myform.controls?.['firstName']?.hasError('pattern')">Alphabets Only Allowed</span>
+    
+    <br>
+    <label > Last Name :</label> <input type="text"class="form-control" [(ngModel)]="pr.lastName" name="name" formControlName="lastname"/>
+    <span class="error" *ngIf="myform.controls?.['lastname']?.touched && myform.controls?.['lastname']?.invalid
+    && myform.controls?.['lastname']?.hasError('required')">LastName Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['lastname']?.touched && myform.controls?.['lastname']?.invalid
+    && myform.controls?.['lastname']?.hasError('pattern')">Alphabets Only Allowed</span>
+    
+    
 
+    <br>
+    <label >Middle Name :</label> <input type="text"class="form-control"  [(ngModel)]="pr.middleName" name="middleName" formControlName="middleName" /> 
+    <span class="error" *ngIf="myform.controls?.['middleName']?.touched && myform.controls?.['middleName']?.invalid
+    && myform.controls?.['middleName']?.hasError('required')">MiddleName Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['middleName']?.touched && myform.controls?.['middleName']?.invalid
+    && myform.controls?.['middleName']?.hasError('pattern')">Alphabets Only Allowed</span>
+    
+
+    <br>
+    <label > Date Of Birth :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth"/> 
+    <span class="error" *ngIf="myform.controls?.['dateOfBirth']?.touched && myform.controls?.['dateOfBirth']?.invalid
+    && myform.controls?.['dateOfBirth']?.hasError('required')"> Cannot be Blank</span>
+    
+    
+    <br>
+
+    
     <label >Gender :</label><br>
     <div class="form-check-inline">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Male"/>Male
+          <input type="radio"formControlName="gender" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Male"/>Male
         </label>
       </div>
       <div class="form-check-inline">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Female"/>Female
+          <input type="radio"formControlName="gender" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Female"/>Female
         </label>
       </div>
       <div class="form-check-inline disabled">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Others"/>Others
+          <input type="radio"formControlName="gender" class="form-check-input" [(ngModel)]="pr.gender" name="gender" value="Others"/>Others
         </label>
-      </div><br><br>
+      </div>
+      <span class="error" *ngIf="myform.controls?.['gender']?.touched && myform.controls?.['gender']?.invalid
+      && myform.controls?.['gender']?.hasError('required')">gender Field is Required</span>
+      <br><br>
+    <label >Age :</label> <input type="number" class="form-control" [(ngModel)]="pr.age" name="age"formControlName="age"/>
+    <span class="error" *ngIf="myform.controls?.['age']?.touched && myform.controls?.['age']?.invalid
+    && myform.controls?.['age']?.hasError('required')">age Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['age']?.touched && myform.controls?.['age']?.invalid
+    && myform.controls?.['age']?.hasError('pattern')">Numbers Only Allowed</span>
 
-    <label >Age :</label> <input type="number" class="form-control" [(ngModel)]="pr.age" name="age"/>  <br>
-    <label >Address :</label> <input type="text" class="form-control" [(ngModel)]="pr.address" name="address"/>  <br>
-    <label >DateOfArrest :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfArrest" name="dateOfArrest"/>  <br>
-    <label >Case ID :</label> <input type="text"class="form-control"  [(ngModel)]="pr.caseId" name="caseId"/>  <br>
+    <br>
+    <label >Address :</label> <input type="text" class="form-control" [(ngModel)]="pr.address" name="address"formControlName="address"/>
+    <span class="error" *ngIf="myform.controls?.['address']?.touched && myform.controls?.['address']?.invalid
+    && myform.controls?.['address']?.hasError('required')">Address Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['address']?.touched && myform.controls?.['address']?.invalid
+    && myform.controls?.['address']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+
+
+    <br>
+    <label >DateOfArrest :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfArrest" name="dateOfArrest"formControlName="dateOfArrest"/>
+    <span class="error" *ngIf="myform.controls?.['dateOfArrest']?.touched && myform.controls?.['dateOfArrest']?.invalid
+    && myform.controls?.['dateOfArrest']?.hasError('required')"> Cannot be Blank</span>
+
+    <br>
+    <label >Case ID :</label> <input type="text"class="form-control"  [(ngModel)]="pr.caseId" name="caseId" formControlName="caseId"/> 
+    <span class="error" *ngIf="myform.controls?.['caseId']?.touched && myform.controls?.['caseId']?.invalid
+    && myform.controls?.['caseId']?.hasError('required')">CaseId Cannot be Blank</span>
+   
+    <span class="error" *ngIf="myform.controls?.['caseId']?.touched && myform.controls?.['caseId']?.invalid
+    && myform.controls?.['caseId']?.hasError('pattern')"> Numbers Only Allowed</span>
+    
+    <br>
 
     <div class="form-group">
         <label >CrimeType :</label>
-        <select class="form-control" [(ngModel)]="pr.crimeType" name="crimeType">
+        <select class="form-control" [(ngModel)]="pr.crimeType" name="crimeType"formControlName="crimeType">
           <option>Murder</option>
           <option>Theft</option>
           <option>Burglary</option>
@@ -45,50 +123,87 @@
           <option>Sexual harassment</option>
           <option>Child abuse</option>
         </select>
+        <span class="error" *ngIf="myform.controls?.['crimeType']?.touched && myform.controls?.['crimeType']?.invalid
+&& myform.controls?.['crimeType']?.hasError('required')">crimeType Field is Required</span>
       </div>
 
-    <label >EyeWitness :</label> <input type="text" class="form-control" [(ngModel)]="pr.eyeWitness" name="eyeWitness"/>  <br>
-    <label >WitnessAddress :</label> <input type="text" class="form-control"  [(ngModel)]="pr.witnessAddress" name="witnessAddress"/>  <br>
-    <label >ComplaintCount :</label> <input type="number" class="form-control" [(ngModel)]="pr.complaintCount" name="complaintCount"/>  <br>
+    <label >EyeWitness :</label> <input type="text" class="form-control" [(ngModel)]="pr.eyeWitness" name="eyeWitness" formControlName="eyeWitness"/> 
+    <span class="error" *ngIf="myform.controls?.['eyeWitness']?.touched && myform.controls?.['eyeWitness']?.invalid
+    && myform.controls?.['eyeWitness']?.hasError('required')">eyeWitness Field is Required</span>
+    <br>
+    <label >WitnessAddress :</label> <input type="text" class="form-control"  [(ngModel)]="pr.witnessAddress" name="witnessAddress"formControlName="witnessAddress"/> 
+    <span class="error" *ngIf="myform.controls?.['witnessAddress']?.touched && myform.controls?.['witnessAddress']?.invalid
+    && myform.controls?.['witnessAddress']?.hasError('required')">witnessAddress Field is Required</span>
+     <br>
+    <label >ComplaintCount :</label> <input type="number" class="form-control" [(ngModel)]="pr.complaintCount" name="complaintCount"formControlName="complaintCount"/>
+    <span class="error" *ngIf="myform.controls?.['complaintCount']?.touched && myform.controls?.['complaintCount']?.invalid
+    && myform.controls?.['complaintCount']?.hasError('required')">complaintCount Field is Required</span>
+      <br>
+
+
+
 
 
     <div class="form-group">
         <label for="sel1">EyeColor :</label>
-        <select class="form-control" [(ngModel)]="pr.eyeColor" name="eyeColor">
+        <select class="form-control" [(ngModel)]="pr.eyeColor" name="eyeColor"formControlName="eyeColor">
           <option>Black</option>
           <option>Brown</option>
           <option>Blue</option>
           <option>Grey</option>
         </select>
+        <span class="error" *ngIf="myform.controls?.['eyeColor']?.touched && myform.controls?.['eyeColor']?.invalid
+        && myform.controls?.['eyeColor']?.hasError('required')">eyeColor Field is Required</span>
       </div>
 
     <div class="form-group">
         <label for="sel1">HairColor :</label>
-        <select class="form-control" [(ngModel)]="pr.hairColor" name="hairColor">
+        <select class="form-control" [(ngModel)]="pr.hairColor" name="hairColor"formControlName="hairColor">
           <option>Black</option>
           <option>White</option>
           <option>Red</option>
           <option>Grey</option>
         </select>
+        <span class="error" *ngIf="myform.controls?.['hairColor']?.touched && myform.controls?.['hairColor']?.invalid
+        && myform.controls?.['hairColor']?.hasError('required')">hairColor Field is Required</span>
       </div>
 
     <div class="form-group">
         <label for="sel1">FaceShape :</label>
-        <select class="form-control"  [(ngModel)]="pr.faceShape" name="faceShape">
+        <select class="form-control"  [(ngModel)]="pr.faceShape" name="faceShape"formControlName="faceShape">
           <option>Round</option>
           <option>Oval</option>
           <option>Square</option>
           <option>Oblong</option>
           <option>Daimond</option>
         </select>
+        <span class="error" *ngIf="myform.controls?.['faceShape']?.touched && myform.controls?.['faceShape']?.invalid
+        && myform.controls?.['faceShape']?.hasError('required')">faceShape Field is Required</span>
       </div>
 
-    <label >RemandDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.remandDate" name="remandDate"/>  <br>
-    <label >ReleaseDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.releaseDate" name="releaseDate"/>  <br>
-    <label >CourtHearing :</label> <input type="date" class="form-control" [(ngModel)]="pr.courtHearing" name="courtHearing"/>  <br>
-    <label > Cell Number :</label> <input type="text" class="form-control" [(ngModel)]="pr.cellNumber" name="cellNumber"/>  <br>
+    <label >RemandDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.remandDate" name="remandDate"formControlName="remandDate"/>
+    <span class="error" *ngIf="myform.controls?.['remandDate']?.touched && myform.controls?.['remandDate']?.invalid
+    && myform.controls?.['remandDate']?.hasError('required')">remandDate Field is Required</span>
 
-<input type="submit" class="btn btn-success" value="Update"/> <br>
+    <br>
+    <label >ReleaseDate :</label> <input type="date" class="form-control" [(ngModel)]="pr.releaseDate" name="releaseDate"formControlName="releaseDate"/>
+    <span class="error" *ngIf="myform.controls?.['releaseDate']?.touched && myform.controls?.['releaseDate']?.invalid
+    && myform.controls?.['releaseDate']?.hasError('required')">releaseDate Field is Required</span>
+
+    <br>
+    <label >CourtHearing :</label> <input type="date" class="form-control" [(ngModel)]="pr.courtHearing" name="courtHearing"formControlName="courtHearing"/>
+    <span class="error" *ngIf="myform.controls?.['courtHearing']?.touched && myform.controls?.['courtHearing']?.invalid
+    && myform.controls?.['courtHearing']?.hasError('required')">courtHearing Field is Required</span>
+
+    <br>
+    <label > Cell Number :</label> <input type="text" class="form-control" [(ngModel)]="pr.cellNumber" name="cellNumber"formControlName="cellNumber"/> 
+    <span class="error" *ngIf="myform.controls?.['cellNumber']?.touched && myform.controls?.['cellNumber']?.invalid
+    && myform.controls?.['cellNumber']?.hasError('required')">cellNumber Field is Required</span>
+    <span class="error" *ngIf="myform.controls?.['cellNumber']?.touched && myform.controls?.['cellNumber']?.invalid
+    && myform.controls?.['cellNumber']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
+    <br>
+
+<input type="submit" class="btn btn-success" value="Update"[disabled]="myform.invalid" /> <br>
 </form> 
 <br>
 <button class="btn btn-info btn-sm" (click)="back()">Back</button>

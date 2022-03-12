@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PayRoll } from '../pay-roll';
 import { PayRollService } from '../pay-roll.service';
@@ -14,8 +15,18 @@ export class AdminPayRollEditComponent implements OnInit {
 
   datman: PayRoll = new PayRoll("","","","","","");
   un:string="";
+  myform:FormGroup;
 
-  constructor(private service: PayRollService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) { }
+  constructor(private service: PayRollService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) {
+    this.myform=new FormGroup({
+      userName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z0-9]*$")]),
+      pid:new FormControl("",[Validators.required,Validators.pattern("^[0-9]*$")]),
+      name:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),Validators.pattern("^[a-zA-Z ]*$")]),
+      regularSalary:new FormControl("",[Validators.required,Validators.pattern("^[0-9.]*$")]),
+      partTimeSalary:new FormControl("",[Validators.required,Validators.pattern("^[0-9.]*$")]),
+      annualSalary:new FormControl("",[Validators.required,Validators.pattern("^[0-9.]*$")])
+    });
+   }
 
   ngOnInit(): void {
     this.datman = new PayRoll("","","","","","");
