@@ -2,7 +2,6 @@ import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataManager } from '../data-manager';
-import { DataManagerLoginService } from '../data-manager-login.service';
 import { DataManagerService } from '../data-manager.service';
 
 @Component({
