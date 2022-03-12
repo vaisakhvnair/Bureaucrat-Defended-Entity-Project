@@ -33,6 +33,8 @@ import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-a
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
+import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
+import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
 import { DataManagerDutyRegisterAllComponent } from './data-manager-duty-register-all/data-manager-duty-register-all.component';
 import { DataManagerDutyRegisterCreateComponent } from './data-manager-duty-register-create/data-manager-duty-register-create.component';
 import { DataManagerDutyRegisterEditComponent } from './data-manager-duty-register-edit/data-manager-duty-register-edit.component';
@@ -85,8 +87,9 @@ const routes: Routes = [
  {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
-
-
+{path:'admin-prisonsearch',component:AdminPrisonerSearchComponent},
+{path:'admin-prison-report',component:AdminPrisonerReportComponent},
+{path:'admin-inoutsearch',component:AdminInOutSearchComponent},
   {path:'admin-automated-release-register',component:AdminAutomatedReleaseRegisterComponent},
 
   {path:'cell-all',component:AdminCellDetailsComponent},
