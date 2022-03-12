@@ -12,37 +12,32 @@ import { DutyRegisterService } from '../duty-register.service';
 })
 export class DataManagerDutyRegisterEditComponent implements OnInit {
 
-  duty: DutyRegister = new DutyRegister("","","","","","");
+  datman: DutyRegister = new DutyRegister("","","","","","");
   un:string="";
   ms:string="";
   myform:FormGroup;
   constructor(private service: DutyRegisterService, private activeRouter: ActivatedRoute, private router: Router) { 
-    this.myform=new FormGroup({
-      userName:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),
-        Validators.pattern("^[a-zA-Z ]*$")]),
-      date: new FormControl("",[Validators.required]),
-      timeOnDuty: new FormControl("",[Validators.required]),
-      name:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),
-        Validators.pattern("^[a-zA-Z ]*$")]),
-      dutyPoint:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(20),
-        Validators.pattern("^[a-zA-Z ]*$")]),
-      timeOffDuty: new FormControl("",[Validators.required]),
-    
-    })
-  }
+    this.myform = new FormGroup({
+      userName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z0-9]*$")]),
+      date: new FormControl("", [Validators.required]),
+      timeOnDuty: new FormControl("", [Validators.required]),
+      name: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z ]*$")]),
+      dutyPoint: new FormControl("", [Validators.required]),
+      timeOffDuty: new FormControl("", [Validators.required])
+    });
+   }
 
   ngOnInit(): void {
-    this.duty = new DutyRegister("","","","","","");
+    this.datman = new DutyRegister("","","","","","");
     this.un = this.activeRouter.snapshot.params['un'];
-    this.service.getOneDutyRegister(this.un).subscribe(data => { this.duty = data; });
+    this.service.getOneDutyRegister(this.un).subscribe(data => { this.datman = data; });
   }
   updateDutyReg() {
-    if(this.myform.valid){
-    this.service.updateDutyRegister(this.duty).subscribe(data => {
+    this.service.updateDutyRegister(this.datman).subscribe(data => {
       console.log(data), this.router.navigate(['/dm-d-all']);
     });
   }
   }
   
 
-}
+

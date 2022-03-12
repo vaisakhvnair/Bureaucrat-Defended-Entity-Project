@@ -15,16 +15,23 @@ export class DataManagerDutyRegisterCreateComponent implements OnInit {
 
   datman: DutyRegister = new DutyRegister("","","","","","");
   message: Message = new Message("","");
+  myform: FormGroup;
 
-  constructor(private service: DutyRegisterService, private router: Router) { }
-  ngOnInit(): void {
-  }
-  createDutyRegister() {
-    this.service.createDutyRegister(this.datman).subscribe(data => { this.message = data; });
-    this.datman = new DutyRegister("","","","","","");
-  }
-  backtoadmin(){
-    this.router.navigate(['/admin'])
-  }
+  constructor(private service: DutyRegisterService, private router: Router) { this.myform = new FormGroup({
+    userName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z0-9]*$")]),
+    date: new FormControl("", [Validators.required]),
+    timeOnDuty: new FormControl("", [Validators.required]),
+    name: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z ]*$")]),
+    dutyPoint: new FormControl("", [Validators.required]),
+    timeOffDuty: new FormControl("", [Validators.required])
+  });
+}
+ngOnInit(): void {
+}
+createDutyRegister() {
+  this.service.createDutyRegister(this.datman).subscribe(data => { this.message = data; });
+  this.datman = new DutyRegister("", "", "", "", "", "");
+}
+  
   
 }

@@ -1,77 +1,61 @@
-<h3 style="color: plum;">Edit duty-register</h3> 
-<form (ngSubmit)="updateDutyReg()"  #myForm="ngForm"> 
-
-     
+<div>
+    <h3 style="color: plum;">Edit duty-register</h3> 
     
+    <form (ngSubmit)="updateDutyReg()"[formGroup]="myform"> 
         <div class="form-group">
-            <label>User Name </label>
-           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.userName" name="userName" required="required" minlength="3" maxlength="25"
-           pattern="^[a-zA-Z]*$" #control1="ngModel"/>   
-           <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('required')">
-            *This Field Cannot be blank
-          </span>
-        
-          <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('minlength')">
-            *Requires minimum three character
-          </span>
-          <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('pattern')">
-           * Only Alphabets Allowed
-          </span>   
-           </div>
-           <div class="form-group">
-            <label>Date </label>
-           <input type="date" class="form-control" style="width: 40%;" [(ngModel)]="duty.date" name="date" required="required"  #control2="ngModel"/>
-           <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('required')">
-            *This Field Cannot be blank
-           </span>
-           </div>
-           <div class="form-group">
-            <label>Time On Duty  </label>
-           <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="duty.timeOnDuty" name="timeOnDuty" required="required"  #control3="ngModel"/>
-           <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('required')">
-            *This Field Cannot be blank
-           </span>
-           </div>
-           <div class="form-group">
-            <label>Name </label>
-           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.name" name="name" required="required" minlength="3" maxlength="25"
-           pattern="^[a-zA-Z]*$" #control4="ngModel"/>   
-           <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('required')">
-            *This Field Cannot be blank
-          </span>
-        
-          <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('minlength')">
-            *Requires minimum three character
-          </span>
-          <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('pattern')">
-           * Only Alphabets Allowed
-          </span> 
-           </div>
-           <div class="form-group">
-            <label>Duty Point </label>
-           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="duty.dutyPoint" name="dutyPoint" required="required" minlength="3" maxlength="25"
-           pattern="^[a-zA-Z]*$" #control5="ngModel"/>   
-           <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('required')">
-            *This Field Cannot be blank
-          </span>
-        
-          <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('minlength')">
-            *Requires minimum three character
-          </span>
-          <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('pattern')">
-           * Only Alphabets Allowed
-          </span> 
-           </div>
-           <div class="form-group">
-            <label>Time Off Duty</label>
-           <input type="time" class="form-control" style="width: 40%;" [(ngModel)]="duty.timeOffDuty" name="timeOffDuty" required="required"  #control6="ngModel"/>
-           <span class="error" *ngIf="control6.touched && control6.invalid && control6.hasError('required')">
-            *This Field Cannot be blank
-           </span> 
-           </div> 
+    User Name : <input type="text" class="form-control"[(ngModel)]="datman.userName" name="userName"formControlName="userName"/>  
+    <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+    && myform.controls?.['userName']?.hasError('required')">userName Cannot be Blank</span>
     
-   
-   
-<input type="submit" class="btn btn-primary" style="background-color: palevioletred;" value="update" [disabled]="myForm.invalid"/>
-</form>
-<br>
+    <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+    && myform.controls?.['userName']?.hasError('minlength')">Min 3 characters</span>
+    
+    <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+    && myform.controls?.['userName']?.hasError('maxlength')">Max 20 characters</span>
+    
+    <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
+    && myform.controls?.['userName']?.hasError('pattern')">Alphabets Only Allowed</span>
+    <br>
+    
+    Date : <input type="date"class="form-control" [(ngModel)]="datman.date" name="date"formControlName="date"/>  
+    <span class="error" *ngIf="myform.controls?.['date']?.touched && myform.controls?.['date']?.invalid
+    && myform.controls?.['date']?.hasError('required')">date Cannot be Blank</span>
+    <br>
+    
+    Time On Duty : <input type="time"class="form-control" [(ngModel)]="datman.timeOnDuty" name="timeOnDuty"formControlName="timeOnDuty"/>  
+    <span class="error" *ngIf="myform.controls?.['timeOnDuty']?.touched && myform.controls?.['timeOnDuty']?.invalid
+    && myform.controls?.['timeOnDuty']?.hasError('required')">timeOnDuty Cannot be Blank</span>
+    <br>
+    
+    Name : <input type="text" class="form-control" [(ngModel)]="datman.name" name="name"formControlName="name"/>  
+    <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+    && myform.controls?.['name']?.hasError('required')">Name Cannot be Blank</span>
+    
+    <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+    && myform.controls?.['name']?.hasError('minlength')">Min 3 characters</span>
+    
+    <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+    && myform.controls?.['name']?.hasError('maxlength')">Max 20 characters</span>
+    
+    <span class="error" *ngIf="myform.controls?.['name']?.touched && myform.controls?.['name']?.invalid
+    && myform.controls?.['name']?.hasError('pattern')">Alphabets Only Allowed</span>
+    <br>
+    
+    Duty Point : <input type="text" class="form-control" [(ngModel)]="datman.dutyPoint" name="dutyPoint"formControlName="dutyPoint"/> 
+    <span class="error" *ngIf="myform.controls?.['dutyPoint']?.touched && myform.controls?.['dutyPoint']?.invalid
+    && myform.controls?.['dutyPoint']?.hasError('required')">dutyPoint Cannot be Blank</span>
+    <br>
+    
+    Time Off Duty : <input type="time" class="form-control" [(ngModel)]="datman.timeOffDuty" name="timeOffDuty"formControlName="timeOffDuty"/>
+    
+    <span class="error" *ngIf="myform.controls?.['timeOffDuty']?.touched && myform.controls?.['timeOffDuty']?.invalid
+    && myform.controls?.['timeOffDuty']?.hasError('required')">timeOffDuty Cannot be Blank</span>
+    
+    <br>
+    
+    <input type="submit" class="btn btn-success" style="background-color: palevioletred;" [disabled]="myform.invalid" value="Update"/>
+        </div>
+    </form>
+    <br>
+    
+    </div>

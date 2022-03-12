@@ -15,17 +15,12 @@ export class DataManagerInOutAddComponent implements OnInit {
   inout: InOut = new InOut("","","","","","","","");
   message: Message = new Message("","");
 
-  constructor(private service: InOutService, private router: Router,private location: Location) { }
+  constructor(private service: InOutService, private router: Router) { }
   ngOnInit(): void {
   }
   createInOut() {
     this.service.createInOut(this.inout).subscribe(data => { this.message = data; });
 
   }
-  back(): void {
-    this.location.back();
-  }
-  backtoadmin(){
-    this.router.navigate(['/manager'])
-  }
+  
 }

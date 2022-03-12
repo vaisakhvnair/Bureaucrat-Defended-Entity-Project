@@ -47,14 +47,14 @@ myForm:FormGroup;
     );  
   }
   updateDetails(){ 
-    if(this.myForm.valid){
+  
     this.service.updatePrisoner(this.prisoner).subscribe(data=>{      
        console.log(data) 
        this.router.navigate(['/dm-p-all']);
        
     });
     
-  }
+  
     
   
 }

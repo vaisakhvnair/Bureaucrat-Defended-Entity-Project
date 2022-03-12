@@ -42,12 +42,12 @@ message:Message=new Message("","");
   ngOnInit(): void {
   }
   addPrisoner(){ 
-    if(this.myForm.valid){
+    
     this.service.createPrisoner(this.prisoner).subscribe(data=>{      
        this.message=data; 
     
     }); 
-  }
+  
     this.prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 
   }

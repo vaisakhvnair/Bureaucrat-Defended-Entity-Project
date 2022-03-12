@@ -13,12 +13,12 @@
   </tr>
   
   <tr *ngFor="let p of pay">
-    <td>{{ p.userName }}</td>
-    <td>{{ p.pid}}</td>
-    <td>{{ p.name}}</td>
-    <td>{{ p.regularSalary }}</td>
-    <td>{{ p.partTimeSalary }}</td>
-    <td>{{ p.annualSalary }}</td>
+    <td>{{p.userName}}</td>
+    <td>{{p.pid}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.regularSalary}}</td>
+    <td>{{p.partTimeSalary}}</td>
+    <td>{{p.annualSalary}}</td>
     <td>
       <button class="btn btn-secondary" (click)="editPayRoll(p.userName)">EDIT</button>
     </td>

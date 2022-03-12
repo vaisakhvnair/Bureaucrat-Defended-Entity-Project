@@ -36,12 +36,14 @@ export class DataManagerPayrollEditComponent implements OnInit {
     this.service.getOnePayRoll(this.un).subscribe(data => { this.pay = data; });
   }
   updateDataManager() {
-    if(this.myform.valid){
+    
     this.service.updatePayRoll(this.pay).subscribe(data => {
-      console.log(data), 
+      console.log(data) 
       this.router.navigate(['/dm-pay-all']);
+      
     });
-  }
+    
+  
   }
   
 }

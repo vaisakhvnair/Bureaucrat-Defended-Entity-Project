@@ -24,7 +24,7 @@ export class DataManagerPayrollAllComponent implements OnInit {
   }
   
   editPayRoll(id: any) {
-    this.router.navigate(['dm-pay-edit', id]);
+    this.router.navigate(['dm-pay-edit',id]);
   }
 
 }

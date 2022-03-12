@@ -1,7 +1,7 @@
 
 <div><br>
-  <h3>In-Out Register Create</h3> 
-  <div style="float: right; padding: 0%;margin: 0%;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+  <h3 style="color: plum;">In-Out Register Create</h3> 
+  
   <div class="form-group">
   <form (ngSubmit)="createInOut()"> 
       <label> SI NO :</label>
@@ -21,7 +21,7 @@
       <label> Digital Signature :</label>
        <input type="text" class="form-control" [(ngModel)]="inout.dsignature" name="dsignature"/><br>
   
-  <input type="submit" value="Register" class="btn btn-success"/> <br>
+  <input type="submit" style="background-color: palevioletred;" value="Register" class="btn btn-success"/> <br>
   </form> 
   {{message.message}} 
   <br>

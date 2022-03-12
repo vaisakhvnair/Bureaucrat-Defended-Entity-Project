@@ -33,14 +33,15 @@ this.myform=new FormGroup({
   ngOnInit(): void {
   }
   createPayRoll() {
-    if(this.myform.valid){
+    
 
     this.service.createPayRoll(this.pay).subscribe(data =>
        { this.message = data; });
-    }
-    this.pay = new PayRoll("","","","","","");
+       this.pay = new PayRoll("","","","","","");
   
+    }
+    
 
-  }
+  
   
 }

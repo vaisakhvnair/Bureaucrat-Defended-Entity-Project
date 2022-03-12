@@ -1,5 +1,5 @@
 <h3 style="color: plum;">Pay Roll update</h3> 
-<form #myform="ngForm" (ngSubmit)="updateDataManager()" > 
+<form (ngSubmit)="updateDataManager()" > 
  <div class="form-group">
             <label>User Name </label>
            <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.userName" name="userName" required="required" minlength="3" maxlength="25"
@@ -84,6 +84,6 @@
     
    
 
-<input type="submit" [disabled]="myform.invalid" class="btn btn-primary" style="background-color: palevioletred;" value="update" /> 
+<input type="submit"  style="background-color: palevioletred;" value="update" /> 
 </form> 
 <br>

@@ -4,6 +4,7 @@
 <table  class="table">
   
   <tr>
+    <th>USERNAME</th>
     <th>DATE</th>
     <th>TIME-ON-DUTY</th>
     <th>NAME</th>
@@ -12,6 +13,7 @@
   </tr>
 
   <tr *ngFor="let p of duty">
+    <td>{{p.userName}}</td>
     <td>{{ p.date }}</td>
     <td>{{ p.timeOnDuty}}</td>
     <td>{{ p.name}}</td>
