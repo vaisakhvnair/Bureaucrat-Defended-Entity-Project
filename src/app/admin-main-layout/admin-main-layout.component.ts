@@ -124,4 +124,5 @@ homelogout(){
   this.router.navigate(['/'])
   alert("Do you want to log out")
 }
+
 }

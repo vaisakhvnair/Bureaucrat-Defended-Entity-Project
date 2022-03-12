@@ -1,3 +1,4 @@
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { delay, delayWhen } from 'rxjs';
@@ -14,7 +15,7 @@ export class AdminLoginComponent implements OnInit {
   upasswd: string = "";
   msg: string = "";
 
-  constructor(private sobj: AdminLoginService,private router: Router, private activeRouter: ActivatedRoute) { }
+  constructor(private sobj: AdminLoginService,private router: Router, private activeRouter: ActivatedRoute,private http:HttpClientModule) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,8 @@ export class AdminLoginComponent implements OnInit {
       setTimeout(() => {
         this.router.navigate(['/admin'])
       },2000)
+      
+  
      
     } else {
       this.msg = " login failed !";
