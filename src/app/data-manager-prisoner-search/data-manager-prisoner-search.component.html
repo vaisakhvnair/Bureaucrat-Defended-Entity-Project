@@ -1,0 +1,74 @@
+<h1 style="color: plum;">Search Form</h1>
+<i>Search By :</i><select style="background-color:whitesmoke;" [(ngModel)]="search"  >
+    <option>---</option>
+    <option>pid</option>
+    <option>firstName</option>
+    <option>lastName</option>
+    <option>middleName</option>
+    <option>dateOfBirth</option>
+    <option>gender</option>
+    <option>age</option>
+    <option>dateOfArrest</option>
+    <option>crimeType</option>
+    <option>complaintCount</option>
+    <option>eyeColor</option>
+    <option>hairColor</option>
+    <option>faceShape</option>
+    <option>remandDate</option>
+    <option>releaseDate</option>
+    <option>courtHearing</option>
+
+</select>
+
+<input type="text" name="search" [(ngModel)]="str1" >
+<input  style="background-color: palevioletred;" type="button" value="search" (click)="searchPrisonerDetails()">
+
+<table class="table">
+    
+    <tr>
+        <th>PrisonerId</th>
+        <th>FirstName </th>
+        <th>LastName </th>
+        <th>MiddleName </th>
+        <th>DateOfBirth </th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>DateOfArrest</th>
+        <th>CrimeType</th>
+        <th>EyeWitness</th>
+        <th>WitnessAddress</th>
+        <th>ComplaintCount</th>
+        <th>EyeColor</th>
+        <th>HairColor</th>
+        <th>FaceShape</th>
+        <th>RemandDate</th>
+        <th>ReleaseDate</th>
+        <th>CourtHearing</th>
+        
+    </tr>
+    
+    <tr *ngFor="let p of prison">
+        <td>{{p.pid}}</td>
+        <td>{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.middleName}}</td>
+        <td>{{p.dateOfBirth}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.dateOfArrest}}</td>
+        <td>{{p.crimeType}}</td>
+        <td>{{p.eyeWitness}}</td>
+        <td>{{p.witnessAddress}}</td>
+        <td>{{p.complaintCount}}</td>
+        <td>{{p.eyeColor}}</td>
+        <td>{{p.hairColor}}</td>
+        <td>{{p.faceShape}}</td>
+        <td>{{p.remandDate}}</td>
+        <td>{{p.releaseDate}}</td>
+        <td>{{p.courtHearing}}</td>
+       
+
+    </tr>
+</table>

@@ -17,10 +17,32 @@ export class AdminAutomatedReleaseRegisterComponent implements OnInit {
   pris:Prisoner[]=[];
   currentDate:any;
   b: boolean = false;
-
+  todaydate:string="";
+//c:string|null="";
   constructor(private service: PrisonerService, private router: Router,private location: Location,private datePipe: DatePipe) { 
    this.currentDate=this.myFunction();
+   this.todaydate=this.currentDate;
    console.log(this.currentDate)
+   this.service.getAllPrisoner().subscribe(data => { this.pris = data 
+    
+   }, 
+     error => { this.pris = [] });
+  
+   var count=0;
+   for(var i=0;i<this.pris.length;i++){
+  
+    if(this.pris[i].releaseDate==this.todaydate){
+     //console.log(this.pris[i].releaseDate);
+      count++;
+    }
+  }
+  if(count==1){
+    this.b=true;
+  }else{
+     this.b=false;
+  }
+     
+   
     
   }
 

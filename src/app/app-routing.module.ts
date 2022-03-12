@@ -33,9 +33,24 @@ import { AdminPrisonerAllComponent } from './admin-prisoner-all/admin-prisoner-a
 import { AdminPrisonerCreateComponent } from './admin-prisoner-create/admin-prisoner-create.component';
 import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
 import { AdminPrisonerEditComponent } from './admin-prisoner-edit/admin-prisoner-edit.component';
-import { AdminPrisonerReportComponent } from './admin-prisoner-report/admin-prisoner-report.component';
-import { AdminPrisonerSearchComponent } from './admin-prisoner-search/admin-prisoner-search.component';
+import { DataManagerDutyRegisterAllComponent } from './data-manager-duty-register-all/data-manager-duty-register-all.component';
+import { DataManagerDutyRegisterCreateComponent } from './data-manager-duty-register-create/data-manager-duty-register-create.component';
+import { DataManagerDutyRegisterEditComponent } from './data-manager-duty-register-edit/data-manager-duty-register-edit.component';
+import { DataManagerInOutAddComponent } from './data-manager-in-out-add/data-manager-in-out-add.component';
+import { DataManagerInOutAllComponent } from './data-manager-in-out-all/data-manager-in-out-all.component';
+import { DataManagerInOutEditComponent } from './data-manager-in-out-edit/data-manager-in-out-edit.component';
+import { DataManagerLoginComponent } from './data-manager-login/data-manager-login.component';
+import { DataManagerMainLayoutComponent } from './data-manager-main-layout/data-manager-main-layout.component';
+import { DataManagerPayrollAllComponent } from './data-manager-payroll-all/data-manager-payroll-all.component';
+import { DataManagerPayrollCreateComponent } from './data-manager-payroll-create/data-manager-payroll-create.component';
+import { DataManagerPayrollEditComponent } from './data-manager-payroll-edit/data-manager-payroll-edit.component';
+import { DataManagerPrisonerAllComponent } from './data-manager-prisoner-all/data-manager-prisoner-all.component';
+import { DataManagerPrisonerCreateComponent } from './data-manager-prisoner-create/data-manager-prisoner-create.component';
+import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/data-manager-prisoner-edit.component';
+import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
+
 import { FIRAllComponent } from './fir-all/fir-all.component';
+import { ReportAllComponent } from './report-all/report-all.component';
 
 
 const routes: Routes = [
@@ -46,17 +61,31 @@ const routes: Routes = [
   {path:'d-add',component:AdminDataManagersCreateComponent},
   {path:'d-edit/:id',component:AdminDataManagersEditComponent},
   {path:'login-admin',component:AdminLoginComponent},
+  {path:'login-manager',component:DataManagerLoginComponent},
   {path:'admin',component:AdminMainLayoutComponent},
+  {path:'manager',component:DataManagerMainLayoutComponent},
   {path:'fir-all',component:FIRAllComponent},
+  {path:'report',component:ReportAllComponent},
   {path:'inout-all',component:AdminInOutAllComponent},
   {path:'inout-add',component:AdminInOutCreateComponent},
   {path:'inout-edit/:id',component:AdminInOutEditComponent},
-  {path:'admin-inoutsearch',component:AdminInOutSearchComponent},
-  {path:'prison-all',component:AdminPrisonerAllComponent},
+  {path:'dm-p-all',component:DataManagerPrisonerAllComponent},
+  {path:'dm-p-add',component:DataManagerPrisonerCreateComponent},
+  {path:'dm-p-edit/:id',component:DataManagerPrisonerEditComponent},
+  {path:'dm-p-search',component:DataManagerPrisonerSearchComponent},
+  {path:'dm-io-all',component:DataManagerInOutAllComponent},
+  {path:'dm-io-add',component:DataManagerInOutAddComponent},
+  {path:'dm-io-edit/:id',component:DataManagerInOutEditComponent},
+  {path:'dm-d-all',component:DataManagerDutyRegisterAllComponent},
+  {path:'dm-d-add',component:DataManagerDutyRegisterCreateComponent},
+  {path:'dm-d-edit/:id',component:DataManagerDutyRegisterEditComponent},
+  {path:'dm-pay-all',component:DataManagerPayrollAllComponent},
+  {path:'dm-pay-add',component:DataManagerPayrollCreateComponent},
+  {path:'dm-pay-edit/:id',component:DataManagerPayrollEditComponent},
+ {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
-  {path:'admin-prisonsearch',component:AdminPrisonerSearchComponent},
-  {path:'admin-prison-report',component:AdminPrisonerReportComponent},
+
 
   {path:'admin-automated-release-register',component:AdminAutomatedReleaseRegisterComponent},
 
@@ -77,7 +106,9 @@ const routes: Routes = [
   {path:'admin-d-search',component:AdminDataManagerSearchComponent},
   {path:'admin-polDuty-eachSearch',component:AdminPoliceDutyEachComponent},
   {path:'admin-datDuty-eachSearch',component:AdminDataManagerDutyEachComponent},
-  {path:'admin-prisoner-eachSearch',component:AdminPrisonerEachSearchComponent},
+  {path:'admin-prisoner-eachSearch',component:AdminPrisonerEachSearchComponent}
+  
+  
 ];
 
 @NgModule({

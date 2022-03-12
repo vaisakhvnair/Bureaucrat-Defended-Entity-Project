@@ -1,0 +1,27 @@
+
+<h3 style="color: plum;">Duty Register</h3>
+
+<table  class="table">
+  
+  <tr>
+    <th>USERNAME</th>
+    <th>DATE</th>
+    <th>TIME-ON-DUTY</th>
+    <th>NAME</th>
+    <th>DUTY-POINT</th>
+    <th>TIME-OFF-DUTY</th>
+  </tr>
+
+  <tr *ngFor="let p of duty">
+    <td>{{p.userName}}</td>
+    <td>{{ p.date }}</td>
+    <td>{{ p.timeOnDuty}}</td>
+    <td>{{ p.name}}</td>
+    <td>{{ p.dutyPoint }}</td>
+    <td>{{ p.timeOffDuty }}</td>
+    <td>
+      <button class="btn btn-secondary" (click)="editDutyRegister(p.userName)">EDIT</button>
+    </td>
+  </tr>
+</table>
+

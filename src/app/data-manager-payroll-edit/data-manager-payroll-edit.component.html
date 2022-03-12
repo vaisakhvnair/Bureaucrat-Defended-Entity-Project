@@ -1,0 +1,89 @@
+<h3 style="color: plum;">Pay Roll update</h3> 
+<form (ngSubmit)="updateDataManager()" > 
+ <div class="form-group">
+            <label>User Name </label>
+           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.userName" name="userName" required="required" minlength="3" maxlength="25"
+           pattern="^[a-zA-Z]*$" #control1="ngModel"/>   
+           <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('required')">
+            *This Field Cannot be blank
+          </span>
+        
+          <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('minlength')">
+            *Requires minimum three character
+          </span>
+          <span class="error" *ngIf="control1.touched && control1.invalid && control1.hasError('pattern')">
+           * Only Alphabets Allowed
+          </span> 
+           </div>
+           <div class="form-group">
+            <label>Pay Roll Id  </label>
+           <input type="text" class="form-control" style="width: 40%;"  [(ngModel)]="pay.pid" name="pid" required="required" 
+           pattern="^[0-9]*$" #control2="ngModel"/> 
+           <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('required')">
+            *This Id  Field Cannot be blank
+            </span>
+          
+            <span class="error" *ngIf="control2.touched && control2.invalid && control2.hasError('pattern')">
+             *Alphabets Not Allowed
+            </span>    
+           </div>
+           <div class="form-group">
+            <label>Name  </label>
+           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.name" name="name" required="required" minlength="3" maxlength="25"
+           pattern="^[a-zA-Z]*$" #control3="ngModel"/>   
+           <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('required')">
+            *This Name Field Cannot be blank
+          </span>
+        
+          <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('minlength')">
+            *Requires minimum three character
+          </span>
+          <span class="error" *ngIf="control3.touched && control3.invalid && control3.hasError('pattern')">
+           * Only Alphabets Allowed
+          </span> 
+           </div>
+           <div class="form-group">
+            <label>Regular Salary </label>
+           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.regularSalary" name="regularSalary" required="required" 
+           pattern="^[0-9]*$" #control4="ngModel"/> 
+           <span class="error" *ngIf="control4.touched && control4.invalid && control4.hasError('required')">
+            *This Field Cannot be blank
+            </span>
+          
+            <span class="error" *ngIf="control4.touched && control2.invalid && control4.hasError('pattern')">
+             *Alphabets Not Allowed
+            </span>  
+           </div>
+           <div class="form-group">
+            <label>Part Time Salary </label>
+           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.partTimeSalary" name="partTimeSalary" required="required" 
+           pattern="^[0-9]*$" #control5="ngModel"/> 
+           <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('required')">
+            *This Field Cannot be blank
+            </span>
+          
+            <span class="error" *ngIf="control5.touched && control5.invalid && control5.hasError('pattern')">
+             *Alphabets Not Allowed
+            </span>   
+           </div>
+           <div class="form-group">
+            <label>Annual Salary </label>
+           <input type="text" class="form-control" style="width: 40%;" [(ngModel)]="pay.annualSalary" name="annualSalary" required="required" 
+           pattern="^[0-9]*$" #control6="ngModel"/> 
+           <span class="error" *ngIf="control6.touched && control6.invalid && control6.hasError('required')">
+            *This Field Cannot be blank
+            </span>
+          
+            <span class="error" *ngIf="control6.touched && control6.invalid && control6.hasError('pattern')">
+             *Alphabets Not Allowed
+            </span> 
+           </div>
+        
+        
+         
+    
+   
+
+<input type="submit"  style="background-color: palevioletred;" value="update" /> 
+</form> 
+<br>
