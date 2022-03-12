@@ -3,7 +3,6 @@
 body{
     background-color: azure;
 }
-<<<<<<< HEAD
 input.ng-invalid.ng-touched{
     border: 2px solid red;
 }
@@ -15,10 +14,3 @@ input.ng-valid.ng-touched{
 .error{
     color:red;
 }
-=======
-html, body, app-root {
-    height: 100%;
-    margin: 0;
-  
-    }
->>>>>>> e6c7478544ef9180e2954e081a9b25a682988571
