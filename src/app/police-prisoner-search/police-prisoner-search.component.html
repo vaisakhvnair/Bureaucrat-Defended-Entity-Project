@@ -1,0 +1,35 @@
+<h1>Search Prisoner</h1>
+<select [(ngModel)]="search">
+    <option>pid</option>
+    <option>firstName</option>
+    <option>gender</option>
+    <option>age</option>
+    
+</select>
+<input type="text" name="search" [(ngModel)]="str1">
+<input type="button" style="background-color: yellow;"  class="btn btn-primary" name="search" value="Search" (click)="searchPrisonerDetails()">
+
+<div *ngFor="let p of prison">
+    <h3>Personal Details</h3>
+
+    <b>PrisonerId    :</b> {{p.pid}}<br><br>
+    <b>First Name    :</b> {{p.firstName}}<br><br>
+    <b>Last Name     :</b> {{p.lastName}}<br><br>
+    <b>Middle Name     :</b> {{p.middleName}}<br><br>
+    <b>DateofBirth     :</b> {{p.dateOfBirth}}<br><br>
+    <b>Gender        :</b> {{p.gender}}<br><br>
+    <b>Age           :</b> {{p.age}}<br><br>
+    <b>Address     :</b> {{p.address}}<br><br>
+    <b>DateofArrest:</b> {{p.dateOfArrest}}<br><br>
+    <b>CrimeType    :</b> {{p.crimeType}}<br><br>
+    <b>EyeWitness    :</b> {{p.eyeWitness}}<br><br>
+    <b>WitnessAddress     :</b> {{p.witnessAddress}}<br><br>
+    <b>ComplaintCount    :</b> {{p.complaintCount}}<br><br>
+    <b>EyeColor     :</b> {{p.eyeColor}}<br><br>
+    <b>HairColor     :</b> {{p.hairColor}}<br><br>
+    <b>FaceShape     :</b> {{p.faceShape}}<br><br>
+    <b>RemandDate     :</b> {{p.remandDate}}<br><br>
+    <b>ReleaseDate     :</b> {{p.releaseDate}}<br><br>
+    <b>CourtHearing     :</b> {{p.courtHearing}}<br><br>
+</div>
+

@@ -50,6 +50,10 @@ import { DataManagerPrisonerEditComponent } from './data-manager-prisoner-edit/d
 import { DataManagerPrisonerSearchComponent } from './data-manager-prisoner-search/data-manager-prisoner-search.component';
 
 import { FIRAllComponent } from './fir-all/fir-all.component';
+import { PoliceLoginComponent } from './police-login/police-login.component';
+import { PoliceMainLayoutComponent } from './police-main-layout/police-main-layout.component';
+import { PolicePrisonerAllComponent } from './police-prisoner-all/police-prisoner-all.component';
+import { PolicePrisonerSearchComponent } from './police-prisoner-search/police-prisoner-search.component';
 import { ReportAllComponent } from './report-all/report-all.component';
 
 
@@ -85,7 +89,10 @@ const routes: Routes = [
  {path:'prison-all',component:AdminPrisonerAllComponent},
   {path:'prison-add',component:AdminPrisonerCreateComponent},
   {path:'prison-edit/:id',component:AdminPrisonerEditComponent},
-
+  {path:'login-police',component:PoliceLoginComponent},
+  {path:'police',component:PoliceMainLayoutComponent},
+  {path:'police-all',component:PolicePrisonerAllComponent},
+  {path:'police-search',component:PolicePrisonerSearchComponent},
 
   {path:'admin-automated-release-register',component:AdminAutomatedReleaseRegisterComponent},
 
