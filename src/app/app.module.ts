@@ -129,7 +129,7 @@ import { NgxPrintModule } from 'ngx-print';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPrintModule
+    NgxPrintModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

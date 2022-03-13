@@ -6,13 +6,9 @@
   <label for="sel1">Sort:</label>
   <select  class="form-control" style="width: 20%;"  [(ngModel)]="sortColumn">
 <option>siNo</option>
-<option>date</option>
 <option>name</option>
 <option>dept</option>
 <option>purpose</option>
-<option>timeIn</option>
-<option>timeOut</option>
-<option>dsignature</option>
 </select></div>
 <label for="sel1">Order:</label>
 <select class="form-control" style="width: 20%;" [(ngModel)]="order">
@@ -47,7 +43,7 @@
     <td>{{ i.dsignature }}</td>
    
     <td>
-      <button class="btn btn-danger" style="color: black;"   (click)="deleteInOut(i.siNo)">
+      <button class="btn btn-danger" style="color: black;"   (click)="alertConfirmation(i.siNo)">
         <i class="fa-solid fa-trash-can"></i>
       </button>
       &nbsp;&nbsp;

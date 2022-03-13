@@ -83,94 +83,13 @@
           <br>
 
           <br>
-          <input type="submit" value="Register" [disabled]="myform.invalid" class="btn btn-success" /> <br>
+          <input type="submit" value="Register"  class="btn btn-success" /> <br>
           {{ message.message }}
         </div>
       </form>
     </div>
 
-    <div style="float: right;">
-      <h3>FIR Edit</h3>
-      <br>
-     
-      <form (ngSubmit)="updateFIR()"[formGroup]="myform">
-        <div class="form-group">
-          Complaint Number : <input type="text" class="form-control" [(ngModel)]="firc.complaintNumber"name="complaintNumber1" formControlName="complaintNumber1" />
-          <span class="error" *ngIf="myform.controls?.['complaintNumber1']?.touched && myform.controls?.['complaintNumber1']?.invalid
-          && myform.controls?.['complaintNumber1']?.hasError('required')">complaintNumber Cannot be Blank</span>
-         
-          <span class="error" *ngIf="myform.controls?.['complaintNumber1']?.touched && myform.controls?.['complaintNumber1']?.invalid
-          && myform.controls?.['complaintNumber1']?.hasError('pattern')">Alphabets & Numbers Only Allowed</span>
-         
-
-          <br>
-          Victim Name/Name of the person making the complaint : <input type="text" class="form-control"[(ngModel)]="firc.victimName" name="victimName1" formControlName="victimName1" />
-          <span class="error" *ngIf="myform.controls?.['victimName1']?.touched && myform.controls?.['victimName1']?.invalid
-          && myform.controls?.['victimName1']?.hasError('required')">victimName Cannot be Blank</span>
-         
-          <span class="error" *ngIf="myform.controls?.['victimName1']?.touched && myform.controls?.['victimName1']?.invalid
-          && myform.controls?.['victimName1']?.hasError('minlength')">Min 3 characters</span>
-         
-          <span class="error" *ngIf="myform.controls?.['victimName1']?.touched && myform.controls?.['victimName1']?.invalid
-          && myform.controls?.['victimName1']?.hasError('maxlength')">Max 20 characters</span>
-         
-          <span class="error" *ngIf="myform.controls?.['victimName1']?.touched && myform.controls?.['victimName1']?.invalid
-          && myform.controls?.['victimName1']?.hasError('pattern')">Alphabets Only Allowed</span>
-         
-
-
-
-          <br>
-          Offence Description : <input type="text" class="form-control" [(ngModel)]="firc.offence" name="offence1" formControlName="offence1" />
-          <span class="error" *ngIf="myform.controls?.['offence1']?.touched && myform.controls?.['offence1']?.invalid
-          && myform.controls?.['offence1']?.hasError('required')">offence Cannot be Blank</span>
-         
-
-          <br>
-          Time Of Crime : <input type="time" class="form-control" [(ngModel)]="firc.timeOfCrime" name="timeOfCrime1" formControlName="timeOfCrime1" />
-          <span class="error" *ngIf="myform.controls?.['timeOfCrime1']?.touched && myform.controls?.['timeOfCrime1']?.invalid
-          && myform.controls?.['timeOfCrime1']?.hasError('required')">timeOfCrime Cannot be Blank</span>
-         
-
-          <br>
-          Date Of Crime : <input type="date" class="form-control" [(ngModel)]="firc.dateOfCrime" name="dateOfCrime1" formControlName="dateOfCrime1" />
-          <span class="error" *ngIf="myform.controls?.['dateOfCrime1']?.touched && myform.controls?.['dateOfCrime1']?.invalid
-          && myform.controls?.['dateOfCrime1']?.hasError('required')">dateOfCrime Cannot be Blank</span>
-         
-
-          <br>
-          Place Of Crime : <input type="text" class="form-control" [(ngModel)]="firc.placeOfCrime" name="placeOfCrime1" formControlName="placeOfCrime1" />
-          <span class="error" *ngIf="myform.controls?.['placeOfCrime1']?.touched && myform.controls?.['placeOfCrime1']?.invalid
-          && myform.controls?.['placeOfCrime1']?.hasError('required')">placeOfCrime Cannot be Blank</span>
-         
-
-          <br>
-          Witness Statement : <input type="text" class="form-control" [(ngModel)]="firc.witnessStatement"name="witnessStatement1" formControlName="witnessStatement1" />
-          <span class="error" *ngIf="myform.controls?.['witnessStatement1']?.touched && myform.controls?.['witnessStatement1']?.invalid
-          && myform.controls?.['witnessStatement1']?.hasError('required')">witnessStatement Cannot be Blank</span>
-         
-
-          <br>
-          Culprit Name : <input type="text" class="form-control" [(ngModel)]="firc.culpritName" name="culpritName1" formControlName="culpritName1"/>
-          <span class="error" *ngIf="myform.controls?.['culpritName1']?.touched && myform.controls?.['culpritName1']?.invalid
-          && myform.controls?.['culpritName1']?.hasError('required')">culpritName Cannot be Blank</span>
-         
-          <span class="error" *ngIf="myform.controls?.['culpritName1']?.touched && myform.controls?.['culpritName1']?.invalid
-          && myform.controls?.['culpritName1']?.hasError('minlength')">Min 3 characters</span>
-         
-          <span class="error" *ngIf="myform.controls?.['culpritName1']?.touched && myform.controls?.['culpritName1']?.invalid
-          && myform.controls?.['culpritName1']?.hasError('maxlength')">Max 20 characters</span>
-         
-          <span class="error" *ngIf="myform.controls?.['culpritName1']?.touched && myform.controls?.['culpritName1']?.invalid
-          && myform.controls?.['culpritName1']?.hasError('pattern')">Alphabets Only Allowed</span>
-          <br>
-
-          <br>
-          <input type="submit" value="Update" [disabled]="myform.invalid" class="btn btn-success" /> <br>
-        </div>
-      </form>
-    </div>
-  </div>
+    
   <br>
   <br>
 
@@ -208,19 +127,17 @@
             <button class="btn btn-danger" style="color: black;" (click)="deleteFIR(f.complaintNumber)">
               <i class="fa-solid fa-trash-can"></i>
             </button>
-            &nbsp;&nbsp;
-            <button class="btn btn-info" (click)="editFIR(f.complaintNumber)"><i class="fa-solid fa-pen"></i></button>
+
           </td>
         </tr>
       </table>
     </div>
 
   
+<button  class="btn btn-light"
+printTitle="FIR List"  
+[useExistingCss]="true"
+printSectionId="print-section"  
+ngxPrint style="margin-left: 600px;"><i class="fa-solid fa-print fa-3x"></i></button>
   </div>
 </div>
-
-<button  class="btn btn-light"
-	printTitle="FIR List"  
-  [useExistingCss]="true"
-	printSectionId="print-section"  
-	ngxPrint style="margin-left: 600px;"><i class="fa-solid fa-print fa-3x"></i></button>

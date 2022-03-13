@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Police } from '../police';
 import { PoliceService } from '../police.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-police-login',
@@ -46,6 +47,7 @@ export class PoliceLoginComponent implements OnInit {
   })
    var b=this.checkUsernameAndPassword(this.userName,this.password)
    if(b){
+    
      this.msg="successful login"+this.userName+" !";
      setTimeout(() => {
        
@@ -62,6 +64,7 @@ export class PoliceLoginComponent implements OnInit {
  }
 
 }
+
 
 
 }

@@ -37,13 +37,9 @@
         <td>{{ p.crimeType }}</td>
         <td>{{ p.courtHearing }}</td>
         <td>{{ p.cellNumber }}</td>
-        <td><div *ngIf="b" style="background-color: green; width:fit-content;">
-          Congratulations..you are releasing today !
-        </div>
+        <td>
         {{ p.releaseDate }}
-        <div *ngIf="!b" style="background-color: red;width:fit-content;">
-          Bettter luck next time..!!!
-        </div></td>
+        </td>
       </tr>
     </table>
     </div>

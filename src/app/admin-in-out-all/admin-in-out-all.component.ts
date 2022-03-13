@@ -4,6 +4,7 @@ import { InOut } from '../in-out';
 import { InOutService } from '../in-out.service';
 import { Message } from '../message';
 import { Location } from '@angular/common'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-admin-in-out-all',
@@ -77,7 +78,23 @@ export class AdminInOutAllComponent implements OnInit {
 
 
 
-
+}
+alertConfirmation(id: any) {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: 'This process is irreversible.',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, go ahead.',
+    cancelButtonText: 'No, let me think',
+  }).then((result) => {
+    if (result.value) {
+      this.deleteInOut(id);
+      Swal.fire('Removed!', 'record removed successfully.', 'success');
+    } else if (result.dismiss === Swal.DismissReason.cancel) {
+      Swal.fire('Cancelled', 'record still in our database.', 'error');
+    }
+  });
 
 }
 }

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Message } from '../message';
 import { Police } from '../police';
 import { PoliceService } from '../police.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-admin-police-all',
@@ -60,6 +61,25 @@ export class AdminPoliceAllComponent implements OnInit {
   }
   backtoadmin(){
     this.router.navigate(['/admin'])
+  }
+
+  alertConfirmation(id: any) {
+    Swal.fire({
+      title: 'Are you sure to delete it?',
+      text: 'This process is irreversible.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        this.deletePolice(id);
+        Swal.fire('Removed!', 'record removed successfully.', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'record still in our database.', 'error');
+      }
+    });
+
   }
 
 }

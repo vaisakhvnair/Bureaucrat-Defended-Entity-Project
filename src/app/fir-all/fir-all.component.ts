@@ -43,7 +43,7 @@ export class FIRAllComponent implements OnInit {
   ngOnInit(): void {
     this.getAllFIR();
     this.fire = new FIR("","","","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOneFIR(this.un).subscribe(data => { this.fire = data; });
 
   }

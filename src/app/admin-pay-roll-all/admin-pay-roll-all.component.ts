@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Message } from '../message';
 import { PayRoll } from '../pay-roll';
 import { PayRollService } from '../pay-roll.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-admin-pay-roll-all',
@@ -60,4 +61,23 @@ export class AdminPayRollAllComponent implements OnInit {
   backtoadmin(){
     this.router.navigate(['/admin'])
   }
+  alertConfirmation(id: any) {
+    Swal.fire({
+      title: 'Are you sure to delete it?',
+      text: 'This process is irreversible.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        this.deletePayRoll(id);
+        Swal.fire('Removed!', 'record removed successfully.', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'record still in our database.', 'error');
+      }
+    });
+
+  }
+
 }

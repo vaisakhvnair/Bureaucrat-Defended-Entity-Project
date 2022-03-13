@@ -17,7 +17,7 @@ export class AdminDataManagersEditComponent implements OnInit {
 
   constructor(private service: DataManagerService, private activeRouter: ActivatedRoute, private router: Router) { 
     this.myform = new FormGroup({
-      userName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z0-9]*$")]),
+      userName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^DAT[a-zA-Z0-9]*$")]),
       password: new FormControl("", [Validators.required]),
       id: new FormControl("", [Validators.required, Validators.pattern("^[a-zA-Z0-9]*$")]),
       name: new FormControl("", [Validators.required, Validators.pattern("^[A-za-z ]*$")]),
