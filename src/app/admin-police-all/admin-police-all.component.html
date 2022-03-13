@@ -1,7 +1,7 @@
 <div>
 <pre><br><h3>       ALL Police</h3></pre>
 <div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
-<div class="container-fluid">
+<div class="container-fluid"id="print-section">
 <table class="table table-sm">
   <tr class="table-dark">
     <th scope="col"><input type="button"class="btn btn-outline-light text-dark"value="User Name" (click)="onSortClickUs()"></th>
@@ -25,13 +25,18 @@
     <td>{{ p.address }}</td>
     <td>
       <button class="btn btn-outline-danger" style="color: black;"   (click)="deletePolice(p.userName)">
-        DELETE
+        <i class="fa-solid fa-trash-can"></i>
       </button>
       &nbsp;&nbsp;
-      <button class="btn btn-outline-info" (click)="editPolice(p.userName)">EDIT</button>
+      <button class="btn btn-outline-info" (click)="editPolice(p.userName)"><i class="fa-solid fa-pen"></i></button>
     </td>
   </tr>
 </table>
 {{ message.message }}
 </div>
 </div>
+<button  class="btn btn-light"
+	printTitle="Police List"  
+  [useExistingCss]="true"
+	printSectionId="print-section"  
+	ngxPrint style="margin-left: 600px;"><i class="fa-solid fa-print fa-3x"></i></button>

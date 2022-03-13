@@ -1,3 +1,16 @@
 input{
     width: 20%;
 }
+#content{
+    width:1395px;
+    height: 842px;
+}
+#table{
+    max-width:2480px;
+    width: 100%;
+}
+#table td{
+    width: auto;
+    overflow: hidden;
+    word-wrap: break-word;
+}

@@ -30,7 +30,7 @@ export class AdminPayRollEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.datman = new PayRoll("","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOnePayRoll(this.un).subscribe(data => { this.datman = data; });
   }
   updateDataManager() {

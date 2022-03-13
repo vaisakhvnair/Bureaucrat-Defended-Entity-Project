@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Location } from '@angular/common'
 import { Router } from '@angular/router';
 import { Prisoner } from '../prisoner';
@@ -10,6 +10,7 @@ import { Message } from '../message';
   styleUrls: ['./admin-prisoner-all.component.css']
 })
 export class AdminPrisonerAllComponent implements OnInit {
+
 
 
 

@@ -5,7 +5,7 @@
     <div class="form-group">
     <form (ngSubmit)="updatePolice()"[formGroup]="myform">
         <label>Police UserName :</label>
-        <input type="text" class="form-control" [(ngModel)]="police.userName" name="userName" formControlName="userName"/>
+        <input type="text"  class="form-control" [(ngModel)]="police.userName" name="userName" formControlName="userName"/>
         <span class="error" *ngIf="myform.controls?.['userName']?.touched && myform.controls?.['userName']?.invalid
         && myform.controls?.['userName']?.hasError('required')">userName Cannot be Blank</span>
        

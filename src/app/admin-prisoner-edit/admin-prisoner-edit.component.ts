@@ -46,7 +46,7 @@ export class AdminPrisonerEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.pr = new Prisoner("","","","","","","","","","","","","","","","","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOnePrisoner(this.un).subscribe(data => { this.pr = data; });
   }
   updatePrisoner() {
