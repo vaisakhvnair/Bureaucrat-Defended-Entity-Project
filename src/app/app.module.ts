@@ -62,6 +62,7 @@ import { PolicePrisonerSearchComponent } from './police-prisoner-search/police-p
 import { PoliceLoginComponent } from './police-login/police-login.component';
 import { PoliceMainLayoutComponent } from './police-main-layout/police-main-layout.component';
 import { NgxPrintModule } from 'ngx-print';
+import { HomeImageComponent } from './home-image/home-image.component';
 
 @NgModule({
   declarations: [
@@ -121,7 +122,8 @@ import { NgxPrintModule } from 'ngx-print';
     PolicePrisonerAllComponent,
     PolicePrisonerSearchComponent,
     PoliceLoginComponent,
-    PoliceMainLayoutComponent
+    PoliceMainLayoutComponent,
+    HomeImageComponent
   ],
   imports: [
     BrowserModule,
