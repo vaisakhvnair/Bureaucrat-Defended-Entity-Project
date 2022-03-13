@@ -30,7 +30,7 @@ export class AdminDataManagersEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.datman = new DataManager("","","","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOneDataManager(this.un).subscribe(data => { this.datman = data; });
   }
   updateDataManager() {

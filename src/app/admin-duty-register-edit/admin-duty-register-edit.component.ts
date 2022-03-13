@@ -30,7 +30,7 @@ export class AdminDutyRegisterEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.datman = new DutyRegister("","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOneDutyRegister(this.un).subscribe(data => { this.datman = data; });
   }
   updateDutyReg() {

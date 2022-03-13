@@ -29,7 +29,7 @@ export class DataManagerInOutEditComponent implements OnInit {
 
 ngOnInit(): void {
   this.inout = new InOut("","","","","","","","");
-  this.un = this.activeRouter.snapshot.params['un'];
+  this.un = this.activeRouter.snapshot.params['id'];
   this.service.getOneInOut(this.un).subscribe(data => { this.inout = data; });
 }
 updateInOut() {

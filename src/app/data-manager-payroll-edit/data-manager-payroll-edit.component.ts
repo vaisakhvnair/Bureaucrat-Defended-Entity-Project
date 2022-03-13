@@ -32,7 +32,7 @@ export class DataManagerPayrollEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.pay = new PayRoll("","","","","","");
-    this.un = this.activeRouter.snapshot.params['un'];
+    this.un = this.activeRouter.snapshot.params['id'];
     this.service.getOnePayRoll(this.un).subscribe(data => { this.pay = data; });
   }
   updateDataManager() {

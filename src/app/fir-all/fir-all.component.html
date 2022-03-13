@@ -182,7 +182,7 @@
       <h2>List All</h2>
       <br>
     </div>
-    <div class="table-responsive">
+    <div class="table-responsive"id="print-section">
       <table class="table table-bordered">
         <tr class="table-info">
           <th scope="col">Complaint Number</th>
@@ -206,10 +206,10 @@
           <td>{{ f.culpritName }}</td>
           <td>
             <button class="btn btn-danger" style="color: black;" (click)="deleteFIR(f.complaintNumber)">
-              DELETE
+              <i class="fa-solid fa-trash-can"></i>
             </button>
             &nbsp;&nbsp;
-            <button class="btn btn-info" (click)="editFIR(f.complaintNumber)">EDIT</button>
+            <button class="btn btn-info" (click)="editFIR(f.complaintNumber)"><i class="fa-solid fa-pen"></i></button>
           </td>
         </tr>
       </table>
@@ -218,3 +218,9 @@
   
   </div>
 </div>
+
+<button  class="btn btn-light"
+	printTitle="FIR List"  
+  [useExistingCss]="true"
+	printSectionId="print-section"  
+	ngxPrint style="margin-left: 600px;"><i class="fa-solid fa-print fa-3x"></i></button>

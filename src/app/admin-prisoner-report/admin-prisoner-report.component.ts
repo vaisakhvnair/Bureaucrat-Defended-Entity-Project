@@ -4,20 +4,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Pimg } from '../pimg';
 import { Prisoner } from '../prisoner';
 import { PrisonerService } from '../prisoner.service';
-import { jsPDF } from "jspdf"
-
 @Component({
   selector: 'app-admin-prisoner-report',
   templateUrl: './admin-prisoner-report.component.html',
   styleUrls: ['./admin-prisoner-report.component.css']
 })
 export class AdminPrisonerReportComponent implements OnInit {
-
-  @ViewChild('content',{static:false}) el!: ElementRef
-  makeReportPdf() {
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.html(this.el.nativeElement,{callback: (pdf)=>{pdf.save("Report.pdf")}})
-  }
 
 
 

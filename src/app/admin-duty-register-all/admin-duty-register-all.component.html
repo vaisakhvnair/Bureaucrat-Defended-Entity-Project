@@ -2,6 +2,7 @@
   <br>
 <h3>Duty Register</h3>
 <div style="float: right; padding: 0%;margin-bottom: 10px;"><button  class="btn btn-outline-secondary" (click)="backtoadmin()">Back To Admin</button></div>
+<div id="print-section">
 <table class="table table-sm">
   <tr class="table-dark">
     <th scope="col"><input type="button" class="btn btn-outline-light text-dark"value="userName" (click)="onSortClickUn()"></th>
@@ -21,14 +22,20 @@
     <td>{{ p.timeOffDuty }}</td>
     <td>
       <button class="btn btn-danger" style="color: black;"   (click)="deleteDutyRegister(p.userName)">
-        DELETE
+        <i class="fa-solid fa-trash-can"></i>
       </button>
       &nbsp;&nbsp;
-      <button class="btn btn-info" (click)="editDutyRegister(p.userName)">EDIT</button>
+      <button class="btn btn-info" (click)="editDutyRegister(p.userName)"><i class="fa-solid fa-pen"></i></button>
     </td>
   </tr>
 </table>
+</div>
 {{ message.message }}
 <br>
-<button class="btn btn-info btn-sm" (click)="back()">Back</button>
+<button class="btn btn-info btn-sm" (click)="back()"><i class="fa-solid fa-arrow-left-long fa-2x"></i></button>
 </div>
+<button  class="btn btn-light"
+	printTitle="Prisoner List"  
+  [useExistingCss]="true"
+	printSectionId="print-section"  
+	ngxPrint style="margin-left: 600px;"><i class="fa-solid fa-print fa-3x"></i></button>

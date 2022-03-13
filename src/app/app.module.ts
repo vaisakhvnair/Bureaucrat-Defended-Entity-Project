@@ -57,6 +57,7 @@ import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-pol
 import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 import { ReportAllComponent } from './report-all/report-all.component';
 import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
+import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
   declarations: [
@@ -119,7 +120,8 @@ import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/a
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]

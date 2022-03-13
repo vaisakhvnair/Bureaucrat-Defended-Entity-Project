@@ -15,7 +15,8 @@ export class AdminLoginComponent implements OnInit {
   upasswd: string = "";
   msg: string = "";
 
-  constructor(private sobj: AdminLoginService,private router: Router, private activeRouter: ActivatedRoute,private http:HttpClientModule) { }
+  constructor(private sobj: AdminLoginService,private router: Router, private activeRouter: ActivatedRoute,
+    private http:HttpClientModule) { }
 
   ngOnInit(): void {
   }

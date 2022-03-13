@@ -10,10 +10,10 @@
     Get Report
     <span class="spinner-grow spinner-grow-sm"></span>
   </button>
-
+<div id="print-section">
   <br>
   <br>
-  <div id="content">
+  <div>
     <pre>
     <h2>                                        <u>Prisoner Report</u></h2>
                                                                                                                                               <img src={{pic}} alt="image" class="img-thumbnail" style="height: 200px;width: 200px;">
@@ -46,6 +46,10 @@
 
 
 
-
 </div>
-<button (click)="makeReportPdf()">Print</button>
+</div>
+<button printSectionId="print-section"
+ ngxPrint
+ [useExistingCss]="true"
+  style="margin-left: 50%;"class="btn btn-light"><i class="fa-solid fa-print fa-3x"></i></button> 
+
