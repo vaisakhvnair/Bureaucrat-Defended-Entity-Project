@@ -7,15 +7,15 @@
     <form>
     <div class="form-group" style="width: 30%;padding-left: 6%; ">
         <label >Username</label>
-    <input type="text"  class="form-control" id="exampleInputEmail1" placeholder="Enter username" name="username" [(ngModel)]="username"#tx1 >
+    <input type="text"  class="form-control" id="exampleInputEmail1" placeholder="Enter username" name="username" (click)="getValidation(tx1)" [(ngModel)]="username"#tx1 >
+    
 </div>
+
 <div class="form-group" style="width: 30%;padding-left: 6%; ">
     <label>Password</label>
    <input type="password"  class="form-control" placeholder="Enter password" name="upasswd" [(ngModel)]="upasswd">
 </div>
-<div class="checkbox" style="margin-left: 6%; ">
-    <label><input type="checkbox" > Remember me</label>
-  </div>
+
    <input type="submit" style="background-color: palevioletred; margin-left: 6%; " class="btn btn-primary" value="login" (click)="getValidation(tx1)">
    
     </form>

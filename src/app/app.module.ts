@@ -57,6 +57,10 @@ import { AdminPoliceDutyEachComponent } from './admin-police-duty-each/admin-pol
 import { AdminDataManagerDutyEachComponent } from './admin-data-manager-duty-each/admin-data-manager-duty-each.component';
 import { ReportAllComponent } from './report-all/report-all.component';
 import { AdminPrisonerEachSearchComponent } from './admin-prisoner-each-search/admin-prisoner-each-search.component';
+import { PolicePrisonerAllComponent } from './police-prisoner-all/police-prisoner-all.component';
+import { PolicePrisonerSearchComponent } from './police-prisoner-search/police-prisoner-search.component';
+import { PoliceLoginComponent } from './police-login/police-login.component';
+import { PoliceMainLayoutComponent } from './police-main-layout/police-main-layout.component';
 import { NgxPrintModule } from 'ngx-print';
 
 @NgModule({
@@ -113,7 +117,11 @@ import { NgxPrintModule } from 'ngx-print';
     DataManagerPayrollAllComponent,
     DataManagerPayrollCreateComponent,
     DataManagerPayrollEditComponent,
-    ReportAllComponent
+    ReportAllComponent,
+    PolicePrisonerAllComponent,
+    PolicePrisonerSearchComponent,
+    PoliceLoginComponent,
+    PoliceMainLayoutComponent
   ],
   imports: [
     BrowserModule,

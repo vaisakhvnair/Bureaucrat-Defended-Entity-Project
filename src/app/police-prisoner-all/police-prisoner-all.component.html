@@ -1,0 +1,51 @@
+<h1>All Prisoners Details</h1>
+<button  class="btn btn-info" (click)="searchPrisonerDetails()">Search Prisoner Data</button>
+<table class="table">
+    <tr>
+        <th scope="col">PrisonerId</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">MiddleName</th>
+        <th scope="col">DateOfBirth</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Address</th>
+        <th scope="col">DateofArrest</th>
+        <th scope="col">CrimeType</th>
+        <th scope="col">EyeWitness</th>
+        <th scope="col">WitnessAddress</th>
+        <th scope="col">ComplaintCount</th>
+        <th scope="col">EyeColor</th>
+        <th scope="col">HairColor</th>
+        <th scope="col">FaceShape</th>
+        <th scope="col">RemandDate</th>
+        <th scope="col">ReleaseDate</th>
+        <th scope="col">CourtHearing</th>
+      
+        
+    </tr>
+    <tr *ngFor="let p of prison">
+
+        <td>{{p.pid}}</td>
+        <td>{{p.firstName}}</td>
+        <td>{{p.lastName}}</td>
+        <td>{{p.middleName}}</td>
+        <td>{{p.dateOfBirth}}</td>
+        <td>{{p.gender}}</td>
+        <td>{{p.age}}</td>
+        <td>{{p.address}}</td>
+        <td>{{p.dateOfArrest}}</td>
+        <td>{{p.crimeType}}</td>
+        <td>{{p.eyeWitness}}</td>
+        <td>{{p.witnessAddress}}</td>
+        <td>{{p.complaintCount}}</td>
+        <td>{{p.eyeColor}}</td>
+        <td>{{p.hairColor}}</td>
+        <td>{{p.faceShape}}</td>
+        <td>{{p.remandDate}}</td>
+        <td>{{p.releaseDate}}</td>
+        <td>{{p.courtHearing}}</td>
+        
+
+    </tr>
+</table>

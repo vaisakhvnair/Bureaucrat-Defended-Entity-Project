@@ -51,10 +51,13 @@ export class DataManagerLoginComponent implements OnInit {
       },2000)
      
     } else { 
+      setTimeout(()=>{
       this.msg = " login failed...!";
       //this.username="";
       this.upasswd="";
       tx1.focus();
+      },20000
+      )
     }
 }
 }

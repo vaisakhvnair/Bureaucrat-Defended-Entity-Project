@@ -1,0 +1,17 @@
+<h1>Police Login</h1>
+
+<form>
+    <div class="form-group" style="width: 20%;">
+      <label>Username</label>
+       <input type="text" class="form-control" placeholder="Enter username" name="username" (click)="getValidation(tx1)" [(ngModel)]="userName"#tx1><br>
+    </div>
+    <div class="form-group" style="width: 20%;">
+      <label>Password</label> 
+       <input type="password" class="form-control" placeholder="Enter password" name="upasswd" [(ngModel)]="password"><br>
+    </div>
+       <input type="submit" style="background-color: blueviolet;" value="login" (click)="getValidation(tx1)">
+    
+</form>
+<div>
+ <hr>
+<div></div><b>{{msg}}</b></div>
