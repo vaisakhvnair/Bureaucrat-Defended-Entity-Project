@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataManager } from '../data-manager';
+import { DataManagerLoginComponent } from '../data-manager-login/data-manager-login.component';
 import { DataManagerService } from '../data-manager.service';
 
 @Component({
@@ -12,10 +13,12 @@ export class DataManagerMainLayoutComponent implements OnInit {
   userName: string = "";
   datam:DataManager=new DataManager("","","","","","","","");
   uname:string="";
-  constructor(private sobj:DataManagerService,private router:Router) { }
+  
+  constructor(private sobj:DataManagerService,private router:Router)
+   { }
 
   ngOnInit(): void {
-   
+  
   }
 
   viewPrisonerData(){

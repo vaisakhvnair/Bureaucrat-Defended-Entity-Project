@@ -13,7 +13,7 @@ export class DataManagerPrisonerEditComponent implements OnInit {
 
   prisoner:Prisoner=new Prisoner("","","","","","","","","","","","","","","","","","","","","");
 pid:string="";
-ms:string="";
+//ms:string="";
 myForm:FormGroup;
   constructor(private service:PrisonerService,private activeRouter:ActivatedRoute,private router:Router) {
     this.myForm=new FormGroup({
