@@ -2,12 +2,12 @@
 <select [(ngModel)]="search">
     <option>pid</option>
     <option>firstName</option>
-    <option>gender</option>
+
     <option>age</option>
     
 </select>
 <input type="text" name="search" [(ngModel)]="str1">
-<input type="button" style="background-color: yellow;"  class="btn btn-primary" name="search" value="Search" (click)="searchPrisonerDetails()">
+<input type="button" style="background-color: rgb(70, 131, 245);"  class="btn btn-primary" name="search" value="Search" (click)="searchPrisonerDetails()">
 
 <div *ngFor="let p of prison">
     <h3>Personal Details</h3>

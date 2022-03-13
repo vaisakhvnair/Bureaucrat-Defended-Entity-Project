@@ -104,12 +104,13 @@
   <div class="form-group" >
   CrimeType &nbsp; <select [(ngModel)]="prisoner.crimeType" class="form-control" style="width: 40%;"  name="crimeType" required="required"  #control9="ngModel">
   
-    <option value="">---</option>
     <option>Murder</option>
-    <option>ChainSnatching</option>
+    <option>Theft</option>
+    <option>Burglary</option>
     <option>Rape</option>
-    <option>Pocso</option>
-    <option>AttempttoMurder</option>
+    <option>Terrorism</option>
+    <option>Sexual harassment</option>
+    <option>Child abuse</option>
   </select>
   <span class="error" *ngIf="control9.touched && control9.invalid && control9.hasError('required')">
     *please select the Category
@@ -145,7 +146,7 @@
         </div>
         <div  class="form-group">
           <label>CellNumber</label>  
-          <input type="number" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.cellNumber" name="cellNumber" required="required"  #control14="ngModel"/>
+          <input type="text" class="form-control" style="width: 40%;"[(ngModel)]="prisoner.cellNumber" name="cellNumber" required="required"  #control14="ngModel"/>
           <span class="error" *ngIf="control14.touched && control14.invalid && control14.hasError('required')">
             *This field cannot be blank
           </span>
@@ -187,12 +188,10 @@
   <div class="form-group">
   <label>EyeColor</label> 
   <select  [(ngModel)]="prisoner.eyeColor" class="form-control" style="width: 40%;" name="eyeColor" required="required"  #control17="ngModel"> 
-    <option value="">---</option>
     <option>Black</option>
-    <option>Grey</option>
     <option>Brown</option>
     <option>Blue</option>
-    <option>Other</option>
+    <option>Grey</option>
     </select>
     <span class="error" *ngIf="control17.touched && control17.invalid && control17.hasError('required')">
       *please select the Category
@@ -201,12 +200,10 @@
   <div class="form-group">
   <label>HairColor</label>
   <select [(ngModel)]="prisoner.hairColor" class="form-control" style="width: 40%;" name="hairColor" required="required"  #control18="ngModel">  
-    <option value="">---</option>
     <option>Black</option>
     <option>White</option>
-    <option>Brown</option>
-    <option>Salt&Pepper</option>
-    <option>Other</option>
+    <option>Red</option>
+    <option>Grey</option>
     </select>
     <span class="error" *ngIf="control18.touched && control18.invalid && control18.hasError('required')">
       *please select the Category
@@ -214,13 +211,11 @@
     </div>
     <div class="form-group">
     FaceShape:<select [(ngModel)]="prisoner.faceShape" class="form-control" style="width: 40%;" name="faceShape" required="required"  #control19="ngModel">  
-      <option value="">---</option>
       <option>Round</option>
       <option>Oval</option>
       <option>Square</option>
       <option>Oblong</option>
-      <option>Diamond</option>
-      <option>Other</option>
+      <option>Daimond</option>
       </select>
       <span class="error" *ngIf="control19.touched && control19.invalid && control19.hasError('required')">
         *please select the Category
