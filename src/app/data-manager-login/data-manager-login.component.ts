@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataManager } from '../data-manager';
 import { DataManagerService } from '../data-manager.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-data-manager-login',
@@ -17,7 +18,10 @@ export class DataManagerLoginComponent implements OnInit {
   //status:string="";
   myClass:string="";
   datam:DataManager[]=[];
-  constructor(private sobj:DataManagerService,private router: Router, private activeRouter: ActivatedRoute) { }
+ 
+  constructor(private sobj:DataManagerService,private router: Router, private activeRouter: ActivatedRoute) { 
+    
+  }
 
   ngOnInit(): void {
     
@@ -45,19 +49,26 @@ export class DataManagerLoginComponent implements OnInit {
 
     var b = this.checkUserNameAndPassword(this.username, this.upasswd)
     if(b) {
-      this.msg = "Successful login "+this.username +":)";
+      //this.msg = "Successful login "+this.username +":)";
       setTimeout(() => {
+        this.tinyAlert()
         this.router.navigate(['/manager'])
       },2000)
      
     } else { 
-      setTimeout(()=>{
-      this.msg = " login failed...!";
+      
+     // this.msg = " login failed...!";
       //this.username="";
+     this.tinyAlert1()
       this.upasswd="";
       tx1.focus();
-      },20000
-      )
+     
     }
+}
+tinyAlert() {
+  Swal.fire('', 'Login Success !', 'success');
+}
+tinyAlert1() {
+  Swal.fire('Oops...', 'Login Failed !', 'error')
 }
 }

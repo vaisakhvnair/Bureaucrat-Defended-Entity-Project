@@ -50,21 +50,26 @@ export class PoliceLoginComponent implements OnInit {
     
      this.msg="successful login"+this.userName+" !";
      setTimeout(() => {
-       
+       this.tinyAlert();
        this.router.navigate(['/police'])
        
      }, 2000)
    }else{
-    setTimeout(()=>{
-     this.msg="login failed";
+    this.tinyAlert1();
+     //this.msg="login failed";
      //this.userName="";
      this.password="";
      tx1.focus();
-   },20000)
- }
+   
+   }
 
 }
-
+tinyAlert() {
+  Swal.fire('', 'Login Success !', 'success');
+}
+tinyAlert1() {
+  Swal.fire('Oops...', 'Login Failed !', 'error')
+}
 
 
 }
