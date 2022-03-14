@@ -31,13 +31,13 @@ export class PoliceMainLayoutComponent implements OnInit {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: 'Yes, go ahead.',
-      cancelButtonText: 'No, stay in admin',
+      cancelButtonText: 'No, stay in police',
     }).then((result) => {
       if (result.value) {
         this.policelogout();
         Swal.fire('Success!', 'LogOut successfully.', 'success');
       } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire('Cancelled', 'We are in admin');
+        Swal.fire('Cancelled', 'We are in police');
       }
     });
   }

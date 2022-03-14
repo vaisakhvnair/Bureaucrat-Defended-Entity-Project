@@ -54,7 +54,8 @@
     
 
     <br>
-    <label > Date Of Birth :</label> <input type="date" class="form-control" [(ngModel)]="pr.dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth"/> 
+    <label > Date Of Birth :</label> 
+    <input type="date" class="form-control" [(ngModel)]="pr.dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth"/> 
     <span class="error" *ngIf="myform.controls?.['dateOfBirth']?.touched && myform.controls?.['dateOfBirth']?.invalid
     && myform.controls?.['dateOfBirth']?.hasError('required')"> Cannot be Blank</span>
     

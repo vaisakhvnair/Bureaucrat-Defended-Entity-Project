@@ -74,13 +74,13 @@ alertConfirmation() {
     icon: 'warning',
     showCancelButton: true,
     confirmButtonText: 'Yes, go ahead.',
-    cancelButtonText: 'No, stay in admin',
+    cancelButtonText: 'No, stay in datamanager',
   }).then((result) => {
     if (result.value) {
       this.homelogout();
       Swal.fire('Success!', 'LogOut successfully.', 'success');
     } else if (result.dismiss === Swal.DismissReason.cancel) {
-      Swal.fire('Cancelled', 'We are in admin');
+      Swal.fire('Cancelled', 'We are in datamanager');
     }
   });
 }

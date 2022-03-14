@@ -57,7 +57,7 @@ export class DataManagerLoginComponent implements OnInit {
      
     } else { 
       
-     // this.msg = " login failed...!";
+      //this.msg = " login failed...!";
       //this.username="";
      this.tinyAlert1()
       this.upasswd="";
