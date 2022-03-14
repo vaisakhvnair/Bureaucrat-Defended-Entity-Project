@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FIR } from '../fir';
 import { FIRService } from '../fir.service';
 import { Message } from '../message';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-fir-all',
@@ -71,6 +72,25 @@ export class FIRAllComponent implements OnInit {
   }
   back(): void {
     this.location.back()
+  }
+
+  alertConfirmation(id: any) {
+    Swal.fire({
+      title: 'Are you sure to delete it?',
+      text: 'This process is irreversible.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, go ahead.',
+      cancelButtonText: 'No, let me think',
+    }).then((result) => {
+      if (result.value) {
+        this.deleteFIR(id);
+        Swal.fire('Removed!', 'record removed successfully.', 'success');
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire('Cancelled', 'record still in our database.', 'error');
+      }
+    });
+
   }
 
 

@@ -19,7 +19,7 @@ export class AdminPrisonerEditComponent implements OnInit {
 
   constructor(private service: PrisonerService, private activeRouter: ActivatedRoute, private router: Router,private location: Location) {
     this.myform = new FormGroup({
-      pid: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[0-9a-zA-Z ]*$")]),
+      pid: new FormControl("", [Validators.required, Validators.minLength(1), Validators.maxLength(20), Validators.pattern("^[0-9a-zA-Z ]*$")]),
       firstName: new FormControl("", [Validators.required, Validators.minLength(3), Validators.maxLength(20), Validators.pattern("^[a-zA-Z ]*$")]),
       lastname: new FormControl("", [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
       middleName: new FormControl("", [Validators.required, Validators.pattern("^[a-zA-Z]*$")]),
